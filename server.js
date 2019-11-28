@@ -19,12 +19,7 @@ express.use(bodyParser.urlencoded({
   extended: true
 }));
 
-express.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "localhost"); // update to match the domain you will make the request from
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  next();
-});
-
+express.set( 'view engine', 'ejs' );
 
 let DB_T = require('./database/t.json');
 let DB_USERS = require('./database/users.json');
@@ -32,7 +27,6 @@ let DB_USERS = require('./database/users.json');
 
 
 
-express.set( 'view engine', 'ejs' );
 /*
 express.use(function (req, res, next) {
   console.log(req.path);
@@ -70,6 +64,17 @@ express.get('/:service/', function (req, res) {
   console.log('>> loading service:', service);
 
   res.render( __dirname + '/web/services/'+service+'/'+service, {
+    BASEURL             : CONFIG.site.baseURL,
+    service             : service
+  });
+});
+
+express.get('/:service/:page', function (req, res) {
+  var service = req.params.service;
+  var page = req.params.page;
+  console.log('>> loading service:', service);
+
+  res.render( __dirname + '/web/services/'+service+'/pages/'+page, {
     BASEURL             : CONFIG.site.baseURL,
     service             : service
   });

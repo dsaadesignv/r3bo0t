@@ -1,0 +1,385 @@
+/*-------------basics -------*/
+* {
+    box-sizing: border-box;
+}
+body{
+  margin: 0;
+  min-height: 100vh;
+
+}
+/*------------- boite à font -------*/
+@font-face {
+	font-family: "HK Grotesk Regular";
+	src: url('c-fonts/HKGrotesk-Regular.otf');
+}
+@font-face {
+	font-family: "HK Grotesk Bold";
+	src: url('c-fonts/HKGrotesk-Bold.otf');
+}@font-face {
+	font-family: "HK Grotesk Italic";
+	src: url('c-fonts/HKGrotesk-Italic.otf');
+}@font-face {
+	font-family: "HK Grotesk Medium";
+	src: url('c-fonts/HKGrotesk-Medium.otf');
+}
+strong{
+  font-family: 'HK Grotesk Bold', sans-serif;
+}
+/*------------- wrapper grid -------*/
+#c-wrapper{
+  display: grid;
+  grid-template-columns: [first] 60% [line] 40% [end];
+  grid-template-rows: [first-row] 100% [end-row];
+  grid-gap: 0px;
+}
+/*------------- layout design basic -------*/
+.c-titre-nav{
+  margin-top: 3%;
+  margin-left:2%;
+  color:#E6FCFE;
+  letter-spacing:4px;
+}
+.c-img-home{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+#c-cerne-home{
+  margin-top: -50%;
+  margin-left: -40%;
+}
+#c-pousse-home{
+  position: absolute;
+  margin-top: -63%;
+  margin-left: -55%;
+}
+#c-pousse-home-deux{
+  position: absolute;
+  margin-top: -30%;
+  margin-left: -13%;
+  transform: rotate(60deg)
+}
+#c-pousse-home-trois{
+  position: absolute;
+  margin-top: 18%;
+  margin-left: -13%;
+  transform: rotate(115deg);
+}
+.c-link-back:link{
+  text-decoration: none;
+}
+.c-titre-nav{
+  display: inline-block;
+      margin-top: 3%;
+}
+/*------------- cerne suivante -------*/
+.c-cerne-deux{
+position: absolute;
+    top: -30%;
+    left: -29%;
+    z-index: -1;
+}
+
+/*------------- hover pousse un -------*/
+#c-pousse-hover{
+position: absolute;
+margin-top: -63%;
+margin-left: -55%;
+display:none;
+}
+.c-pousse-link:hover #c-pousse-hover {
+  display:inline;
+}
+/*------------- hover pousse deux -------*/
+#c-pousse-hover-deux{
+  position: absolute;
+  margin-top: -30%;
+  margin-left: -13%;
+  transform: rotate(60deg);
+  display: none;
+}
+.c-pousse-link-deux:hover #c-pousse-hover-deux {
+  display:inline;
+}
+/*------------- hover pousse trois -------*/
+#c-pousse-hover-trois{
+  position: absolute;
+  margin-top: 18%;
+  margin-left: -13%;
+  transform: rotate(115deg);
+  display: none;
+}
+.c-pousse-link-trois:hover #c-pousse-hover-trois {
+  display:inline;
+}
+/*------------- CARTOUCHE UN -------*/
+.c-pousse-label {
+  position:absolute;
+  top:50%;
+  left:50%;
+  background:#F2662C;
+  color: white;
+  letter-spacing:3px;
+  margin-top: -100%;
+  font-family: 'Fira Code', monospace;
+  font-size: 16px;
+  padding: 3%;
+  padding-left: 5%;;
+  display:none;
+}
+.c-pousse-link:hover .c-pousse-label {
+  display:block;
+}
+/*------------- CARTOUCHE DEUX -------*/
+.c-pousse-label-deux {
+  position:absolute;
+  top:80%;
+  left:80%;
+  background:#F2662C;
+  color: white;
+  letter-spacing:3px;
+  margin-top: -100%;
+  font-family: 'Fira Code', monospace;
+  font-size: 16px;
+  padding: 3%;
+  padding-left: 5%;;
+  display:none;
+}
+
+
+.c-pousse-link-deux:hover .c-pousse-label-deux {
+  display:block;
+}
+/*------------- CARTOUCHE TROIS -------*/
+.c-pousse-label-trois {
+  position:absolute;
+  top:80%;
+  left:80%;
+  background:#F2662C;
+  color: white;
+  letter-spacing:3px;
+  margin-top: -5%;
+  font-family: 'Fira Code', monospace;
+  font-size: 16px;
+  padding: 3%;
+  padding-left: 5%;;
+  display:none;
+}
+
+.c-pousse-link-trois:hover .c-pousse-label-trois {
+  display:block;
+}
+/*------------- HOVER Cerne page catégorie -------*/
+#c-cerne-un:hover #c-cerne-un-hover{
+display: inline;
+}
+#c-cerne-un:hover .c-pousse-label{
+}
+
+#c-cerne-un-hover{
+  margin-top: -50%;
+  margin-left: -40%;
+
+  stroke:#F2662C;
+  display:none;
+}
+.c-pousse-label:hover{
+  display: inline;
+}
+.c-pousse-label-cat {
+  position:absolute;
+  top:80%;
+  left:80%;
+  background:#F2662C;
+  color: white;
+  letter-spacing:3px;
+  margin-top: -125%;
+  margin-left: 40%;
+  font-family: 'Fira Code', monospace;
+  font-size: 16px;
+  padding: 3%;
+  padding-left: 5%;;
+  display:none;
+}
+#c-label-un, #c-label-deux{
+  display: none;
+}
+/*------------- GRID PART LEFT -------*/
+#c-part-nav{
+  background-color: #02424B;
+  grid-column-start: first;
+  grid-column-end: line;
+  grid-row-start: first-row;
+  grid-row-end: end-row;
+  margin: 0;
+  height: 100%;
+  width:60%;
+  position: fixed;
+}
+/*------------- GRID PART RIGHT -------*/
+#c-part-text{
+  margin-top: 3%;
+  margin-left: 6%;
+  margin-right: 10%;
+  margin-bottom: 3%;
+  grid-column-start: line;
+  grid-column-end: end;
+  grid-row-start: first-row;
+  grid-row-end: end-row;
+  overflow:scroll;
+}
+/*------------- LAYOUT TEXT PART RIGHT -------*/
+h1{
+  font-family: 'Fira Code', monospace;
+  font-size: 24px;
+  color: #02424B;
+}
+h2{
+  font-family: 'Fira Code', monospace;
+  font-size: 18px;
+}
+h3{
+  font-family: 'HK Grotesk Medium', sans-serif;
+  font-size: 18px;
+}
+p{
+    font-family: 'HK Grotesk Regular', sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+}
+.c-questions{
+  color: #02424B;
+  padding-bottom:1%;
+}
+.c-questions:hover{
+  color: #F2662C;
+}
+/*------------- LAYOUT FORM PART -------*/
+
+#c-input-title{
+  font-family: 'Fira Code', monospace;
+  color: #02424B;
+  border-color: #02424B;
+  border-width: thin;
+  margin-left: 2%;
+  margin-bottom: 2%;
+}
+#c-textarea{
+  width: 100%;
+  border-color: #02424B;
+  font-size: 18px;
+  font-family: 'HK Grotesk Regular', sans-serif;
+}
+.c-form-cat{
+  font-family: 'Fira Code', monospace;
+    margin-bottom: 2%;
+}
+#c-form-send{
+  margin-top: 2%;
+  background-color: #F2662C;
+  font-family: 'Fira Code', monospace;
+  color: white;
+  padding: 1%;
+  font-size: 100%;
+}
+#c-help-button{
+  margin-top: 2%;
+  margin-left: 5%;
+  background-color: #02424B;
+  font-family: 'Fira Code', monospace;
+  color: white;
+  padding: 1%;
+  font-size: 100%;
+}
+#c-help-box{
+  background-color: #02424B;
+      color: white;
+      padding: 1%;
+      position: absolute;
+      margin-top: 1%;
+      display: none;
+}
+#c-p-help-box{
+  font-family: 'Fira Code', monospace;
+  line-height: 28px;
+      margin: 2%;
+}
+/*------------- LAYOUT TEXT PART ON NAV PART -------*/
+.c-camera{
+position: absolute;
+    bottom: 3%;
+    right: 3%;
+}
+.c-camera-on{
+position: absolute;
+    bottom: 3%;
+    right: 3%;
+    display:none;
+}
+.c-div-sommaire{
+  position: absolute;
+  right: 3%;
+  top: 3%;
+}
+.c-sommaire:link{
+  color:white;
+text-decoration: none;
+}
+h4{
+  color: white;
+  font-family: 'Fira Code', monospace;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: right;
+}
+h4:hover{
+color:#F2662C;
+}
+h4:focus{
+  font-size: 20px;
+}
+/*------------- POP IN - FORMULAIRE DE PLANTAGE DE POUSSE -------*/
+.c-wrapper-popin{
+  display: none;
+}
+.c-input-plant-pousse{
+  position: absolute;
+  bottom: 11%;
+  right: 3%;
+  display: inline-flex;
+  padding-left: 2%;
+
+}
+.c-text-zone{
+font-family: 'Fira Code', monospace;
+}
+.c-send{
+font-family: 'Fira Code', monospace;
+background-color: #F2662C;
+color:white;
+border: none;
+padding-left: 2%;
+}
+#c-cross{
+  position: absolute;
+    font-size: 50px;
+    color: white;
+    bottom: -200%;
+    right: 0%;
+}
+.c-form-un{
+  display: inline-flex;
+}
+/*------------- BUTTON PAGE CAT -------*/
+#c-button-cat{
+  background-color: white;
+  font-family: 'Fira Code', monospace;
+  font-size: 18px;
+  padding: 1%;
+  padding-right: 2%;
+  padding-left: 2%;
+  color: #02424B;
+  position: absolute;
+  bottom: 3%;
+  right: 3%;
+}
