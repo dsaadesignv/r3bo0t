@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel=stylesheet href="services/s/css/isotope-docs.css" type="text/css" media="all">
+
+    <link rel=stylesheet href="services/s/css/typo.css" type="text/css" media="all">
+    <link rel=stylesheet href="services/s/css/slider.css" type="text/css" media="all">
+    <link rel=stylesheet href="services/s/css/stylesheet.css" type="text/css" media="all">
+
+
+    <title>Transfert - Stockage</title>
+</head>
+<body>
+    <div class="s-principalContainer">
+        <header class="s-header">
+                <div class="logo">
+                    <img class="simg-logo"
+                    src="services/s/img/logo.svg"
+                    alt="Logo du service transfert et stockage">
+                </div>
+        </header>
+
+        <div class="sparent">
+
+            <!--INTERFACE 1 -->
+
+            <div class="s-page s-page1">
+                <div class="s-page1-contenu">
+                    <img class="simg"
+                    src="services/s/img/pictos-télécharger.svg"
+                    alt="Pictogramme d'ajout de fichier">
+                    <p class="stexte">Glisse tes fichiers pour les partager</p>
+                    <p class="stexte">Ou
+                    </p>
+                    <input class="s-input" type="file" name="myFile">
+                    <button class="s_button_navigateur_p1">VALIDER</button>
+                </div>
+            </div>
+
+
+
+
+            <!--INTERFACE 2 ATTENTION PB INCRÉMENTATION   -->
+
+            <div class="s-page s-page2">
+                <div class="s-page2-contenu">
+                    <h2 class="s-h2">Challenge_IHM.jpg</br>
+                    Image.jpg</h2>
+                    <div class="s-switch-prive">
+
+                        <label class="switch">
+                            <input type="checkbox" checked>
+                            <span class="slider round"></span>
+                        </label>
+
+                        <p class="stexte-switch-on">Privée</p>
+                        <p class="stexte-switch-off">Public</p>
+                    </div>
+
+                    <div class="compresserPhoto">
+                        <label for="amount" class="stexte">Qualité de l'image :</label>
+                        <input type="text" id="amount1" readonly style="border:0; color:#0F0C0A">
+                        <p class="s_mini_texte">Plus la qualité de votre photo est faible, moins elle sera lourde et prendra peu d'espace de stockage.</p>
+                        <div id="slider-range-max1">
+                        </div>
+                    </div>
+                    <div class="dureeVie">
+                        <label for="amount" class="stexte">Durée de vie (en semaine) :</label>
+                        <input type="text" id="amount2" readonly style="border:0; color:#0F0C0A">
+                        <p class="s_mini_texte">Donner une durée de vie à votre fichier, il sera envoyé au compost à la fin de celle-ci.</br> Par défault - 1mois</p>
+                        <div id="slider-range-max2"></div>
+                    </div>
+                    <div class="telechargement">
+                        <input type="checkbox" id="scales" name="scales"
+                        checked>
+                        <label for="scales" class="s_mini_texte_spe">Supprimer après téléchargement</label>
+                    </div>
+                    <div class="partageLien">
+                        <p class="stexte">Lien de partage : >meme_keanu_reeves</p>
+                        <button class="s_button_messagerie">Via la Messagerie  </button>
+                    </div>
+                    <button class="s_button_navigateur_p2">VALIDER</button>
+                </div>
+                <div class="s-page2-image">
+                    <img class="simg_meme"
+                    src="services/s/img/meme.jpg"
+                    alt="meme"
+                    data-slider="10">
+                    <img class="simg_meme"
+                    src="services/s/img/meme2.jpg"
+                    alt="meme"
+                    data-slider="9">
+                    <img class="simg_meme"
+                    src="services/s/img/meme3.png"
+                    alt="meme"
+                    data-slider="8">
+                    <img class="simg_meme"
+                    src="services/s/img/meme4.png"
+                    alt="meme"
+                    data-slider="7">
+                    <img class="simg_meme"
+                    src="services/s/img/meme5.png"
+                    alt="meme"
+                    data-slider="6">
+                    <img class="simg_meme"
+                    src="services/s/img/meme6.png"
+                    alt="meme"
+                    data-slider="5">
+                    <img class="simg_meme"
+                    src="services/s/img/meme7.png"
+                    alt="meme"
+                    data-slider="4">
+                    <img class="simg_meme"
+                    src="services/s/img/meme8.png"
+                    alt="meme"
+                    data-slider="3">
+                    <img class="simg_meme"
+                    src="services/s/img/meme9.png"
+                    alt="meme"
+                    data-slider="2">
+                    <img class="simg_meme"
+                    src="services/s/img/meme10.png"
+                    alt="meme"
+                    data-slider="1">
+                </div>
+            </div>
+
+
+            <!--INTERFACE 3  -->
+
+            <div class="s-page s-page3">
+                <div class="s-page3-contenu">
+
+                    <div class="big-demo go-wide" data-js="sorting-demo">
+
+
+                        <div class="grid">
+                            <div class="element-item transition metal "
+                            style="background-image: url(services/s/img/meme.jpg);background-size: cover;"
+                            data-category="transition">
+                                <h5 class="name">Meme.jpg</h5>
+                                <p class="symbol">1Ko</p>
+                                <p class="number">2 jours</p>
+                                <p class="weight"> 26 novembre</p>
+                                <div class="informations">
+                                    <p class="localisation">Origine : Messagerie</p>
+                                    <img class="simg-telechargement"
+                                        src="services/s/img/pictos-télécharger.svg"
+                                    alt="Pictogramme de téléchargement">
+                                    <img class="simg-partager"
+                                    src="services/s/img/picto-partager.svg"
+                                    alt="Pictogramme de partage">
+                                </div>
+
+                            </div>
+                            <div class="element-item metalloid " style="background-image: url(services/s/img/musart2.png); background-size: cover;"data-category="metalloid">
+
+                                <h5 class="name">Musart.png</h5>
+                                <p class="symbol">2Ko</p>
+                                <p class="number">4 jours</p>
+                                <p class="weight">1 septembre</p>
+                                <div class="informations">
+                                    <p class="localisation">Origine : HIVE</p>
+                                    <img class="simg-telechargement"
+                                        src="services/s/img/pictos-télécharger.svg"
+                                    alt="Pictogramme de téléchargement">
+                                    <img class="simg-partager"
+                                    src="services/s/img/picto-partager.svg"
+                                    alt="Pictogramme de partage">
+                                </div>
+
+                            </div>
+                            <div class="element-item post-transition metal "
+                            style="background-image: url(services/s/img/p3.png); background-size: cover;" data-category="post-transition">
+                                <h5 class="name">Projection.png</h5>
+                                <p class="symbol">3Ko</p>
+                                <p class="number">1 jours</p>
+                                <p class="weight">4 octobre</p>
+                                <div class="informations">
+                                    <p class="localisation">Origine : HIVE</p>
+                                    <img class="simg-telechargement"
+                                        src="services/s/img/pictos-télécharger.svg"
+                                    alt="Pictogramme de téléchargement">
+                                    <img class="simg-partager"
+                                    src="services/s/img/picto-partager.svg"
+                                    alt="Pictogramme de partage">
+                                </div>
+                            </div>
+
+                            <div class="element-item post-transition metal "
+                            style="background-image: url(services/s/img/tuxkart.png); background-size: cover;"
+                             data-category="post-transition">
+                                <h5 class="name">TuxKart.jpg</h5>
+                                <p class="symbol">4Ko</p>
+                                <p class="number">1 jours</p>
+                                <p class="weight">
+                                    8 novembre
+                                </p>
+                                <div class="informations">
+                                    <p class="localisation">Origine : HIVE</p>
+                                    <img class="simg-telechargement"
+                                        src="services/s/img/pictos-télécharger.svg"
+                                    alt="Pictogramme de téléchargement">
+                                    <img class="simg-partager"
+                                    src="services/s/img/picto-partager.svg"
+                                    alt="Pictogramme de partage">
+                                </div>
+                            </div>
+
+
+                            <div class="element-item post-transition metal " style="background-image: url(services/s/img/tuxkart2.jpg); background-size: cover;"data-category="post-transition">
+
+
+                                <h5 class="name">TuxKart-2.png</h5>
+                                <p class="symbol">5Ko</p>
+                                <p class="number">15 jours</p>
+                                <p class="weight">24 novembre </p>
+                                <div class="informations">
+                                    <p class="localisation">Origine : HIVE</p>
+                                    <img class="simg-telechargement"
+                                        src="services/s/img/pictos-télécharger.svg"
+                                    alt="Pictogramme de téléchargement">
+                                    <img class="simg-partager"
+                                    src="services/s/img/picto-partager.svg"
+                                    alt="Pictogramme de partage">
+                                </div>
+                            </div>
+
+                            <div class="element-item post-transition metal "
+                            style="background-image: url(services/s/img/musique.png); background-size: cover;"
+                            data-category="post-transition">
+
+                                <h5 class="name">La reine des neiges.mp3</h5>
+                                <p class="symbol">6Ko</p>
+                                <p class="number">4 jours</p>
+                                <p class="weight">20 novembre</p>
+                                <div class="informations">
+                                    <p class="localisation">Origine : HIVE</p>
+                                    <img class="simg-telechargement"
+                                        src="services/s/img/pictos-télécharger.svg"
+                                    alt="Pictogramme de téléchargement">
+                                    <img class="simg-partager"
+                                    src="services/s/img/picto-partager.svg"
+                                    alt="Pictogramme de partage">
+                                </div>
+                            </div>
+
+                            <div class="element-item post-transition metal "
+                            style="background-image: url(services/s/img/video.png); background-size: cover;"
+                            data-category="post-transition">
+
+                                <h5 class="name">Navigation.mov</h5>
+                                <p class="symbol">7Ko</p>
+                                <p class="number">20 jours</p>
+                                <p class="weight">20 octobre</p>
+                                <div class="informations">
+                                    <p class="localisation">Origine : plateforme vidéo</p>
+                                    <img class="simg-telechargement"
+                                        src="services/s/img/pictos-télécharger.svg"
+                                    alt="Pictogramme de téléchargement">
+                                    <img class="simg-partager"
+                                    src="services/s/img/picto-partager.svg"
+                                    alt="Pictogramme de partage">
+                                </div>
+                            </div>
+
+                            <div class="element-item post-transition metal "
+                            style="background-image: url(services/s/img/texte.png); background-size: cover;"
+                            data-category="post-transition">
+
+                                <h5 class="name">Texte.txt</h5>
+                                <p class="symbol">8Ko</p>
+                                <p class="number">20 jours</p>
+                                <p class="weight">3 octobre</p>
+                                <div class="informations">
+                                    <p class="localisation">Origine : Utilitaire / Note</p>
+                                    <img class="simg-telechargement"
+                                        src="services/s/img/pictos-télécharger.svg"
+                                    alt="Pictogramme de téléchargement">
+                                    <img class="simg-partager"
+                                    src="services/s/img/picto-partager.svg"
+                                    alt="Pictogramme de partage">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="button-group sort-by-button-group js-radio-button-group">
+                            <p class="stexte">Trier par :</p>
+                                <button class="button-s" data-sort-by="name">Nom</button>
+                                <button class="button-s" data-sort-by="symbol">Poids</button>
+                                <button class="button-s" data-sort-by="number">Date d'expiration</button>
+                                <button class="button-s" data-sort-by="weight">Date de création</button>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--INTERFACE 4 -->
+
+            <div class="s-page s-page4">
+                <div class="s-page4-contenu">
+                    <div class="s-contenu-herbier">
+                        <div class="s-infos-herbier">
+                            <p class="stexte">
+                              Challenge_IHM.jpg </br>
+                              Type : Image </br>
+                              150Ko</br>
+
+                            </p>
+                            <div class="s-button-herbier">
+                                <button class="s-style-button-herbier">Partager</button>
+                                <button class="s-style-button-herbier">Télécharger</button>
+                            </div>
+                        </div>
+                        <div class="s-img-herbier">
+                        </div>
+                    </div>
+                    <div class="s-nav-herbier">
+                        <div class="s-place-restante">
+                            <p class="stexte">
+                            Nombre de place restante 3/8 :
+                            </p>
+                            <div class="places-carre-prise"></div>
+                            <div class="places-carre-prise"></div>
+                            <div class="places-carre-prise"></div>
+                            <div class="places-carre-restante"></div>
+                            <div class="places-carre-restante"></div>
+                            <div class="places-carre-restante"></div>
+                            <div class="places-carre-restante"></div>
+                            <div class="places-carre-restante"></div>
+                        </div>
+                        <div class="s-fichiers-present">
+                            <p class="stexte">
+                            1/3
+                            </p>
+                            <img class="simg image-fleche"
+                            src="services/s/img/fleche.svg"
+                            alt="Pictogramme fleche">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!--INTERFACE 5 -->
+
+            <div class="s-page s-page5">
+                <div class="s-page5-contenu">
+                    <div class="s-content-uri">
+                        <p class="stexte-uri">URI : >meme_keanu_reeves</p>
+                    </div>
+                    <div class="gallery-compost">
+                        <div class="s-image-compost">
+                            <img class="simg_compost"
+                        src="services/s/img/compost/favicon-1.png"
+                        alt="meme">
+                            <img class="simg_compost"
+                        src="services/s/img/compost/favicon-2.png"
+                        alt="meme">
+                        <img class="simg_compost"
+                        src="services/s/img/compost/favicon-3.png"
+                        alt="meme">
+                        <img class="simg_compost"
+                        src="services/s/img/compost/favicon-4.png"
+                        alt="meme">
+                        <img class="simg_compost"
+                        src="services/s/img/compost/favicon-5.png"
+                        alt="meme">
+
+
+
+                        </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <footer class="s-footer">
+            <div class="barreStockage">
+                <div class="barrePerso">
+                    <div class="sAvancement"></div>
+                    <div class="sPoids">
+                        <p class="stexte-stockage">Stockage restant : 30 Mo</p>
+                    </div>
+                </div>
+                <div class="barreGlobale">
+                    <div class="sAvancement"></div>
+                    <div class="sPoids">
+                        <p class="stexte-stockage">Espace web restant : 10 Go</p>
+                    </div>
+                </div>
+            </div>
+            <div class="nomPage">
+                <div class="titre">
+                    <h1 class="s-titre s-titre1">Ajouter</h1>
+                    <h1 class="s-titre s-titre2">Jardin Data</h1>
+                    <h1 class="s-titre s-titre3">Herbier</h1>
+                    <h1 class="s-titre s-titre4">Compost</h1>
+                </div>
+                <div class="pictogrammes">
+                    <img id="ajout" class="s-picto simg-picto1"
+                    src="services/s/img/pictos-plus.svg"
+                    alt="Pictogramme d'ajout de fichier">
+                    <img id="jardin" class="s-picto simg-picto2"
+                    src="services/s/img/picto_jardin.svg"
+                    alt="Pictogramme jardin data">
+                    <img id="herbier" class="s-picto simg-picto3"
+                    src="services/s/img/picto_herbier.svg"
+                    alt="Pictogramme herbier">
+                    <img id="compost" class="s-picto simg-picto4"
+                    src="services/s/img/pictos_compost.svg"
+                    alt="Pictogramme compost">
+                </div>
+            </div>
+        </footer>
+
+
+    </div>
+
+
+
+</body>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<!-- Bibliothèque de slider -->
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<!-- Looking for isotope.js? Use isotope.pkgd.min.js -->
+<!-- Isotope does NOT require jQuery. But it does make things easier -->
+
+<script>window.jQuery || document.write('<script src="services/s/js/jquery.min.js"><\/script>')</script>
+<script src="services/s/js/isotope-docs.min.js?6"></script>
+
+
+
+<script src="services/s/js/sketch.js"></script>
+</html>
