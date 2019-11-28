@@ -19,6 +19,12 @@ express.use(bodyParser.urlencoded({
   extended: true
 }));
 
+express.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "localhost"); // update to match the domain you will make the request from
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
 
 let DB_T = require('./database/t.json');
 let DB_USERS = require('./database/users.json');
