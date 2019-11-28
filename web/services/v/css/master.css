@@ -1,0 +1,12 @@
+/***** Importe tout les fichiers css *****/
+
+@import url("normalize.css"); /* normalise across browsers*/
+@import url("../fonts/fontsheet.css"); /* Fonts (Arsenal + Philosopher)  */ 
+
+
+/****** Responsive *************/
+
+@import url("desktop.css"); /* High-Resolution : 1920x1080 & plus */
+/* @import url("low-resolution.css"); /* Low-Res :  moins de 1480 */
+/* @import url("tablette.css"); Tablette  */
+/* @import url("mobile.css"); Mobile  */

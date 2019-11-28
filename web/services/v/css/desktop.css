@@ -1,0 +1,875 @@
+/************************************** TEMPORAIRE */
+
+
+/************************************** GENERAL */
+
+.theme_black {
+    background-color: rgb(14, 14, 14);
+}
+
+
+input:focus, button:focus {
+    outline: none;
+}
+
+#v button {
+    border: 1px solid #142585;
+    background-color: white;
+    font-family: 'quebecsemibold', sans-serif;
+    color: #142585;
+    text-transform: uppercase;
+}
+
+.v-hide {
+    visibility: hidden;
+    display: none !important; /* to overwrite flex */
+    pointer-events: none;
+}
+
+.v-selected {
+    background-color: #142585 !important; /* overwrite button */
+    color: white !important; /* overwrite button */
+    stroke: white !important;
+}
+
+.v-selected_button { /* UI panel*/
+    fill: #142585 !important;
+    stroke: white !important;
+}
+
+.v-color_blue {
+    fill: #142585 !important;
+   
+}
+
+.v-color_white {
+    fill: white !important;
+    stroke: #142585;
+}
+
+.v-selected_button { /* change the background of the button */
+    background-color: #142585;
+}
+
+.v-album, .v-subcategory, .v-category, .v-url, .v-hydratation {
+    visibility: hidden;
+    display: none;
+    pointer-events: none;
+}
+
+/**************************************************************************
+_____   _                     _             _ 
+|  ___| (_) __  __   ___    __| |    _   _  (_)
+| |_    | | \ \/ /  / _ \  / _` |   | | | | | |
+|  _|   | |  >  <  |  __/ | (_| |   | |_| | | |
+|_|     |_| /_/\_\  \___|  \__,_|    \__,_| |_|
+                                            
+*****************************************************************************/
+
+
+
+
+/***********************************************************************************/
+/******************************************************************* HEADER | NAV */
+/***********************************************************************************/
+#v header {
+    position: fixed;
+    top: 1vh;
+    right: 2vw;
+    width: 100%;
+    
+    display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row nowrap;
+	flex-flow: row nowrap;
+	-webkit-justify-content: flex-end;
+	justify-content:flex-end;
+}
+
+#v header a  {
+    -webkit-flex: 0 0 4vh;
+    flex: 0 0 4vh;
+    
+    margin-right: 0.5vw;
+}
+
+/******************************* reading list */
+
+
+
+/******************************* Small Research bar */
+#v header #v-research {
+    -webkit-flex: 0 0 74.5%;
+    flex: 0 0 74.5%;
+    
+}
+
+#v header #v-research form {
+display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-justify-content: flex-start;
+    justify-content:flex-start;
+    
+}
+
+#v header #v-research form input {
+    -webkit-flex: 0 0 100%;
+    flex: 0 0 100%;
+    border: none;
+    
+    margin-bottom: 0.8vh;
+    padding-top: 1.6vh;
+    padding-bottom: 1.3vh;
+    background-color: #142585;
+    text-indent: 0.7vw;
+
+    font-family: 'quebeclight_italic';
+    font-size: 1.1em;
+    color: white;
+    text-transform: lowercase;
+}
+
+#v-research form button {
+    -webkit-flex: 0 0 8%;
+    flex: 0 0 8%;
+    margin-right: 0.7vw;
+
+    padding-bottom: 0.6em;
+    padding-top: 0.4em;
+    font-size: 0.7em;
+}
+
+/***********************************************************************************/
+/******************************************************************** VIEWING BAR **/
+/***********************************************************************************/
+#v-bar {
+    background-color: rgba(255, 159, 159, 0.200);
+    width: 1.8vw;
+    height: 100vh;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+
+
+#v-level {
+    background-color: #FF9F9F;
+    height: 20vh;
+    margin-top: 80vh;
+}
+
+#v-bar img {
+    position: fixed;
+    margin-top: -3vh;
+    margin-left: 0.5vw;
+}
+
+
+
+
+/******************************************************************************
+    
+ __        __  ____       _      ____    ____    _____   ____  
+ \ \      / / |  _ \     / \    |  _ \  |  _ \  | ____| |  _ \ 
+  \ \ /\ / /  | |_) |   / _ \   | |_) | | |_) | |  _|   | |_) |
+   \ V  V /   |  _ <   / ___ \  |  __/  |  __/  | |___  |  _ < 
+    \_/\_/    |_| \_\ /_/   \_\ |_|     |_|     |_____| |_| \_\
+                                                               
+
+*********************************************************************************/
+
+/* ALL THE CONTENT FIT INSIDE THE WRAPPER (except the nav + viewing bar) */
+/* There is 7 blocs inside the wrapper, the layout auto-ajust in JS accordingly 
+by displaying some of the blocs*/
+
+#v-wrapper {
+    position: absolute;
+    width: 82vw;
+    left: 6vw;
+    top: 14vh;
+}
+
+/***********************************************************************************/
+/******************************************************** BLOC 1 - BIG SEARCH BAR */
+/***********************************************************************************/
+
+#v-research_home {
+    -webkit-flex: 0 0 5vh;
+    flex: 0 0 5vh;
+    width: 120vh;
+    margin-top: 6vh;
+    margin-bottom:16vh;
+}
+
+#v-research_home form {
+display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-justify-content: flex-start;
+	justify-content:flex-start;
+}
+
+#v-research_home form input {
+    -webkit-flex: 0 0 100%;
+    flex: 0 0 100%;
+    border: none;
+    border-bottom: 2px solid #142585;
+    margin-bottom: 1.5vh;
+    padding-bottom: 2vh;
+
+    font-family: 'quebeclight_italic';
+    font-size: 1.4em;
+    color: grey;
+}
+
+#v-research_home form img { /* glass picto*/
+    -webkit-flex: 0 0 7%;
+    flex: 0 0 3%;
+
+    position: relative;
+    margin-left: -4%;
+    margin-top:-3%;
+}
+
+#v-research_home form button {
+    -webkit-flex: 0 0 13%;
+    flex: 0 0 13%;
+    margin-right: 1vw;
+
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+    font-size: 0.8em;
+}
+
+
+/***********************************************************************************/
+/******************************************************** BLOC 2 - ITEMS GRID */
+/***********************************************************************************/
+
+#v-grid {
+    -webkit-flex: 0 0 43vh;
+    flex: 0 0 43vh;
+    width: 150vh;
+
+    display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: column nowrap;
+	flex-flow: column nowrap;
+}
+
+#v-grid h2:nth-child(1){ /* "Récolte du jour" */
+    -webkit-flex: 0 0 4vh;
+    flex: 0 0 4vh;
+}
+
+#v-category_name {
+    display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row nowrap;
+	flex-flow: row nowrap;
+	-webkit-justify-content: space-between;
+	justify-content:space-between;
+}
+
+#v-category_name h3 {
+    -webkit-flex: 0 0 31%;
+    flex: 0 0 31%;
+    
+    margin-bottom: 1.5vh;
+}
+
+#v-results { /* wrapper results */
+    display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row nowrap;
+	flex-flow: row nowrap;
+	-webkit-justify-content: space-between;
+    justify-content:space-between;
+
+    width: 100%;
+}
+
+#v-results #v-cat-knowledge, #v-cat-music, #v-cat-entertainment { /* 3 categories */
+    width: 31%; /* flex : 0 0 31%; isn't working*/
+    
+    display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: column nowrap;
+	flex-flow: column nowrap;
+}
+
+/******************************************* Gardeners */
+#v-gardeners {
+   margin-top: 6vh;
+   display: none; /* hide by default */
+}
+
+#v-gardeners div {
+    display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-justify-content: space-between;
+    justify-content:space-between;
+    margin-top: 1.5vh;
+}
+
+#v-gardeners div a {
+    -webkit-flex: 0 0 31%;
+    flex: 0 0 31%;
+    
+    font-family: 'quebeclight';
+    font-size: 1em;
+    margin-top: 1em;
+}
+
+/********************************************* RESEARCH ITEMS */
+
+#v h2 { /* BIG Title */
+    font-family: 'faunetext_regular';
+    font-size: 1.7em;
+    text-transform: uppercase;
+    color: #142585;
+    margin-bottom: 2vh;
+}
+
+#v h3 { /* MEDIUM TITRE */
+    font-family: 'quebeclight_italic';
+    text-transform: uppercase;
+    color: #142585;
+}
+
+.v-item {
+    width: 100%;
+    margin-top: 4vh;
+    cursor: pointer;
+}
+
+.v-item hr{
+    position: relative;
+    margin-top: -1.5%;
+    width: 99%;
+    float: right;
+    height: 1px;
+    background-color: #142585;
+    position: relative;
+    z-index: 1;
+}
+
+.v-duration {
+    background-color: white;
+    display: inline-block;
+    padding-right: 2%;
+    padding-bottom: 0.5%;
+    font-family: 'quebeclight_italic';
+    font-size: 0.8em;
+    position: relative;
+    z-index: 10;
+}
+
+.v-item img {
+    float: right;
+    position: relative;
+    margin-top: -3%;
+    height: 2.6vh;
+    z-index:1;
+}
+
+.v-title {
+    font-family: 'quebecsemibold';
+    font-size: 1em;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-top: 0.5em;
+    padding-bottom: 0.5em;
+    color: black;
+}
+
+.v-author {
+    font-family: 'quebeclight';
+    font-size: 1em;  
+}
+
+
+/***********************************************************************************/
+/******************************************************** BLOC 3 - CONTENT INFO ***/
+/***********************************************************************************/
+
+#v-info_content {
+    width: 100vh;
+    margin-bottom: 5.5vh;
+
+    display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-justify-content: space-between;
+	justify-content:space-between;
+}
+ 
+#v-info_1{
+    -webkit-flex: 0 0 100%;
+	flex: 0 0 100%;
+}
+
+#v-info_2{
+    -webkit-flex: 0 0 78%;
+	flex: 0 0 78%;
+}
+
+#v-info_3 {
+    -webkit-flex: 0 0 22%;
+    flex: 0 0 22%;
+    display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+}
+
+/******************* Detail */
+
+#v-content_category {
+    display: inline-block;
+    margin-right: 0.5vw;
+    font-family: 'quebecbold', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    text-decoration: underline;
+    color: #142585;
+}
+
+#v-content_subcategory {
+    display: inline-block;
+    font-family: 'quebecregular', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    text-decoration: underline;
+    color: #142585;
+}
+
+#v-state {
+    display: block;
+    float: right;
+    position: relative;
+    margin-top: -1.2%;
+    width: 8%;
+}
+
+#v-background_bar {
+    border: 0.5px solid #142585;
+}
+
+#v-hydratation_bar {
+    position: relative;
+    margin-top: -1%;
+    border: 1.5px solid #142585;
+    float: right;
+    
+}
+
+#v-content_title {
+    display: inline-block;
+    font-family: 'quebecbold', sans-serif;
+    font-size: 1.7em;
+    margin-top: 0.4em;
+}
+
+#v-separator {
+    display: inline-block;
+    font-family: 'quebeclight', sans-serif;
+    font-size: 1.3em;
+}
+
+#v-content_album {
+    display: inline-block;
+    font-family: 'quebeclight', sans-serif;
+    font-size: 1.2em;
+}
+
+#v-content_author {
+    font-family: 'quebecregular', sans-serif;
+    font-size: 1.4em;
+    margin-top: 0.5em;
+}
+
+#v-drops_plus {
+   width: 26%;
+   margin-right: 5%;
+   margin-bottom: 3%;
+}
+
+#v-info_3 div {
+    width : 100%;
+
+    display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row nowrap;
+	flex-flow: row nowrap;
+	-webkit-justify-content: flex-end;
+	justify-content:flex-end;
+}
+
+#v-share {
+   padding-bottom: 0.6em;
+   padding-top: 0.4em;
+   padding-left: 0.9em;
+   padding-right: 0.9em;
+   margin-left: 3%;
+}
+
+#v-bucket_add {
+   width: 18%;
+   border: 1px solid #142585;
+   padding: 0.5em;
+}
+
+
+
+
+
+/***********************************************************************************/
+/******************************************************** BLOC 4 - CONTENT MEDIA ***/
+/***********************************************************************************/
+
+.v-quality_choice {
+    display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    height: 4.3vh;
+    margin-bottom: 1vh;
+}
+
+
+.v-quality_choice button {
+    color: #FF9F9F !important; /* overwrite button */
+    border: 1px solid #FF9F9F !important; /* overwrite button */
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-right: 0.5em;
+    
+}
+
+.v-quality_choice img {
+   width: 7vh;
+}
+
+
+/*********************** Contenu (figure + iframe) */
+#v-content {
+    width: 130vh;
+    display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-justify-content: space-between;
+	justify-content:space-between;
+}
+
+#v-content figure {
+    -webkit-flex: 0 1 30%;
+    flex: 0 1 30%;
+    display: none;
+}
+
+#v-content figure img {
+    width: 100%;
+}
+
+#v-content div {
+    -webkit-flex: 0 0 100%;
+    flex: 0 0 100%;
+    background-color: rgba(229, 229, 229, 0.7);
+}
+
+#v-content div img {
+    width: 100%;
+    display: none;
+}
+
+#v-content div audio {
+    width: 100%;
+    position: relative;
+    margin-top: -5%;
+}
+
+#v-content div video {
+    width: 100%;
+    margin-bottom: 2vh;
+    
+}
+
+#v-content div p {
+    width: 100%;
+    margin-top: 27vh;
+    margin-bottom: 27vh;
+    margin-left: 13vw;
+    
+    font-family: 'quebecregular', sans-serif;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    color: #FF9F9F;
+}
+
+/***********************************************************************************/
+/******************************************************** BLOC 5 - PROFILE Info ***/
+/***********************************************************************************/
+
+#v-info_profile {
+    width: 150vh;
+    margin-top: 10vh;
+    margin-bottom: 11vh;
+
+    display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-justify-content: space-between;
+	justify-content:space-between;
+}
+
+
+#v-info_profile div:nth-child(1) {
+    -webkit-flex: 0 1 45%;
+    flex: 0 1 45%;
+ }
+
+ #v-info_profile div:nth-child(2) {
+    -webkit-flex: 0 1 30%;
+    flex: 0 1 30%;
+ }
+
+#v-profile_author {
+    display: inline-block;
+    font-family: 'quebecbold', sans-serif;
+    font-size: 1.7em;
+    margin-top: 0.2em;
+}
+
+
+#v-content_year {
+    display: inline-block;
+    font-family: 'quebeclight', sans-serif;
+    font-size: 1.2em;
+}
+
+#v-info_profile button {
+    padding-top: 0.6em;
+    padding-bottom: 0.8em;
+    padding-left: 0.9em;
+    padding-right: 0.9em;
+    float: right;
+}
+
+#v-info_profile button img {
+    margin-left: 0.5em;
+    width: 6%;
+}
+
+
+/***********************************************************************************/
+/***************************************************** BLOC 6 - PROFILE Content ***/
+/***********************************************************************************/
+
+#v-content_profile {
+    width: 150vh;
+
+    display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-justify-content: space-between;
+	justify-content:space-between;
+}
+
+/****************** profile bar*/
+
+#v-profile_bar {
+    -webkit-flex: 0 1 30%;
+    flex: 0 1 30%;
+}
+
+
+#v-profile_bar figure {
+    width: 100%;
+    margin-bottom: 2vh;
+}
+
+#v-profile_bar figure img {
+    width: 100%;
+}
+
+
+#v-musician_album {
+    display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: column nowrap;
+	flex-flow: column nowrap;
+}
+
+#v-musician_album h3 {
+    margin-bottom: 1vh;
+}
+
+
+#v-musician_album div {
+    margin-bottom: 2.3vh;
+}
+
+/************************ Profile grid */
+
+
+#v-profile_grid {
+    -webkit-flex: 0 0 67%;
+    flex: 0 0 67%;
+
+    display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-justify-content: space-between;
+	justify-content:space-between;
+}
+
+#v-profile_grid div {
+    width: 48%; /* Bloc width */
+    margin-top: 0;
+}
+
+
+/***********************************************************************************/
+/***************************************************** BLOC 7 - Import ***/
+/***********************************************************************************/
+
+#v-import {
+    margin-top: 5vh;
+    margin-left: 5vw;
+    width: 130vh;
+    
+    display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-justify-content: space-between;
+    justify-content:space-between;
+}
+
+
+#v-import #v-import_title {
+    -webkit-flex: 0 0 100%;
+    flex: 0 0 100%;
+    margin-bottom: 10vh;
+}
+
+
+#v-import #v-import_cutting, #v-import_upload {
+    -webkit-flex: 0 0 42%;
+    flex: 0 0 42%;  
+
+    display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+
+#v-import p{
+    display: inline-block;
+}
+
+
+#v-import div h2{
+    align-self: flex-start;
+   margin-bottom: 4vh;
+}
+
+
+#v-import figure  {
+    width: 100%;
+    height: 26vh;
+    border: #142585 1px solid;
+    display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row nowrap;
+	flex-flow: row nowrap;
+	-webkit-justify-content: center;
+    justify-content:center;
+    
+    margin-bottom: 3vh;
+}
+
+
+#v-import button {
+    padding-top: 0.6em;
+    padding-bottom: 0.7em;
+    padding-left: 0.9em;
+    padding-right: 0.9em;
+}
+
+
+.v-background_bar {
+    width: 95%;
+    height: 1.5vh;
+    background-color: #1425852d;
+}
+
+.v-background_bar {
+    width: 95%;
+    height: 1.5vh;
+    background-color: #1425852d;
+}
+
+.v-progress_bar {
+    width: 50%;
+    float: right;
+    height: 1.5vh;
+    background-color: #142585;
+}
+
+#v-import p {
+    font-family: 'quebecsemibold';
+    font-size: 0.9em;
+    margin-bottom: 0.7em;
+}
+
+.v-left_number {
+    margin-left: 0.7em;
+}
+
+/************************** Cutting */
+
+#v-cutting_quota {
+    width: 100%;
+    margin-bottom: 4vh;
+
+    display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-justify-content: space-between;
+    justify-content:space-between;
+}
+
+
+#v-cutting_quota div {
+    -webkit-flex: 0 0 47%;
+    flex: 0 0 47%;
+}
+
+/***************************** Upload ***/
+
+
+#v-plant_quota {
+    width: 100%;
+    margin-bottom: 4vh;
+}
+
+

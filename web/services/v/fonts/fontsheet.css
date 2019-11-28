@@ -1,0 +1,141 @@
+
+
+@font-face {
+    font-family: 'faunetext_bold';
+    src: url('faune-text_bold-webfont.woff2') format('woff2'),
+         url('faune-text_bold-webfont.woff') format('woff'),
+         url('faune-text_bold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'faunetext_italic';
+    src: url('faune-text_italic-webfont.woff2') format('woff2'),
+         url('faune-text_italic-webfont.woff') format('woff'),
+         url('faune-text_italic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'faunetext_regular';
+    src: url('faune-text_regular-webfont.woff2') format('woff2'),
+         url('faune-text_regular-webfont.woff') format('woff'),
+         url('faune-text_regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'quebecbold';
+    src: url('quebec-bold-webfont.woff2') format('woff2'),
+         url('quebec-bold-webfont.woff') format('woff'),
+         url('quebec-bold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'quebecbold_italic';
+    src: url('quebec-bolditalic-webfont.woff2') format('woff2'),
+         url('quebec-bolditalic-webfont.woff') format('woff'),
+         url('quebec-bolditalic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'quebecitalic';
+    src: url('quebec-italic-webfont.woff2') format('woff2'),
+         url('quebec-italic-webfont.woff') format('woff'),
+         url('quebec-italic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'quebeclight';
+    src: url('quebec-light-webfont.woff2') format('woff2'),
+         url('quebec-light-webfont.woff') format('woff'),
+         url('quebec-light-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'quebeclight_italic';
+    src: url('quebec-lightitalic-webfont.woff2') format('woff2'),
+         url('quebec-lightitalic-webfont.woff') format('woff'),
+         url('quebec-lightitalic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'quebecregular';
+    src: url('quebec-regular-webfont.woff2') format('woff2'),
+         url('quebec-regular-webfont.woff') format('woff'),
+         url('quebec-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'quebecsemibold';
+    src: url('quebec-semibold-webfont.woff2') format('woff2'),
+         url('quebec-semibold-webfont.woff') format('woff'),
+         url('quebec-semibold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'quebecsemibold_italic';
+    src: url('quebec-semibolditalic-webfont.woff2') format('woff2'),
+         url('quebec-semibolditalic-webfont.woff') format('woff'),
+         url('quebec-semibolditalic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
