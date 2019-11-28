@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+  <sites>
+      <site id="0">
+          <nom>Le Monde</nom>
+          <description>actualité française et régionale</description>
+          <idéologie>centre gauche</idéologie>
+          <adresseweb>https://www.lemonde.fr </adresseweb>
+          <propriétaire>Xavier Niel</propriétaire>
+          <catégorie>actu international</catégorie>
+          <rss></rss>
+      </site>
+      <site id="2">
+          <nom>Étapes</nom>
+          <description>revue bimestrielle française du graphisme, du design, de l'image et de la création</description>
+          <idéologie>inconnue</idéologie>
+          <adresseweb>https://etapes.com </adresseweb>
+          <propriétaire>Les éditions Pyramyd</propriétaire>
+          <catégorie>design</catégorie>
+          <rss></rss>
+      </site>
+      <site id="3">
+          <nom>L'équipe</nom>
+          <description>Le meilleur de l'actualité sportive</description>
+          <idéologie>inconnue</idéologie>
+          <adresseweb>https://www.lequipe.fr </adresseweb>
+          <propriétaire>Groupe Amaury</propriétaire>
+          <catégorie>sport</catégorie>
+          <rss>feed:https://www.lequipe.fr/rss/flashlequipe_podcast.xml</rss>
+      </site>
+      <site id="4">
+          <nom>L'AFP</nom>
+          <description>Agence de presseet généraliste chargée de collecter, vérifier, recouper et diffuser l'information, sous une forme brut</description>
+          <idéologie>Neutre</idéologie>
+          <adresseweb>https://www.afp.com</adresseweb>
+          <propriétaire>Indépendant</propriétaire>
+          <catégorie>actu international</catégorie>
+      </site>
+      <site id="5">
+          <nom>L'Obs</nom>
+          <description>magazine d'actualité hebdomadaire français</description>
+          <idéologie>gauche</idéologie>
+          <adresseweb>https://www.nouvelobs.com</adresseweb>
+          <propriétaire>Xavier Niel</propriétaire>
+          <catégorie>actu</catégorie>
+      </site>
+      <site id="6">
+          <nom>Le progrès</nom>
+          <description>Journal régional français, diffusé dans le Rhône, l'Ain, le Nord-Isère, la Loire, la Haute-Loire et le Jura.</description>
+          <idéologie>droite modérée</idéologie>
+          <adresseweb>https://www.leprogres.fr</adresseweb>
+          <propriétaire>Crédit mutuel</propriétaire>
+          <catégorie>actu</catégorie>
+      </site>
+      <site id="7">
+          <nom>Télérama</nom>
+          <description>Télérama est un magazine culturel français à parution hebdomadaire.</description>
+          <idéologie>Inconnue</idéologie>
+          <adresseweb>https://www.lemonde.fr </adresseweb>
+          <propriétaire>Xavier Niel</propriétaire>
+          <catégorie>culture</catégorie>
+      </site>
+      <site id="8">
+          <nom>Ouest France</nom>
+          <description>Ouest-France est un quotidien régional français, édité à Rennes et vendu dans les régions de l'ouest de la France</description>
+          <idéologie>centre gauche</idéologie>
+          <adresseweb>https://www.lemonde.fr </adresseweb>
+          <propriétaire>Groupe Ouest France</propriétaire>
+          <catégorie>actu</catégorie>
+      </site>
+      <site id="9">
+          <nom>Journal du Design</nom>
+          <description>actualité française et régionale</description>
+          <idéologie>Inconnuee</idéologie>
+          <adresseweb>www.journal-du-design.fr</adresseweb>
+          <propriétaire>Inconnue</propriétaire>
+          <catégorie>Desing</catégorie>
+      </site>
+  </sites>

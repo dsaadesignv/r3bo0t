@@ -1,0 +1,99 @@
+html{
+  height: 100vh;
+  width: 100vw;
+}
+
+body{
+  height: 100%;
+  display: flex;
+}
+
+header{
+  position: fixed;
+}
+
+.page2{
+  height: 68.2%;
+  display: flex;
+  align-self: flex-end;
+}
+
+.a-recolte{
+  width: 22vw;
+  height: 100%;
+  overflow: hidden;
+}
+
+.a-recolte img{
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+}
+
+#a-1{
+  position: relative;
+  z-index: -1;
+  left: -2%;
+}
+
+.vert img{
+    background-color: black;
+    background-image: url('../img/a-point-n.png');
+}
+
+.vert{
+  color: white;
+}
+
+.vert a {
+    border: solid 3px white;
+}
+
+.noir a {
+    border: solid 3px black;
+}
+
+.noir img{
+  background-color: #49DA69;
+  background-image: url('../img/a-point.png');
+}
+
+.a-recolte img{
+  z-index: 0;
+}
+
+.a-recolte hgroup{
+  position: relative;
+  top: -67%;
+  text-align: center;
+  z-index: 2;
+  width: 73%;
+  height: 34%;
+}
+
+.a-recolte hgroup a {
+  margin-top: 5%;
+  width: 41%;
+  display: inline-block;
+}
+
+.a-recolte h2{
+  font-family: 'Faune-Text_Bold';
+  font-size: 2em;
+  letter-spacing: 0.1em;
+  margin-bottom: 2%;
+}
+
+.a-recolte i{
+  font-family: 'Faune-Text_Bold';
+}
+
+
+#plus{
+  font-size: 8em;
+}
+
+
+.a-titre-niv1{
+  width: 46%;
+}
