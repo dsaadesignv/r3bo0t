@@ -11,6 +11,9 @@ $(function(){
     }).fadeIn();
   });
 
+
+
+
   // Recherche :
   // Par défaut, cacher les élements de la liste
   $('ul').hide();
@@ -44,4 +47,5 @@ $(function(){
         $('ul>li').show().not(':contains(' + input_content  + ')').hide();
     }
   });
+
 });
