@@ -112,7 +112,7 @@ io.on('connection', function(socket) {
 
 
 server.listen(CONFIG.site.port, function(){
-  console.log('>> reb00t est lancé sur le port :'+CONFIG.site.port);
+  console.log('>> accédez à reb00t à l\'adresse [ localhost:'+CONFIG.site.port+' ]');
 });
 
 

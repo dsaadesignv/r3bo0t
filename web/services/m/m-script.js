@@ -1,0 +1,67 @@
+$(function () {
+	$('.goto-m-hub').on('click', function(){
+		$('.m-page').hide();  // 1. On cache tous les écrans
+		$('.m-hub').show(); // 2. Puis on affiche l'écran
+	});
+	$('.goto-m-chat').on('click', function(){
+		$('.m-page').hide();  // 1. On cache tous les écrans
+		$('.m-chatContainer').show(); // 2. Puis on affiche l'écran
+	});
+});
+
+$(function () {
+  $('.goto-m-smileyDrawer').on('click', function(){
+  	$('.m-pageDrawer').hide();  // 1. On cache tous les écrans
+  	$('.m-drawerSmiley').show(); // 2. Puis on affiche l'écran
+  });
+//	toggleDrawer();
+});
+
+$("#smiley").click(function(){
+    $('#text').val($('#text').val() + $('#smiley').html());
+  });
+
+function toggleNav() {
+    var element = document.getElementById("fenetre");
+    if (element.style.height == "428.44px") {
+        element.style.height = "0px";
+    } else {
+        element.style.height = "428.44px";
+    }
+
+		var element = document.getElementById("fenetreChat");
+		if (element.style.height == "428.44px") {
+				element.style.height = "0px";
+		} else {
+				element.style.height = "428.44px";
+		}
+}
+
+function toggleDrawer() {
+    var element = document.getElementById("m-drawerOpened");
+    if (element.style.height == "95.5%") {
+        element.style.height = "0%";
+    } else {
+        element.style.height = "95.5%";
+    }
+
+		var element = document.getElementById("m-drawerChatOpened");
+		if (element.style.height == "75%") {
+				element.style.height = "3.6%";
+		} else {
+				element.style.height = "75%";
+		}
+}
+
+/* Set the width of the side navigation to 250px */
+function openNav() {
+	document.getElementById("fenetreChat").style.height = "428.44px";
+
+}
+
+
+
+/* Set the width of the side navigation to 0 */
+/*function closeNav() {
+  document.getElementById("fenetre").style.height = "0";
+}*/

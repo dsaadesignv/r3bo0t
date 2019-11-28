@@ -1,0 +1,151 @@
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>R.O.O.T.S</title>
+    <link href="services/m/m-style2.min.css" rel="stylesheet" type="text/css">
+    <script src="services/m/jquery-3.4.1.min.js"> </script>
+    <script src="services/m/m-script.js"></script>
+    <script src="services/m/m-scriptio.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script> var socket = io(); </script>
+  </head>
+  <body>
+    <footer class="m-footer">
+      <div class="m-divBlock">
+      <div class="m-tab">
+        <button id="buttonChat" class="goto-m-chat" onclick="openNav()"></button>
+        <button id="buttonHub" class="tablinks" onclick="toggleNav()"></button>
+      </div>
+      <div class="m-content" data-current-page>
+      <div class="m-hub m-page" id="fenetre">
+        <div class="m-header">
+        <form action="">
+          <input id="text" autocomplete="off" placeholder="Recherchez une pousse ..."/>
+        </form>
+        <img id="linkFlowerHub" src="services/m/link-flower.svg" alt="Lien vers notre fleur">
+      </div>
+      <div class="m-listContainer">
+        <div class="m-lineGroup" id="lineGrid" >
+          <div class="leftLineButton"> </div>
+          <div class="lineGroupFlowers" id="lineGridFlowers">
+            <div class="m-userbox" id="flwr1">
+              <div class="m-userboxFlwr"> </div>
+              <div class="m-userboxName">=daxfire</div>
+            </div>
+            <div class="m-userbox" id="flwr2">
+              <div class="m-userboxFlwr"> </div>
+              <div class="m-userboxName">=dana.void</div>
+            </div>
+            <div class="m-userbox" id="flwr3">
+              <div class="m-userboxFlwr"> </div>
+              <div class="m-userboxName">=MargotDelFuego</div>
+            </div>
+            <div class="m-userbox" id="flwr4">
+              <div class="m-userboxFlwr"> </div>
+              <div class="m-userboxName"> </div>
+            </div>
+            <div class="m-userbox" id="flwr5">
+              <div class="m-userboxFlwr"> </div>
+              <div class="m-userboxName"> </div>
+            </div>
+          </div>
+          <div class="rightLineButton"> </div>
+        </div>
+        <div class="m-lineConnected" id="lineGrid">
+          <div class="leftLineButton"> </div>
+          <div class="lineConnectedFlowers" id="lineGridFlowers">
+            <div class="m-userbox" id="flwr1">
+              <div class="m-userboxFlwr"> </div>
+              <div class="m-userboxName"> </div>
+            </div>
+            <div class="m-userbox" id="flwr2">
+              <div class="m-userboxFlwr"> </div>
+              <div class="m-userboxName"> </div>
+            </div>
+            <div class="m-userbox" id="flwr3">
+              <div class="m-userboxFlwr"> </div>
+              <div class="m-userboxName"> </div>
+            </div>
+            <div class="m-userbox" id="flwr4">
+              <div class="m-userboxFlwr"> </div>
+              <div class="m-userboxName"> </div>
+            </div>
+            <div class="m-userbox" id="flwr5">
+              <div class="m-userboxFlwr"> </div>
+              <div class="m-userboxName"> </div>
+            </div>
+          </div>
+          <div class="rightLineButton"> </div>
+        </div>
+        <div class="m-friendList" id="lineGrid">
+          <div class="leftLineButton"> </div>
+          <div class="lineFriendFlowers" id="lineGridFlowers">
+            <div class="m-userbox" id="flwr1">
+              <div class="m-userboxFlwr"> </div>
+              <div class="m-userboxName"> </div>
+            </div>
+            <div class="m-userbox" id="flwr2">
+              <div class="m-userboxFlwr"> </div>
+              <div class="m-userboxName"> </div>
+            </div>
+            <div class="m-userbox" id="flwr3">
+              <div class="m-userboxFlwr"> </div>
+              <div class="m-userboxName"> </div>
+            </div>
+            <div class="m-userbox" id="flwr4">
+              <div class="m-userboxFlwr"> </div>
+              <div class="m-userboxName"> </div>
+            </div>
+            <div class="m-userbox" id="flwr5">
+              <div class="m-userboxFlwr"> </div>
+              <div class="m-userboxName"> </div>
+            </div>
+          </div>
+          <div class="rightLineButton"> </div>
+        </div>
+      </div>
+    </div>
+
+
+      <div class="m-chatContainer m-page" id="fenetreChat">
+        <div class="m-chatHeader">
+          <img class="goto-m-hub" id="m-retour" src="services/m/Pousse-retour.svg" alt="Retour au hub">
+          <h3 align="center" id="m-usernametop">=daxfire</h3>
+        </div>
+        <div class="m-chatMessages" id="messages">
+          <div class="m-usernames"></div>
+          <div class="m-messages"></div>
+        </div>
+        <div class="m-drawerChat" id="m-drawerChatOpened">
+        <div class="m-drawerClosed">
+          <div class="m-btn1 goto-m-smileyDrawer" alt="Smiley">
+          </div>
+          <div class="m-btn2"> </div>
+          <div class="m-btn3"> </div>
+          <div class="m-toggleDrawer" onclick="toggleDrawer()"></div>
+          <div class="m-btn4"> </div>
+          <div class="m-btn5"> </div>
+          <div class="m-btn6"> </div>
+        </div>
+        <div class="m-drawerOpened" id="m-drawerOpened">
+          <div class="m-contentDrawer" data-current-page>
+          <div class="m-drawerSmiley m-pageDrawer" id="drawerScreen">
+            <div class="m-drawerSmileyScreen">
+              <a id="smiley" title="smiley" href="#"> &#129300; </a>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+        <div class="m-chatFooter">
+          <form action="">
+          <input id="text" /><button></button>
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    </footer>
+</body>
+</html>

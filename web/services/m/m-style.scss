@@ -1,0 +1,55 @@
+@font-face {
+	font-family: "Grotesk";
+	src: url('HKGrotesk-Medium.otf');
+}
+@font-face {
+	font-family: "Grotesk";
+	font-style: italic;
+	src: url('HKGrotesk-MediumItalic.otf');
+}
+@font-face {
+	font-family: "Grotesk";
+	font-weight: bold;
+	src: url('HKGrotesk-Bold.otf');
+}
+/*.m-parent {
+display: grid;
+grid-template-columns: repeat(12, 1fr);
+grid-template-rows: repeat(12, 1fr);
+grid-column-gap: 12px;
+grid-row-gap: 12px;
+}*/
+
+.m-chatContainer {
+/*	grid-area: 7 / 10 / 13 / 13;*/
+	width: 483px;
+	height: 546px;
+	border: solid;
+	border-color: black;
+	font-family: "Grotesk";
+}
+
+.m-chatContainer > .m-chatHeader {
+	width: 100%;
+	background: white;
+}
+
+#m-usernametop {
+		font-weight: bold;
+}
+
+.m-chatContainer > .m-chatMessages{
+	height: 82%;
+	overflow-y: scroll;
+}
+
+.m-chatContainer > .m-chatBottom form input[type="text"]{
+	width: 90%;
+	padding: 3px;
+	padding-left: 1em;
+	margin: 5px;
+	height: 20px;
+	background: #F5F1F0;
+	border: solid 1px;
+	align: center;
+}

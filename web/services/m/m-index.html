@@ -1,0 +1,27 @@
+<!--<?php
+On chope le username
+$user = $_GET['u'];
+?>-->
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>R.O.O.T.S</title>
+    <link href="m-style.min.css" rel="stylesheet" type="text/css">
+    <script src="jquery-3.4.1.min.js"> </script>
+  </head>
+  <body>
+<!--      <div class="m-parent">-->
+      <div class="m-chatContainer">
+        <div class="m-chatHeader">
+          <h3 align="center" id="m-usernametop">=daxfire</h3>   <!--<?php echo ucwords($user); ?> Code pour le username php-->
+        </div>
+        <div class="m-chatMessages"></div>
+        <div class="m-chatBottom">
+          <form action='#' onSubmit="return false;" id="m-chatForm">
+            <input type="hidden" id="m-name"> <!--value="<?php echo $user; ?>"-->
+            <input type="text" name="text" id="m-text" value="" placeholder="Envoyez une pousse ...">
+        </div>
+      </div>
+<!--      </div>-->
+  </body>
+</html>
