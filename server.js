@@ -27,7 +27,7 @@ let DB_USERS = require('./database/users.json');
 
 
 express.set( 'view engine', 'ejs' );
-
+/*
 express.use(function (req, res, next) {
   console.log(req.path);
   if (req.path.startsWith('/login')) {
@@ -40,7 +40,7 @@ express.use(function (req, res, next) {
     }
   }
 });
-
+*/
 express.get('/login/:username/:password', function(req, res) {
   var username = req.params.username;
   var password = req.params.password;
