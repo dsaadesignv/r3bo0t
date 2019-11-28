@@ -9,20 +9,55 @@ var serveStatic       = require('serve-static');
 var fs                = require("fs");
 var bodyParser        = require('body-parser');
 var url               = require('url');
-
-let DB_T = require('./database/t.json');
-
-console.log(DB_T);
+var cookieParser      = require('cookie-parser');
 
 
-
-express.use( serveStatic( __dirname + '/web/' ) );
+express.use(serveStatic( __dirname + '/web/' ));
 express.use(require('express-favicon-short-circuit'));
-express.use( bodyParser.urlencoded({
+express.use(cookieParser());
+express.use(bodyParser.urlencoded({
   extended: true
 }));
 
+
+let DB_T = require('./database/t.json');
+let DB_USERS = require('./database/users.json');
+
+
+
+
 express.set( 'view engine', 'ejs' );
+
+express.use(function (req, res, next) {
+  console.log(req.path);
+  if (req.path.startsWith('/login')) {
+    next();
+  } else {
+    if (req.cookies['username'] == undefined) {
+      res.render( __dirname + '/web/resources/forbidden', {});
+    } else {
+      next();
+    }
+  }
+});
+
+express.get('/login/:username/:password', function(req, res) {
+  var username = req.params.username;
+  var password = req.params.password;
+
+  res.cookie('username', username, { maxAge: 900000, httpOnly: true });
+
+  res.redirect('/');
+});
+
+express.get('/', function (req, res) {
+  console.log('>> loading jardin');
+  console.log(req.cookies['username']);
+
+  res.render( __dirname + '/web/services/n/n', {
+    BASEURL             : CONFIG.site.baseURL
+  });
+});
 
 express.get('/:service/', function (req, res) {
   var service = req.params.service;
@@ -39,19 +74,28 @@ express.get('/:service/', function (req, res) {
 
 /////////////////////////
 
-io.on('connection', function(socket){
+io.on('connection', function(socket) {
   console.log('New socket connected');
 //  io.sockets.emit('connectedId',data);
-  /*
-  socket.on('connectedId', function(data) {
-    console.log('connectedId : '+data.id);
 
+  socket.emit('connection/handshake', {});
+
+  socket.on('connection/handshake', function(data) {
+    console.log(data);
+
+//    console.log('connectedId : '+data.id);
+
+    /*
     socket.id = data.id;
     socket.join('/'+socket.id);
+    */
 
-    io.sockets.emit('connectedId',data);
+  //  io.sockets.emit('connectedId',data);
+
+    // addUser();
+
+    io.sockets.emit('users/update', { DB_USERS });
 	});
-	*/
 
 	socket.on('showSlide', function(data) {
     io.sockets.emit('showSlide',data);
@@ -63,13 +107,12 @@ io.on('connection', function(socket){
 	});
 
   socket.on('disconnect', function(){
-    clearTimeout(heartBeat);
   });
 });
 
 
 server.listen(CONFIG.site.port, function(){
-  console.log('>> reb00t est lancé sur *:'+CONFIG.site.port);
+  console.log('>> reb00t est lancé sur le port :'+CONFIG.site.port);
 });
 
 

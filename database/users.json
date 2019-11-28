@@ -1,0 +1,13 @@
+{
+  "users": [
+    {
+      "username": "hi",
+      "status": "online",
+      "following": [
+        { "display": "*venise", "type": "tag" },
+        { "display": "*dsaa", "type": "tag" },
+        { "display": "=daxfire", "type": "user" }
+      ]
+    }
+  ]
+}
