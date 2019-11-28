@@ -1,0 +1,628 @@
+@font-face {
+ font-family: "Quebec";
+ src: url("/fonts/quebec.otf") format("otf"),
+
+}
+
+::selection {background: lightgrey;}
+
+select {
+width: 100%;
+padding: none;
+color: white;
+background-color: black;
+border: 1px solid darkgrey;
+display: inline-block;
+}
+form select:hover {
+  background-color: lightgrey;
+}
+
+textarea:focus {
+    outline: none !important;
+  }
+
+input:focus {
+  outline: none !important;
+}
+
+/*
+.accordion-group:nth-child(1) .u-base-line-gauche {
+  width:30%;
+}
+.accordion-group:nth-child(1) .u-base-line-droite {
+  width:70%;
+}
+*/
+
+.u-base-line-0 {
+  border: 1.5px solid white;
+  width: 20%;
+  margin-left: 0%;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.u-base-line-1 {
+  border: 1.5px solid white;
+  width: 25%;
+  margin-left: 0%;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.u-base-line-2 {
+  border: 1.5px solid white;
+  width: 30%;
+  margin-left: 0%;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.u-base-line-3 {
+  border: 1.5px solid white;
+  width: 35%;
+  margin-left: 0%;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.u-base-line-4 {
+  border: 1.5px solid white;
+  width: 40%;
+  margin-left: 0%;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.u-base-line-0-0 {
+  border: 1.5px solid white;
+  width: 70%;
+  margin-left: 5%;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.u-base-line-1-1 {
+  border: 1.5px solid white;
+  width: 65%;
+  margin-left: 5%;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.u-base-line-2-2 {
+  border: 1.5px solid white;
+  width: 60%;
+  margin-left: 5%;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.u-base-line-3-3 {
+  border: 1.5px solid white;
+  width: 55%;
+  margin-left: 5%;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.u-base-line-4-4 {
+  border: 1.5px solid white;
+  width: 50%;
+  margin-left: 5%;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+
+/* METEO */
+
+#u-header-line {
+  width:99%;
+  height: 1px;
+  background: white;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+}
+
+.u-titre {
+  font-family: "Quebec", sans-serif;
+  font-weight: bold;
+  font-size: 3.5em;
+  color: white;
+  line-height: 1;
+  display: inline-block;
+  vertical-align: middle;
+  text-transform: uppercase;
+}
+
+.u-temp {
+  font-family: "Quebec", sans-serif;
+  font-weight: bold;
+  font-size: 5em;
+  color: white;
+  margin-top: 3%;
+  display: inline-block;
+}
+
+.u-corps {
+  font-family: "Quebec", sans-serif;
+  font-weight: lighter;
+  font-size: 1.2em;
+  color: white;
+  margin-top: 0.5%;
+}
+
+#u-api-block {
+  display: inline-block;
+}
+
+#u-api-condition {
+  margin-top: -2.2%;
+}
+
+#u-api-date {
+  margin-top: 0.5%;
+}
+
+.u-button {
+  margin-left: 2%;
+  width: 100%;
+  background-color: black;
+  border: 1px solid #404040;
+  margin-top: 2%;
+  margin-bottom: 1%;
+  padding: 0.5%;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+ }
+
+#u-corps {
+  display: inline-block;
+}
+
+#u-title-line {
+  width:25%;
+  height: 1px;
+  background: white;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 1%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#u-weather {
+  width: 40px;
+  height: 40px;
+  background-image: url("image/B soleil.png");
+  background-size: contain;
+  background-position: center;
+  margin-top: 3%;
+  display: inline-block;
+}
+
+#u-api-humidity {
+  display: inline-block;
+}
+
+#u-api-pressure {
+  display: inline-block;
+}
+
+#u-api-wind {
+  display: inline-block;
+}
+
+.u-block {
+  margin-top: 5%;
+  padding-bottom: 5%;
+}
+
+.u-semiblock {
+  margin-left: 10%;
+  display: block;
+}
+
+#u-city {
+  display: inline-block;
+  width: 20%;
+  font-size: 1em;
+  }
+
+#u-ville {
+  width: 100%;
+  height: 1%;
+  padding: 2% 3%;
+  border: 1px solid white;
+  display: inline-block;
+
+}
+
+/* Bloc note */
+
+#u-container-note {
+  display: inline-block;
+  vertical-align: top;
+}
+
+#u-documents {
+  padding: none;
+  cursor: pointer;
+}
+
+#u-doc {
+  width: 50vw;
+  height: 50vh;
+  margin-left: 10vw;
+  font-size: 1em;
+  background-color: black;
+  border: none;
+  color: white;
+  font-family: "Quebec", sans-serif;
+  display: inline-block;
+  resize: none;
+  }
+
+  #u-form {
+    height: 50%;
+    display: inline-block;
+  }
+
+  #u-send {
+    border: 1px solid white;
+    display: inline-block;
+    font-size: 1em;
+    margin-top: 2%;
+    padding-left: 1%;
+
+  }
+
+  #u-container-note-global {
+    display: inline-block;
+  }
+
+  .u-button-two {
+    background-color: black;
+    border: 1px solid #404040;
+    width: auto;
+    margin-top: 2%;
+    margin-bottom: 1%;
+    padding: 1.5%;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+   }
+
+/*Calendrier CSS*/
+
+.cal_calendrier
+{
+    background-color: none;
+    color: none;
+    display: table;
+
+}
+.cal_calendrier th
+{
+    background-color:black;
+    border: 1px solid: #404040;
+    color: white;
+}
+.cal_calendrier td
+{
+    border:none;
+    background-color: none;
+    text-align:center;
+    color: lightgrey;
+}
+
+.cal_calendrier td:hover
+{
+    cursor: pointer;
+}
+
+.cal_aujourdhui td
+{
+    color:white;
+    font-weight: bold;
+}
+.cal_jours_av_ap
+{
+    color:#404040;
+}
+
+#cal_body {
+  width: 100%;
+}
+
+#u-mois {
+  display: block;
+  border: 1px solid #404040;
+}
+
+#u-calendar {
+  display: block;
+}
+
+#u-event {
+  margin-top: 1.5%;
+  height: 6.5vw;
+  width: 12vw;
+  border: 1px solid #404040;
+  color: white;
+  background-color: black;
+  padding-left: 1em;
+  font-size: 1em;
+  font-family: "Quebec", sans-serif;
+  text-align: left;
+  display: inline-block;
+}
+
+#u-square {
+  height: 8vh;
+  width: 8vh;
+  border: 1px solid white;
+  color: white;
+  background-color: black;
+  font-size: 3em;
+  font-family: "Quebec", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  margin-top: 5%;
+}
+
+.plus {
+    vertical-align: middle;
+    text-align: center;
+    margin-top: -15%;
+}
+
+#u-block-three {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 1.5%;
+  padding-top: 1.5%;
+}
+
+#u-container-cal {
+  display: inline-block;
+  margin-left: 23%;
+  width: 50%;
+  height: 50vh;
+  margin-right: 3%;
+  padding-bottom: 1.5%;
+  padding-top: 1.5%;
+}
+
+
+/* Calculatrice */
+
+.u-parent {
+display: grid;
+width: 100%;
+grid-template-columns: repeat(4, 30%);
+grid-template-rows: repeat(6, 16%);
+grid-column-gap: 5px;
+grid-row-gap: 5px;
+}
+
+.u-div1 { grid-area: 6 / 1 / 7 / 5;
+  vertical-align: middle;
+  text-align: center;
+  background-color: white;
+  color: black;
+}
+.u-div2 { grid-area: 5 / 1 / 6 / 2;
+  border: 1px solid #404040;
+  vertical-align: middle;
+  text-align: center;}
+.u-div3 { grid-area: 4 / 1 / 5 / 2;
+  border: 1px solid #404040;
+  vertical-align: middle;
+  text-align: center;}
+.u-div4 { grid-area: 3 / 1 / 4 / 2;
+  border: 1px solid #404040;
+  vertical-align: middle;
+  text-align: center;}
+.u-div5 { grid-area: 2 / 1 / 3 / 2;
+  border: 1px solid #404040;
+  vertical-align: middle;
+  text-align: center;}
+.u-div6 { grid-area: 1 / 1 / 2 / 2;
+  vertical-align: middle;
+  text-align: center;
+  background-color: white;
+  color:black;
+}
+.u-div7 { grid-area: 5 / 2 / 6 / 5;
+  vertical-align: middle;
+  text-align: center;
+  background-color: white;
+  color: black;
+}
+.u-div8 { grid-area: 4 / 2 / 5 / 5;
+  vertical-align: middle;
+  text-align: center;
+  background-color: white;
+  color: black;
+}
+.u-div9 { grid-area: 1 / 2 / 2 / 3;
+  vertical-align: middle;
+  text-align: center;}
+.u-div10 { grid-area: 1 / 3 / 2 / 4;
+  vertical-align: middle;
+  text-align: center; }
+.u-div11 { grid-area: 1 / 4 / 2 / 5;
+  vertical-align: middle;
+  text-align: center;}
+.u-div12 { grid-area: 2 / 2 / 3 / 3;
+  vertical-align: middle;
+  text-align: center;}
+.u-div13 { grid-area: 2 / 3 / 3 / 4;
+  vertical-align: middle;
+  text-align: center;}
+.u-div14 { grid-area: 2 / 4 / 3 / 5;
+  vertical-align: middle;
+  text-align: center;}
+.u-div15 { grid-area: 3 / 2 / 4 / 3;
+  vertical-align: middle;
+  text-align: center;}
+.u-div16 { grid-area: 3 / 3 / 4 / 4;
+  vertical-align: middle;
+  text-align: center;}
+.u-div17 { grid-area: 3 / 4 / 4 / 5;
+  vertical-align: middle;
+  text-align: center;}
+
+#u-container-calculator {
+  width: 50%;
+  height: 54vh;
+  margin: auto;
+  padding-bottom: 1%;
+}
+
+#u-calculator{
+  height: 54vh;
+}
+
+.u-chiffres {
+  background-color: black;
+  border: none;
+  color: white;
+  font-size: 2em !important;
+  font-family: "Quebec", sans-serif;
+  font-weight: bold;
+  vertical-align: middle;
+  text-align: center;
+
+}
+
+.u-operator {
+  background-color: black;
+  border: none;
+  color: white;
+  font-size: 2em !important;
+  font-family: "Quebec", sans-serif;
+  width: 100%;
+  height:100%;
+  font-weight: bold;
+  vertical-align: middle;
+  text-align: center;
+
+}
+
+.u-clear {
+  font-size: 2em !important;
+  font-family: "Quebec", sans-serif;
+  font-weight: bold;
+  vertical-align: middle;
+  text-align: center;
+  color: black;
+  width: 100%;
+  height:100%;
+  background-color: white;
+  border: none;
+}
+
+.u-display {
+  font-size: 2em !important;
+  font-family: "Quebec", sans-serif;
+  font-weight: bold;
+  vertical-align: middle;
+  text-align: center;
+  color: black;
+  width: 100%;
+  height:100%;
+  background-color: white;
+  border: none;
+}
+
+.u-equal {
+  font-size: 2em !important;
+  font-family: "Quebec", sans-serif;
+  font-weight: bold;
+  width: 100%;
+  height:100%;
+  vertical-align: middle;
+  text-align: center;
+  color: black;
+  background-color: white;
+  border: none;
+}
+
+.u-zero {
+  font-size: 2em !important;
+  font-family: "Quebec", sans-serif;
+  font-weight: bold;
+  vertical-align: middle;
+  text-align: center;
+  color: black;
+  width: 100%;
+  height:100%;
+  background-color: white;
+  border: none;
+}
+
+/*Maps*/
+
+.u-map-box {
+  display: inline-block;
+}
+
+#u-map {
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  height: 50vh;
+  background-color: black;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-position: center;
+}
+#u-send-map {
+  border: 1px solid white;
+  display: inline-block;
+  font-size: 1em;
+  margin-top: 2%;
+  padding-left: 1%;
+  outline: none;
+  position: absolute;
+  top: 0%;
+  left: 3%;
+
+}
+.u-button-map {
+  background-color: black;
+  border: 1px solid #404040;
+  width: auto;
+  margin-top: 2%;
+  margin-bottom: 1%;
+  padding: 0.5%;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  position: absolute;
+  top: 10%;
+  left: 3%;
+ }
+
+ .u-button-map:hover {
+   background-color: #404040;
+   border: 1px solid white;
+   color: white;
+   text-align: center;
+   text-decoration: none;
+   cursor: pointer;
+ }
