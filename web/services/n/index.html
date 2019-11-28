@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"> <!-- indique la langue du code -->
+		<title>Navigateur</title>
+		<link rel="stylesheet" type="text/css" href="style/style.css">
+		<link rel="stylesheet" type="text/css" href="style/style2.css">
+		<script src="js/jquery-3.4.1.min.js"> </script>
+		<script src="js/jquery-ui.min.js"> </script>
+		
+		<script src="js/js.js"> </script>
+
+		<link href="https://fonts.googleapis.com/css?family=Fira+Mono&display=swap" rel="stylesheet">
+	</head>
+
+  <body id="n">
+
+    <div id="menu">
+			<div id="retour"> </div>
+			<div id="barrerecherche">
+				<!-- <label for="site-search">Que souhaitez-vous recherchez dans votre jardin ?</label> -->
+				<input type="text" id="site-search" name="recherche" placeholder="Que souhaitez-vous recherchez dans votre jardin ?"/>
+			</div>
+			<div class="space"></div>
+
+			<div class="bouton" id="profil">
+
+				<div class="handler"></div>
+
+				<div id="pageprofil">
+					<table>
+						<caption> Profil : Nanastar </caption>
+							<tr>
+								<td></td>
+								<td class=reponse> Oui / Non	</td>
+						</tr>
+						<tr>
+								<td class=quoiprofil>Navigation privée</td>
+								<td class=reponse>
+									<label class="switch">
+										<input type="checkbox">
+										<span class="slider"></span>
+									</label>
+								</td>
+						</tr>
+						<tr>
+								<td class=quoiprofil>Données de stockage restantes</td>
+								<td class=reponse>325 Mo</td>
+						</tr>
+						<tr>
+								<td class=quoiprofil>Visionnage vidéo restant</td>
+								<td class=reponse>6 minutes</td>
+						</tr>
+					</table>
+
+					<table>
+						<caption class=separation> Favoris</caption>
+						<tr>
+								<td class=picto>=</td>
+								<td class=quoifavoris>Amis :</td>
+								<td class=reponse>DarkJuly</td>
+						</tr>
+						<tr>
+							<td class=picto>+</td>
+							<td class=quoifavoris>Connaissance :</td>
+							<td class=reponse>Le surf</td>
+						</tr>
+						<tr>
+							<td class=picto>°</td>
+							<td class=quoifavoris>Vidéo :</td>
+							<td class=reponse>Astronomie</td>
+						</tr>
+						<tr>
+							<td class=picto>!</td>
+							<td class=quoifavoris>Actualités :</td>
+							<td class=reponse>Grève SNCF</td>
+						</tr>
+					</table>
+
+					<table>
+						<caption class=separation> Paramètres</caption>
+						<tr>
+								<td class=quoiparametre>Niveau luminosité :</td>
+								<td class=reponse>
+										<input type="range" min="0" max="10" step="5"/>
+								</td>
+						</tr>
+						<tr>
+								<td class=quoiparametre>Niveau contraste :</td>
+								<td class=reponse><input type="range" min="0" max="10" step="5"/></td>
+						</tr>
+						<tr>
+								<td class=quoiparametre>Chargement des commentaires :</td>
+								<td class=reponse>
+									<label class="switch">
+										<input type="checkbox">
+										<span class="slider"></span>
+									</label>
+								</td>
+						</tr>
+						<tr>
+								<td class=quoiparametre>Chargement des photos :</td>
+								<td class=reponse>
+									<label class="switch">
+										<input type="checkbox">
+										<span class="slider"></span>
+									</label>
+								</td>
+						</tr>
+						<tr>
+								<td class=quoiparametre>Localisation activée :</td>
+								<td class=reponse>
+									<label class="switch">
+										<input type="checkbox">
+										<span class="slider"></span>
+									</label>
+								</td>
+						</tr>
+						<tr>
+								<td class=quoiparametre>Rafraîchissement des données <br> automatique :</td>
+								<td class=reponse>
+									<label class="switch">
+										<input type="checkbox">
+										<span class="slider"></span>
+									</label>
+								</td>
+						</tr>
+						<tr>
+								<td class=quoiparametre>Ajustement luminosité <br>  pour personnes malvoyantes :</td>
+								<td class=reponse>
+									<label class="switch">
+										<input type="checkbox">
+										<span class="slider"></span>
+									</label>
+								</td>
+						</tr>
+					</table>
+				</div>
+
+			</div>
+			<div class="bouton" id="otherjardin">  </div>
+			<div class="bouton" id="exit"> </div>
+		</div>
+
+		<div id="conteneur">
+			<div class="service" id="serviceA"><div class="box"> A </div></div>
+			<div class="service" id="serviceV"><div class="box"> V </div></div>
+			<div class="service" id="serviceT"><div class="box"> T </div></div>
+			<div class="service" id="serviceJ"><div class="box"> J </div></div>
+			<div class="service" id="serviceP"><div class="box"> P </div></div>
+			<div class="service" id="serviceC"><div class="box"> C </div></div>
+		</div>
+
+		<div id="service">
+			<div id="page-service"> </div>
+			<div id="utilitaire-messagerie">
+				<div id="utilitaire"> </div>
+				<div id="messagerie"> </div>
+			</div>
+			<div id="stockage">
+				<div class="stockage-use"> </div>
+				<div class=pourcentage>Il vous reste 20%</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+		<div id="exit1">
+		Etes-vous sûr de vouloir <br> quitter le web ? <br><br>
+		Non / Oui <br><br>
+			<label class="switch">
+				<input type="checkbox">
+				<span class="slider"></span>
+			</label>
+		</div>
+
+
+		<div id="exit2">
+			Pour naviguer le plus légèrement possible,
+			le jardin vous propose de gérer vos paramètres.
+			Moins votre navigation exigera la consommation d’énergie,
+			plus important vous sera le <br> temps accordé au sein de l’ancien web.
+
+			<table class=exit2>
+				<tr>
+						<td></td>
+						<td>Non / Oui</td>
+						<td>Contrainte</td>
+						<td>Non / Oui</td>
+				</tr>
+				<tr>
+					<td class=>Charger les images</td>
+					<td class=v>
+						<label class="switch">
+							<input type="checkbox">
+							<span class="slider"></span>
+						</label>
+					</td>
+					<td class=x>Clic</td>
+					<td class=v>
+						<label class="switch">
+							<input type="checkbox">
+							<span class="slider"></span>
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<td class=x>Charger les vidéos</td>
+					<td class=v>
+							<label class="switch">
+								<input type="checkbox">
+								<span class="slider"></span>
+							</label>
+					</td>
+					<td class=x>Minutes</td>
+					<td class=v>
+						<label class="switch">
+							<input type="checkbox">
+							<span class="slider"></span>
+						</label>
+					</td>
+				</tr>
+				<tr>
+						<td class=x>Charger les actualitées</td>
+						<td class=v>
+							<label class="switch">
+								<input type="checkbox">
+								<span class="slider"></span>
+							</label>
+						</td>
+						<td class=x>Données</td>
+						<td class=v>
+							<label class="switch">
+								<input type="checkbox">
+								<span class="slider"></span>
+							</label>
+						</td>
+				</tr>
+				<tr>
+						<td class=x>Ecran en N&B</td>
+						<td class=v>
+							<label class="switch">
+								<input type="checkbox">
+								<span class="slider"></span>
+							</label>
+						</td>
+						<td class=x></td>
+						<td class=v> </td>
+				</tr>
+				<tr>
+						<td class=x>Contraste légé</td>
+						<td class=v>
+								<label class="switch">
+									<input type="checkbox">
+									<span class="slider"></span>
+								</label>
+						<td> </td>
+						<td class=button-ok> Ok </td>
+
+				</tr>
+			</table>
+		</div>
+
+		<div id="exit3">
+			Vous disposez de : <br><br><br>
+			8 minutes
+		</div>
+
+	<!--    <ul class="initiale">
+	      <li> C </li>
+	      <li> A </li>
+	      <li> T </li>
+	      <li> V </li>
+	      <li> J </li>
+	      <li> P </li>
+			</ul>
+
+		-->
+
+
+
+  </body>
+</html>

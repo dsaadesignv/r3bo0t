@@ -1,0 +1,217 @@
+/* td
+{
+  border: 1px solid black;
+} */
+
+
+#pageprofil
+{
+  font-family: 'Fira Mono', sans-serif;
+  background-color: #00FFD1;
+  height:80vh;
+  width: 40vh;
+  padding: 0vh 3vh 3vh 3vh;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  display: none;
+  /* visibility: hidden; */
+  z-index: 10;
+}
+
+/* tableau */
+table
+{
+  border-collapse: collapse;
+  margin-bottom: 1vh;
+  /* padding-bottom: 10%; */
+}
+
+td
+{
+  font-size: 0.6em;
+  height: 3.5vh;
+  width: 100%;
+}
+
+
+caption
+{
+  font-size: 1em;
+  text-align:left;
+  padding-bottom: 2vh;
+  padding-top: 3vh;
+}
+
+.picto
+{
+  font-size: 1.2em;
+  border: 2px solid black;
+  height: 1vh;
+  width: 12%;
+  text-align: center;
+  /* border-collapse: separate; */
+  /* margin-bottom: 4px; */
+}
+
+.reponse
+{
+  text-align: right;
+  min-width: 9vh;
+}
+
+.quoifavoris
+{
+  padding-left: 2vh;
+}
+
+.separation
+{
+  border-top: 2px dashed rgba(0, 0, 0, 0.8);
+}
+
+
+/* slide */
+input[type="range"]{
+  width: 7vh;
+}
+
+
+
+
+
+#exit1
+{
+  background-color: black;
+  font-family: 'Fira Mono', sans-serif;
+  font-size: 1em;
+  color: white;
+  text-align: center;
+  width: 60vh;
+  height: 30vh;
+  border: 2px solid white;
+  box-sizing: border-box;
+  padding: 8vh 5vh 0vh 5vh;
+  position: absolute;
+  top: 10vh;
+  left: 45%;
+  display: none;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 12px;
+  text-align: left;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  border: 1px solid white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 13px;
+  margin: 1px;
+  /* left: 2px;
+  bottom: 1px; */
+  background-color: #00FFD1;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: rgba(100,100,100,100.8);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(13px);
+  -ms-transform: translateX(13px);
+  transform: translateX(13px);
+}
+
+
+
+
+#exit2
+{
+  background-color: black;
+  font-family: 'Fira Mono', sans-serif;
+  font-size: 0.6em;
+  color: white;
+  width: 60vh;
+  height: 30vh;
+  border: 2px solid white;
+  padding: 3vh 5vh 0vh 5vh;
+  box-sizing: border-box;
+  position: absolute;
+  top: 10vh;
+  left: 45%;
+  display: none;
+  /* visibility: hidden; */
+}
+
+.exit2
+{
+  color:white;
+  margin-top: 2vh;
+  width: 50vh;
+  /* border: 1px solid white; */
+}
+
+#exit2 td{
+  width:13vh;
+  height: 2.5vh;
+  padding-right: 5px;
+}
+
+.button-ok{
+  background-color: white;
+  width: 2px;
+  height: 2px;
+  color: black;
+  text-align: center;
+  position: center;
+}
+
+
+
+
+#exit3
+{
+  background-color: black;
+  font-family: 'Fira Mono', sans-serif;
+  font-size: 1em;
+  color: white;
+  text-align: center;
+  width: 60vh;
+  height: 30vh;
+  border: 2px solid white;
+  box-sizing: border-box;
+  padding: 8vh 5vh 0vh 5vh;
+  position: absolute;
+  top: 10vh;
+  left: 45%;
+  display: none;
+}
