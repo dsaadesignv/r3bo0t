@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Réseau Social — Post</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="services/p/css/style.min.css" type="text/css">
+    <script src="services/p/js/jquery.min.js"></script>
+    <script src="services/p/js/js.js"></script>
+  </head>
+
+  <!-- data-current-page sert à définir quelle page est affichée + quel élément de la navbar est en highlight. -->
+  <body id="p" data-current-page="p-profile-post">
+    <!-- Grille générale contenant navbar + main-content -->
+    <div class="p-grid-general">
+      <div class="p-margin-top"></div> <!-- Grid area de 1 ligne -->
+
+      <div class="p-navbar">
+        <!-- 3 blocs gauche -->
+        <div class="p-navbar-elements profil"></div>
+        <div class="p-navbar-elements tags"></div>
+        <div class="p-navbar-elements post"></div>
+        <!-- Textes -->
+        <!-- Profil -->
+        <div class="p-navbar-text profil">
+          <h2 data-goto="p-profile-post" class="goto-p-profile-post">profil</h2>
+          <h3 data-goto="p-profile-following" class="goto-p-profile-following">abonnements</h3>
+        </div>
+        <!--Tags -->
+        <div class="p-navbar-text tags">
+          <h2 data-goto="p-tags" class="goto-p-tags">tags</h2>
+          <h3 data-goto="p-tag-venise" class="goto-p-tag-venise">*venise</h3>
+          <h3 data-goto="p-post-arnaud" class="goto-p-post-arnaud">post</h3>
+          <h3 data-goto="p-profile-arnaud" class="goto-p-profile-arnaud">=arnaud</h3>
+        </div>
+        <!-- Post -->
+        <div class="p-navbar-text post">
+          <h2 data-goto="p-post" class="goto-p-post">post</h2>
+        </div>
+      </div>
+
+      <div class="p-main-content" > <!-- Main div pour le contenu -->
+        <div id="p-profile-post" class="p-grid-content">
+
+          <div class="p-profile-pic p-png16"></div>
+
+          <div class="p-profile-desc">
+            <h4>=dana.void</h4>
+            <p>hello i am a professional memelord</p>
+            <div class="p-btn" data-goto="p-profile-edit">
+              <p>Modifier</p>
+            </div>
+          </div>
+
+          <div class="p-content p-1 p-png12"></div>
+          <div class="p-content p-2 p-png13"></div>
+          <div class="p-content p-3 p-png14"></div>
+          <div class="p-content p-4 p-png15"></div>
+          <div class="p-content p-5 p-png1"></div>
+          <div class="p-content p-6 p-png2"></div>
+          <div class="p-content p-7"></div>
+          <div class="p-content p-8"></div>
+          <div class="p-content p-9"></div>
+          <div class="p-content p-10"></div>
+          <div class="p-content p-11"></div>
+          <div class="p-content p-12"></div>
+          <div class="p-content p-13"></div>
+          <div class="p-content p-14"></div>
+          <div class="p-content p-15"></div>
+          <div class="p-content p-16"></div>
+          <div class="p-content p-17"></div>
+
+        </div>
+        <div id="p-profile-edit" class="p-grid-content">
+
+          <div class="p-profile-pic p-png16">
+            <div class="p-overlay">
+              <p>Modifier</p>
+            </div>
+          </div>
+
+          <div class="p-profile-desc">
+            <h4>=dana.void</h4>
+            <p><span>hello i am a|</span> professional memelord</p>
+            <div class="p-btn" data-goto="p-profile-post">
+              <p><span>Enregistrer</span></p>
+            </div>
+          </div>
+
+          <div class="p-content p-1 p-png12">
+            <div class="p-overlay">
+              <p>4j restants
+              <br><span>Supprimer</span></p>
+            </div>
+          </div>
+          <div class="p-content p-2 p-png13">
+            <div class="p-overlay">
+              <p>7j restants
+              <br><span>Supprimer</span></p>
+            </div>
+          </div>
+          <div class="p-content p-3 p-png14">
+            <div class="p-overlay">
+              <p>1j restant
+              <br><span>Supprimer</span></p>
+            </div>
+          </div>
+          <div class="p-content p-4 p-png15">
+              <div class="p-overlay">
+                <p>1j restant
+                <br><span>Supprimer</span></p>
+              </div>
+          </div>
+          <div class="p-content p-5 p-png1">
+            <div class="p-overlay">
+              <p>2j restants
+              <br><span>Supprimer</span></p>
+            </div>
+          </div>
+          <div class="p-content p-6 p-png2">
+            <div class="p-overlay">
+              <p>7j restants
+              <br><span>Supprimer</span></p>
+            </div>
+          </div>
+          <div class="p-content p-7"></div>
+          <div class="p-content p-8"></div>
+          <div class="p-content p-9"></div>
+          <div class="p-content p-10"></div>
+          <div class="p-content p-11"></div>
+          <div class="p-content p-12"></div>
+          <div class="p-content p-13"></div>
+          <div class="p-content p-14"></div>
+          <div class="p-content p-15"></div>
+          <div class="p-content p-16"></div>
+          <div class="p-content p-17"></div>
+        </div>
+        <div id="p-profile-following" class="p-grid-content">
+          <div class="p-profile-pic p-png16"></div>
+          <div class="p-profile-desc">
+            <h4>=dana</h4>
+            <p>hello i am a professional memelord</p>
+          </div>
+
+
+          <div class="p-content p-1"><h5>*dsaa</h5></div>
+          <div class="p-content p-2"><h5>*photographie</h5></div>
+          <div class="p-content p-3"><h5>*venise</h5></div>
+          <div class="p-content p-4"></div>
+          <div class="p-content p-5"><h5>*party</h5></div>
+          <div class="p-content p-6"><h5>*memes</h5></div>
+          <div class="p-content p-7"></div>
+          <div class="p-content p-8"><h5>=arnaud</h5></div>
+          <div class="p-content p-9"><h5>=yraelle</h5></div>
+          <div class="p-content p-10"><h5>=daxfire</h5></div>
+          <div class="p-content p-11"></div>
+          <div class="p-content p-12"></div>
+          <div class="p-content p-13"></div>
+          <div class="p-content p-14"></div>
+          <div class="p-content p-15"></div>
+          <div class="p-content p-16"></div>
+          <div class="p-content p-17"></div>
+
+        </div>
+        <div id="p-tags" class="p-grid-content">
+
+          <div class="p-tag1"><h5>recherche</h5></div>
+          <div data-goto="p-tag-venise" class="p-tag2"><h5>*venise</h5></div>
+          <div class="p-tag3"><h5>*dsaa</h5></div>
+          <div class="p-tag4"><h5>*photographie</h5></div>
+          <div class="p-tag5"><h5>*memes</h5></div>
+
+          <div class="p-content p-recherche">
+            <input id="search" type="text" value="tag, utilisateur" autocomplete="off" onfocus="this.value=''">
+            </input>
+            <ul>
+              <li data-goto="p-tag-venise">*venise</li>
+              <li data-goto="p-profile-post">=dana.void</li>
+              <li data-goto="p-profile-arnaud">=arnaud</li>
+              <li>*dsaa</li>
+              <li>*design</li>
+              <li>*party</li>
+              <li>*memes</li>
+              <li>*cats</li>
+              <li>*doge</li>
+              <li>*lol</li>
+              <li>*looping</li>
+              <li>*ratvengers</li>
+              <li>*photographie</li>
+
+              <li>=daxfire</li>
+              <li>=buschy</li>
+              <li>=yraelle</li>
+              <li>=dark.july</li>
+              <li>=nan_paol</li>
+              <li>=mae_cc</li>
+              <li>=jacquemoud.bzh</li>
+              <li>=shin</li>
+              <li>=ǝuɹop_ʎǝɹɟɟoǝɓ</li>
+              <li>=nanastar</li>
+              <li>=mrg.crg</li>
+              <li>=root2</li>
+            </ul>
+          </div>
+          <div data-goto="p-tag-venise" class="p-content p-5 p-png4"></div>
+          <div data-goto="p-tag-venise" class="p-content p-6 p-png5"></div>
+          <div data-goto="p-tag-venise" class="p-content p-7 p-png6"></div>
+          <div class="p-content p-8 p-png1"></div>
+          <div class="p-content p-9 p-png2"></div>
+          <div class="p-content p-10 p-png4"></div>
+          <div class="p-content p-12 p-png7"></div>
+          <div class="p-content p-13 p-png8"></div>
+          <div class="p-content p-14 p-png9"></div>
+          <div class="p-content p-15 p-png12"></div>
+          <div class="p-content p-16 p-png14"></div>
+          <div class="p-content p-17 p-png15"></div>
+
+        </div>
+        <div id="p-profile-arnaud" class="p-grid-content">
+
+          <div class="p-profile-pic p-png3"></div>
+
+          <div class="p-profile-desc">
+            <h4>=arnaud</h4>
+            <p>Photographe. Pour tout RDV me contacter sur Roots :)</p>
+            <a href=""><div class="p-btn">
+              <p>Se désabonner</p>
+            </div></a>
+            <a href=""><div class="p-btn-2">
+              <p>Message</p>
+            </div></a>
+          </div>
+
+          <div class="p-content p-1 p-png4"></div>
+          <div data-goto="p-tag-venise" class="p-content p-2 p-png5"></div>
+          <div class="p-content p-3 p-png6"></div>
+          <div class="p-content p-4 p-png7"></div>
+          <div class="p-content p-5 p-png8"></div>
+          <div class="p-content p-6 p-png9"></div>
+          <div class="p-content p-7 p-png10"></div>
+          <div class="p-content p-8 p-png11"></div>
+          <div class="p-content p-9"></div>
+          <div class="p-content p-10"></div>
+          <div class="p-content p-11"></div>
+          <div class="p-content p-12"></div>
+          <div class="p-content p-13"></div>
+          <div class="p-content p-14"></div>
+          <div class="p-content p-15"></div>
+          <div class="p-content p-16"></div>
+          <div class="p-content p-17"></div>
+
+        </div>
+        <div id="p-post-arnaud" class="p-grid-content">
+
+          <div data-goto="p-profile-arnaud" class="p-profile-pic p-png3"></div>
+
+          <div class="p-profile-desc">
+            <h4 data-goto="p-profile-arnaud">=arnaud</h4>
+            <p>*venise, *design, *photographie</p>
+            <a href=""><div class="p-btn">
+              <p>Commenter</p>
+            </div></a>
+            <a href=""><div class="p-btn-2">
+              <p>Partager</p>
+            </div></a>
+          </div>
+
+          <div class="p-content p-post-arnaud p-png5"></div>
+
+        </div>
+        <div id="p-tag-venise" class="p-grid-content">
+
+          <div class="p-profile-pic p-png4"></div>
+
+          <div class="p-profile-desc">
+            <h4>*venise</h4>
+            <a href=""><div class="p-btn">
+              <p>Se désabonner</p>
+            </div></a>
+          </div>
+
+          <div data-goto="p-post-arnaud" class="p-content p-1 p-png5"></div>
+          <div class="p-content p-2 p-png6"></div>
+          <div class="p-content p-3"></div>
+          <div class="p-content p-4"></div>
+          <div class="p-content p-5"></div>
+          <div class="p-content p-6"></div>
+          <div class="p-content p-7"></div>
+          <div class="p-content p-8"></div>
+          <div class="p-content p-9"></div>
+          <div class="p-content p-10"></div>
+          <div class="p-content p-11"></div>
+          <div class="p-content p-12"></div>
+          <div class="p-content p-13"></div>
+          <div class="p-content p-14"></div>
+          <div class="p-content p-15"></div>
+          <div class="p-content p-16"></div>
+          <div class="p-content p-17"></div>
+
+        </div>
+        <div id="p-post" class="p-grid-content">
+          <div class="p-newpic"><h3><span>+</span><br>Importer...</h3></div>
+          <div class="p-profile-desc">
+            <h4>post publique</h4>
+            <div class="p-btn">
+              <p>Poster</p>
+            </div>
+          </div>
+          <div class="p-add-desc"><h3><span>|</span>Ajouter une description</h3></div>
+          <div class="p-add-tags"><h3><span>|</span>Ajouter des tags</h3></div>
+
+        </div>
+      </div>
+
+      <div class="p-margin-bottom"></div>
+    </div>
+  </body>
+</html>
