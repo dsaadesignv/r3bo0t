@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Jeux Gratuits</title>
+
+    <link href="services/j/css/styles.min.css" rel="stylesheet">
+    <link href="services/j/css/fonts.css" rel="stylesheet">
+    <link href="services/j/css/reset.css" rel="stylesheet">
+
+  </head>
+
+
+
+  <body>
+
+
+<div id="j-nuit">
+<div data-current-page>
+
+<!-- PAGE 1 : ACCUEIL -->
+
+<div class="j-n-page j-n-page1">
+
+  <img class="j-n-araignee-img-accueil" src="services/j/images/araignee-nuit.gif">
+
+    <a class="j-n-goto-page2" href="#">
+      <div class="j-n-grid-page1-haut">
+        <p class="j-n-txt-jeu-favori">Jeu favori actuel : <br><em class="j-n-gras">Snake</em></p>
+
+        <div class="j-n-img-jeu-favori"></div>
+
+        <img class="j-n-fraise" src="services/j/images/fraise-nuit.png">
+      </div>
+    </a>
+
+    <a class="j-n-goto-page3" href="#">
+      <div class="j-n-grid-page1-bas">
+        <p class="j-n-txt-jeu-mystere"> Jeu mystère : <br><em class="j-n-gras">A dark room</em></p>
+
+        <div class="j-n-img-jeu-mystere"></div>
+
+        <img class="j-n-point-interogation" src="services/j/images/point-interogation-blanc.png">
+      </div>
+    </a>
+
+</div>
+
+
+<!-- PAGE 2 : JEU FAVORI -->
+
+<div class="j-n-page j-n-page2">
+  <div class="j-n-grid-page2">
+
+      <div class="j-n-goto-page1 j-n-araignee-retour">
+      </div>
+
+      <div class="j-n-meilleur-score">
+        <img class="j-n-boom" src="services/j/images/boom-nuit.png">
+        <p class="j-n-txt-meilleur-score">Meilleur score : <span class="highscore">0</span></p>
+      </div>
+
+      <div class="j-n-boite-jeu-favori">
+          <!-- <iframe src="jeux/JavaScript-Snake-master/index.html" width="100%"  height="100%"></iframe> -->
+
+
+          <link rel=stylesheet id="style" type="text/css" href="services/j/jeux/JavaScript-Snake-master/css/dark-snake.css" />
+
+          <style>
+            .snake-toolbar {
+              position: absolute;
+              top: 0;
+              left: 0;
+              z-index:10000;
+              padding: 5px;
+            }
+          </style>
+          <script>
+
+          function getTheme () {
+          function changeTheme (Theme) {
+              document.getElementById('style').setAttribute('href', Theme);
+          }
+          var index = document.getElementById("select").selectedIndex;
+          switch (index) {
+              case 0:
+                changeTheme('jeux/JavaScript-Snake-master/css/light-snake.css?' + Math.random());
+                break;
+              case 1:
+                changeTheme('jeux/JavaScript-Snake-master/css/dark-snake.css?' + Math.random());
+                break;
+              case 2:
+                changeTheme('jeux/JavaScript-Snake-master/css/dark-snake.css?' + Math.random());
+                break;
+          case 3:
+                changeTheme('jeux/JavaScript-Snake-master/css/green-snake.css?' + Math.random());
+                break;
+              default:
+                changeTheme('jeux/JavaScript-Snake-master/css/dark-snake.css?' + Math.random());
+                break;
+          }
+          setTimeout(function() {
+              document.getElementById('game-area').focus();
+          }, 10);
+          }
+          </script>
+
+           <!-- <div class="snake-toolbar">
+            <div style="display:inline-block;margin-right:10px;">
+              <span>Theme:</span>
+              <select onchange="getTheme()" id="select">
+                  <option>Light Theme by yokesharun</option>
+                  <option selected>Main Theme by patorjk</option>
+                  <option>Dark Theme by KenyStev</option>
+                  <option>Green Theme by CoffeeCatDE</option>
+
+              </select>
+            </div>
+            <div style="display:inline-block;margin-right:10px;">
+              <span>Mode:</span>
+              <select id="selectMode">
+                  <option value="100">Easy</option>
+                  <option value="75" selected>Medium</option>
+                  <option value="50">Hard</option>
+              </select>
+            </div>
+            <button onclick="go_full_screen()">Full Screen</button><br />
+          </div> -->
+
+
+            <!-- <h2>Select which mode you would like to play in.</h2>
+            <button id="Easy">Easy</button><br />
+            <button id="Medium">Medium</button><br />
+            <button id="Difficult">Difficult</button>
+
+          <button id="high-score">Get your current high score for this game.</button> -->
+
+          <div id="mode-wrapper" style="display: inline; width: auto;">
+          </div>
+
+          <div id="game-area" style="width:500px" tabindex="0">
+          </div>
+          <script type="text/javascript" src="services/j/jeux/JavaScript-Snake-master/js/snake.js"></script>
+          <script type="text/javascript">
+              var mySnakeBoard = new SNAKE.Board(  {
+                  boardContainer: "game-area",
+                  fullScreen: false,
+                  width: 1250,
+                  height: 480
+              });
+          </script>
+          <script type="text/javascript">
+            function go_full_screen(){
+              var elem = document.documentElement;
+              if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+              } else if (elem.msRequestFullscreen) {
+                elem.msRequestFullscreen();
+              } else if (elem.mozRequestFullScreen) {
+                elem.mozRequestFullScreen();
+              } else if (elem.webkitRequestFullscreen) {
+                elem.webkitRequestFullscreen();
+              }
+            }
+          </script>
+
+
+
+
+      </div>
+
+      <div class="j-n-fraise-titre-jeu-favori">
+        <img class="j-n-fraise-titre" src="services/j/images/fraise-nuit.png">
+        <p class="j-n-titre-jeu-favori">Snake</p>
+      </div>
+
+      <div class="j-n-goto-pop-up4 j-n-comment-jouer">
+        <img class="j-n-point-interogation-comment-jouer" src="services/j/images/point-interogation-blanc.png">
+        <p class="j-n-txt-boutons">Comment jouer ?</p>
+      </div>
+
+  </div>
+</div>
+
+
+<!-- PAGE 3 : JEU MYSTERE -->
+
+<div class="j-n-page j-n-page3">
+  <div class="j-n-grid-page3">
+
+      <div class="j-n-goto-page1 j-n-araignee-retour"></div>
+
+      <div class="j-n-boite-jeu-mystere"><iframe src="services/j/jeux/adarkroom-master/index.html" width="100%" height="100%"></iframe></div>
+
+      <div class="j-n-titre-jeu-mystere"><p>A Dark Room</p></div>
+
+      <div class="j-n-goto-pop-up3 j-n-comment-jouer-2">
+        <img class="j-n-point-interogation-comment-jouer" src="services/j/images/point-interogation-blanc.png">
+        <p class="j-n-txt-boutons">Comment jouer ?</p>
+      </div>
+
+      <div class="j-n-goto-pop-up1 j-n-ajouter-favori">
+        <img class="j-n-fraise-ajout" src="services/j/images/fraise-nuit.png">
+        <p class="j-n-txt-boutons">Ajouter au favori</p>
+      </div>
+
+  </div>
+</div>
+
+
+<!-- POP UP AJOUTER EN FAVORI 1 -->
+
+<div class=" j-n-pop-up1">
+  <div class="j-n-filtre-pop-up"></div>
+
+    <div class="j-n-boite-pop-up">
+
+    <p class="j-n-pop-up-txt1">Voulez vous ajouter ce jeu à votre jardin ?</p>
+
+    <p class="j-n-pop-up-txt2">Attention cette action supprimera Snake, votre jeu favori actuel...</p>
+
+    <div class="j-n-pop-up-jeu-favori"></div>
+
+    <button class="j-n-goto-pop-up2 j-n-boutons-oui">Oui !</button>
+    <button class="j-n-goto-ferme-pop-up j-n-boutons-non">Non</button>
+  </div>
+</div>
+
+
+<!-- POP UP AJOUTER EN FAVORI 2 -->
+
+<div class="j-n-pop-up2">
+
+  <div class="j-n-filtre-pop-up"></div>
+
+  <div class="j-n-boite-pop-up2">
+    <p class="j-n-pop-up-txt3">Super, <em class="j-n-gras">A Dark Room</em> est votre nouveau terrain de jeu !</p>
+    <img class="j-n-pop-up-araignee" src="services/j/images/araignee-clin-doeil.png">
+    <img class="j-n-pop-up-fraise" src="services/j/images/fraise-nuit.png">
+  </div>
+
+</div>
+
+
+<!-- POP UP COMMENT JOUER POUR JEU FAVORI -->
+
+<div class="j-n-pop-up-comment-jouer-favori">
+
+  <div class="j-n-filtre-pop-up"></div>
+
+  <div class="j-n-boite-pop-up">
+    <p class="j-n-pop-up-txt4">→ ← ↑ ↓ : se déplacer</p>
+  </div>
+
+</div>
+
+
+<!-- POP UP COMMENT JOUER POUR JEU MYSTERE -->
+
+<div class="j-n-pop-up-comment-jouer-mystere">
+
+  <div class="j-n-filtre-pop-up"></div>
+
+  <div class="j-n-boite-pop-up">
+      <p class="j-n-pop-up-txt5"><em>Principe du jeu :</em><br><br>utiliser les différents boutons permettant de faire certaines actions, puis suivre l'évolution de l'histoire...</p>
+  </div>
+
+</div>
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="j-jour">
+  <div class="j-content" data-current-page>
+
+
+  <!-- PAGE 1 : ACCUEIL -->
+
+  <div class="j-page j-page1">
+
+    <img class="j-coccinelle-img-accueil" src="services/j/images/coccinelle-jour.gif">
+
+      <a class="j-goto-page2" href="#">
+        <div class="j-grid-page1-haut">
+          <p class="j-txt-jeu-favori">Jeu favori actuel : <br><em class="j-gras">Snake</em></p>
+
+          <div class="j-img-jeu-favori"></div>
+
+          <img class="j-fraise" src="services/j/images/fraise-jour.png">
+        </div>
+      </a>
+
+      <a class="j-goto-page3" href="#">
+        <div class="j-grid-page1-bas">
+          <p class="j-txt-jeu-mystere"> Jeu mystère : <br><em class="j-gras">Tiny Moon runner</em></p>
+
+          <div class="j-img-jeu-mystere"></div>
+
+          <img class="j-point-interogation" src="services/j/images/point-interogation-noir.png">
+        </div>
+      </a>
+
+  </div>
+
+
+  <!-- PAGE 2 : JEU FAVORI -->
+
+  <div class="j-page j-page2">
+    <div class="j-grid-page2">
+
+        <div class="j-goto-page1 j-coccinelle-retour"></div>
+
+        <div class="j-meilleur-score">
+          <img class="j-boom" src="services/j/images/boom-jour.png">
+          <p class="j-txt-meilleur-score">Meilleur score : <span class="highscore">0</span></p>
+        </div>
+
+        <div class="j-boite-jeu-favori">
+            <iframe src="services/j/jeux/JavaScript-Snake-master/index.html" width="100%" height="100%"></iframe>
+        </div>
+
+        <div class="j-fraise-titre-jeu-favori">
+          <img class="j-fraise-titre" src="services/j/images/fraise-jour.png">
+          <p class="j-titre-jeu-favori">Snake</p>
+        </div>
+
+        <div class="j-goto-pop-up4 j-comment-jouer">
+          <img class="j-point-interogation-comment-jouer" src="services/j/images/point-interogation-noir.png">
+          <p class="j-txt-boutons">Comment jouer ?</p>
+        </div>
+
+    </div>
+  </div>
+
+
+  <!-- PAGE 3 : JEU MYSTERE -->
+
+  <div class="j-page j-page3">
+    <div class="j-grid-page3">
+
+        <div class="j-goto-page1 j-coccinelle-retour"></div>
+
+        <div class="j-boite-jeu-mystere">
+          <iframe class="j-tiny-moon-runner" src="services/j/jeux/tiny-moon-runner-master/index.html" width="660px" height="370px"></iframe>
+        </div>
+
+        <div class="j-titre-jeu-mystere"><p>Tiny Moon Runner</p></div>
+
+        <div class="j-goto-pop-up3 j-comment-jouer-2">
+          <img class="j-point-interogation-comment-jouer" src="services/j/images/point-interogation-noir.png">
+          <p class="j-txt-boutons">Comment jouer ?</p>
+        </div>
+
+        <div class="j-goto-pop-up1 j-ajouter-favori">
+          <img class="j-fraise-ajout" src="services/j/images/fraise-jour.png">
+          <p class="j-txt-boutons">Ajouter au favori</p>
+        </div>
+
+    </div>
+  </div>
+
+
+  <!-- POP UP AJOUTER EN FAVORI 1 -->
+
+  <div class=" j-pop-up1">
+    <div class="j-filtre-pop-up"></div>
+
+    <div class="j-boite-pop-up">
+
+      <p class="j-pop-up-txt1">Voulez vous ajouter ce jeu à votre jardin ?</p>
+
+      <p class="j-pop-up-txt2">Attention cette action supprimera Snake, votre jeu favori actuel...</p>
+      <div class="j-pop-up-jeu-favori"></div>
+
+      <button class="j-goto-pop-up2 j-boutons-oui">Oui !</button>
+      <button class="j-goto-ferme-pop-up j-boutons-non">Non</button>
+
+    </div>
+  </div>
+
+
+  <!-- POP UP AJOUTER EN FAVORI 2 -->
+
+  <div class="j-pop-up2">
+
+    <div class="j-filtre-pop-up"></div>
+
+    <div class="j-boite-pop-up2">
+      <p class="j-pop-up-txt3">Super, <em class="j-gras">Tiny Moon Runner</em> est votre nouveau terrain de jeu !</p>
+      <img class="j-pop-up-coccinelle" src="services/j/images/coccinelle-clin-doeil.png">
+      <img class="j-pop-up-fraise" src="services/j/images/fraise-jour.png">
+    </div>
+
+  </div>
+
+
+  <!-- POP UP COMMENT JOUER POUR JEU FAVORI -->
+
+  <div class="j-pop-up-comment-jouer-favori">
+
+    <div class="j-filtre-pop-up"></div>
+
+    <div class="j-boite-pop-up">
+      <p class="j-pop-up-txt4">→ ← ↑ ↓ : se déplacer</p>
+    </div>
+
+  </div>
+
+
+  <!-- POP UP COMMENT JOUER POUR JEU MYSTERE -->
+
+  <div class="j-pop-up-comment-jouer-mystere">
+
+    <div class="j-filtre-pop-up"></div>
+
+    <div class="j-boite-pop-up">
+        <p class="j-pop-up-txt5">← →  : avancer / reculer<br><br>↑ : sauter<br><br>R : rejouer</p>
+    </div>
+
+  </div>
+
+  </div>
+</div>
+
+
+<script src="services/j/js/jquery.min.js"></script>
+<script src="services/j/js/js.js"></script>
+
+  </body>
+</html>
