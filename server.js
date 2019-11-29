@@ -51,8 +51,9 @@ express.get('/login/:username/:password', function(req, res) {
 });
 
 express.get('/', function (req, res) {
+  console.log(req.query);
+
   console.log('>> loading jardin');
-  console.log(req.cookies['username']);
 
   res.render( __dirname + '/web/services/n/n', {
     BASEURL             : CONFIG.site.baseURL
@@ -123,7 +124,7 @@ io.on('connection', function(socket) {
 
 
 server.listen(CONFIG.site.port, function(){
-  console.log('>> accédez à reb00t à l\'adresse [ localhost:'+CONFIG.site.port+' ]');
+  console.log('>> accédez à r3bo0t à l\'adresse [ localhost:'+CONFIG.site.port+' ]');
 });
 
 

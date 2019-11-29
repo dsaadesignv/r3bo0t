@@ -2,24 +2,24 @@
 /* RESEARCH FUNCTION : each time we want a new list of content, call this function */
 
     function  research(){
-        $.getJSON('data.json').done(function(data) {
-              
+        $.getJSON('services/v/data.json').done(function(data) {
+
           /* Get the keyword used in the search bar */
           var keyword = $('#v-search').val().toLowerCase();
 
           /* Get the selected category */
-          var entertainment_category = $('.selected').text().toLowerCase().includes("divertissement"); 
-          var music_category = $('.selected').text().toLowerCase().includes("musique"); 
-          var knowledge_category = $('.selected').text().toLowerCase().includes("connaissance");  
+          var entertainment_category = $('.selected').text().toLowerCase().includes("divertissement");
+          var music_category = $('.selected').text().toLowerCase().includes("musique");
+          var knowledge_category = $('.selected').text().toLowerCase().includes("connaissance");
           var nb_item_displayed_music;
           var nb_item_displayed_entertainment;
           var nb_item_displayed_knowledge;
-          
+
           if (entertainment_category == true) {
             nb_item_displayed_music = 0;
             nb_item_displayed_entertainment = 15;
             nb_item_displayed_knowledge = 0;
-            
+
           } else if (music_category == true) {
             nb_item_displayed_music = 15;
               nb_item_displayed_entertainment = 0;
@@ -33,35 +33,35 @@
               nb_item_displayed_entertainment = 3;
               nb_item_displayed_knowledge = 3;
           }
-          
+
               $.each(data.content, function( i, item ) {
 
-               
+
                       /* Retrieve the category of the object and assign it in the good column, and limit the results to 5 / column */
                       var category = item.category;
-                      
-                                
+
+
                       /*Look at the number of items in each category and create a variable accordingly */
                       var nb_item_music = $("#v-cat-music div").length;
                       var nb_item_knowledge = $("#v-cat-knowledge div").length;
                       var nb_item_entertainment = $("#v-cat-entertainment div").length;
                       var nb_author = $("#v-gardeners div a").length;
 
-                      var keyword_check_title = item.title.toLowerCase().includes(keyword); 
+                      var keyword_check_title = item.title.toLowerCase().includes(keyword);
                       var keyword_check_author = item.author.toLowerCase().includes(keyword);
 
                       /* Check if the keyword in the input is in the JSON data*/
                       if(keyword.length > 0) { /* if there is a key word */
-                        
+
 
                             if (keyword_check_title == true || keyword_check_author == true ) {
                                     /* CHECK the category, then check the numbers of items already there in the category
                                     if there is more than 5 items stop the function*/
-                                    
 
-                                      if (category == 'Musique' && nb_item_music < nb_item_displayed_music){                            
+
+                                      if (category == 'Musique' && nb_item_music < nb_item_displayed_music){
                                           category = 'music';
-                                      } else if (category == 'Connaissance' && nb_item_knowledge < nb_item_displayed_knowledge){                          
+                                      } else if (category == 'Connaissance' && nb_item_knowledge < nb_item_displayed_knowledge){
                                           category = 'knowledge';
                                       } else if (category == 'Divertissement'&& nb_item_entertainment < nb_item_displayed_entertainment){
                                           category = 'entertainment';
@@ -71,38 +71,38 @@
 
 
                         } /* END OF THE IF "there is a keyword" */
-                                        
+
                                 } else { /* For the suggestion part */
-                                      if (category == 'Musique' && nb_item_music < 3){                    
+                                      if (category == 'Musique' && nb_item_music < 3){
                                           category = 'music';
-                                          
-                                      } else if (category == 'Connaissance' && nb_item_knowledge < 3){                        
+
+                                      } else if (category == 'Connaissance' && nb_item_knowledge < 3){
                                           category = 'knowledge';
                                       } else if (category == 'Divertissement' && nb_item_entertainment < 3){
                                           category = 'entertainment';
                                       }
-                                  
+
 
                                 } /* END OF THE IF "keyword check" + else suggestions*/
-                            
-                              
-                            
+
+
+
 
                               var hydratation_img;
                               if (item.hydratation < 1) {
-                                  hydratation_img = '/icons/0_state.svg';
+                                  hydratation_img = 'services/v/icons/0_state.svg';
                               } else if (item.hydratation >= 1 && item.hydratation < 17 ) {
-                                hydratation_img = '/icons/1_state.svg';
+                                hydratation_img = 'services/v/icons/1_state.svg';
                               } else if (item.hydratation >= 17 && item.hydratation < 35 ) {
-                                hydratation_img = '/icons/2_state.svg';
+                                hydratation_img = 'services/v/icons/2_state.svg';
                               } else if (item.hydratation >= 35 && item.hydratation < 52 ) {
-                                hydratation_img = '/icons/3_state.svg';
+                                hydratation_img = 'services/v/icons/3_state.svg';
                               } else if (item.hydratation >= 52) {
-                                hydratation_img = '/icons/4_state.svg';
+                                hydratation_img = 'services/v/icons/4_state.svg';
                               }
 
                                 /* Create the element + add it to the html */
-                                $('<div>').addClass('v-item').appendTo('#v-cat-'+ category)   
+                                $('<div>').addClass('v-item').appendTo('#v-cat-'+ category)
                                 .append($('<p>').addClass('v-duration').text(item.duration))
                                 .append($('<img>').attr('src', hydratation_img))
                                 .append($('<hr/>'))
@@ -113,26 +113,26 @@
                                 .append($('<p>').addClass('v-category').text(item.category))
                                 .append($('<p>').addClass('v-url').text(item.url))
                                 .append($('<p>').addClass('v-hydratation').text(item.hydratation));
-                         
-                              
+
+
                         if (keyword_check_author == true ) {
-            
+
                               /* cache = value to remove duplicated author */
                               var cache = $('#v-gardeners div a').text().includes(item.author);
-                          
+
                               if (nb_author < 6 && cache == false) { /* If there is less than 6 authors + if the name isn't already showed */
-                                  $('<a>').addClass('v-author').text(item.author).appendTo('#v-gardeners div');  
+                                  $('<a>').addClass('v-author').text(item.author).appendTo('#v-gardeners div');
                               }
                           }
-                        
 
-                        
-                        
+
+
+
                     }); /* END OF THE "Each items" function */
 
-                   
+
                   }); /* END OF THE GetJSON function */
-            
+
     } /* END OF THE research function */
 
 
@@ -153,12 +153,12 @@
         var title = $('#selected_item .v-title').text();
         var author = $('#selected_item .v-author').text();
         var author = $('#selected_item .v-author').text();
-        var category = $('#selected_item .v-category').text(); 
-        var subcategory = $('#selected_item .v-subcategory').text(); 
+        var category = $('#selected_item .v-category').text();
+        var subcategory = $('#selected_item .v-subcategory').text();
         var album = $('#selected_item .v-album').text();
         var url = $('#selected_item .v-url').text();
         var hydratation = $('#selected_item .v-hydratation').text();
-         
+
         /* Change all the textes */
         $('#v-content_title').text(title);
         $('#v-content_author').text(author);
@@ -171,15 +171,15 @@
         var hydratation_level = Math.floor((hydratation / 70) * 100);
         var hydratation_level_img;
         if (hydratation < 1) {
-          hydratation_level_img = '/icons/0_state.svg';
+          hydratation_level_img = 'services/v/icons/0_state.svg';
         } else if (hydratation >= 1 && hydratation < 17 ) {
-          hydratation_level_img = '/icons/1_state.svg';
+          hydratation_level_img = 'services/v/icons/1_state.svg';
         } else if (hydratation >= 17 && hydratation < 35 ) {
-          hydratation_level_img = '/icons/2_state.svg';
+          hydratation_level_img = 'services/v/icons/2_state.svg';
         } else if (hydratation >= 35 && hydratation < 52 ) {
-          hydratation_level_img = '/icons/3_state.svg';
+          hydratation_level_img = 'services/v/icons/3_state.svg';
         } else if (hydratation >= 52) {
-          hydratation_level_img = '/icons/4_state.svg';
+          hydratation_level_img = 'services/v/icons/4_state.svg';
         }
 
 
@@ -187,13 +187,13 @@
         $('#v-hydratation_bar').css('width', hydratation_level+"%");
 
         /* Change the quality choice bar if this is a music item*/
-        if (category == 'Musique'){                    
+        if (category == 'Musique'){
           $('#v-quality_choice_music').removeClass("v-hide");
           $('#v-quality_choice_video').addClass("v-hide");
           $('#v-content div audio').removeClass("v-hide");
           $('#v-content div video').addClass("v-hide");
         }
-        
+
     }
 
 
@@ -219,7 +219,7 @@ function quality_choice() {
 
 
 
-              
+
 
 $(document).ready(function() {
 
@@ -250,12 +250,12 @@ $(document).ready(function() {
             $('#v-import_open').toggleClass('v-selected_button');
 
             if ($(".v-selected_button").length > 0){  /* if the class exist */
-              // Hide ALL the pages except the import page 
-              $('#v-research_home').addClass("v-hide"); 
-              $('#v-grid').addClass("v-hide"); 
-              $('#v-info_content').addClass("v-hide"); 
+              // Hide ALL the pages except the import page
+              $('#v-research_home').addClass("v-hide");
+              $('#v-grid').addClass("v-hide");
+              $('#v-info_content').addClass("v-hide");
               $('#v-content_media').addClass("v-hide");
-              $('#v-info_profile').addClass("v-hide"); 
+              $('#v-info_profile').addClass("v-hide");
               $('#v-content_profile').addClass("v-hide");
               $('#v-import').removeClass("v-hide");
 
@@ -264,18 +264,18 @@ $(document).ready(function() {
             }
                else {
                 console.log("ok")
-                $('#v-research_home').removeClass("v-hide"); 
-                  $('#v-grid').removeClass("v-hide"); 
+                $('#v-research_home').removeClass("v-hide");
+                  $('#v-grid').removeClass("v-hide");
                   $('#v-import').addClass("v-hide");
                   $('#v-import_open svg path').addClass("v-color_blue");
                   $('#v-import_open svg path').removeClass("v-color_white");
-                  
+
 
 
                 }
           });
 
-          
+
           /***************************************** CHANGE THEME */
           $('#v-theme').click(function() {
             console.log("o");
@@ -314,7 +314,7 @@ $(document).ready(function() {
             $('#v-gardeners').show(); /* Show gardeners part */
             research();
             $('#v-research').toggleClass("v-hide");
-            return false; /* Do not reload page */ 
+            return false; /* Do not reload page */
           });
 
           /* SHOW RESEARCH GRID : from search bar at the top*/
@@ -343,11 +343,10 @@ $(document).ready(function() {
 
 
 
-      /**********************************  */   
+      /**********************************  */
       $(document).on('click', '.v-quality_choice button', function() {
         quality_choice();
       });
 
-    
-}); /* END OF DOCUMENT READY function */
 
+}); /* END OF DOCUMENT READY function */

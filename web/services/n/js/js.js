@@ -84,6 +84,10 @@ $('#conteneur').css('height', somme +'vh');
 
 $(function (){
   $("#conteneur").on("click", function(){
+
+      $('body').addClass('is-service-open');
+
+      /*
     $('body').toggleClass('is-service-open');
 
     if ($('body').hasClass('is-service-open')) {
@@ -91,8 +95,8 @@ $(function (){
     } else {
       modeHome();
     }
-
-    $("#service").toggle();
+*/
+    $("#service").show();
 
 
 
@@ -124,7 +128,7 @@ function modeService() {
 }
 
 $( function() {
-{
+
     var availableTags=    [
         {
            "category": "Divertissement",
@@ -154,14 +158,15 @@ $( function() {
             "url" : "../video/gateau.mp4"
         }
 
-    ]
- }
+    ];
 
- $( "#site-search" ).autocomplete({
-  source: availableTags
-});
+
+         $( "#site-search" ).autocomplete({
+          source: availableTags
+        });
 
   } );
+
 
 
 

@@ -1,4 +1,5 @@
 $(function () {
+	console.log('m loaded');
 	$('.goto-m-hub').on('click', function(){
 		$('.m-page').hide();  // 1. On cache tous les écrans
 		$('.m-hub').show(); // 2. Puis on affiche l'écran
@@ -9,6 +10,8 @@ $(function () {
 // chat
 		var socket = io();
 		$('.m-chatContainer form').on("submit",function(e){
+
+				console.log('send msg');
 			e.preventDefault(); // prevents page reloading
 			let msg = $('#m-text').val();
       socket.emit('chat message', msg);

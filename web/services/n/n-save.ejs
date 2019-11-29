@@ -1,0 +1,31 @@
+JARDIN
+
+
+<script src="<%= BASEURL %>/resources/socket.io.js"></script>
+
+<script>
+  var BASEURL = '<%= BASEURL %>';
+  var socket = io(BASEURL);
+</script>
+
+<script type="text/javascript">
+
+
+
+  socket.on('connection/handshake', function() {
+
+    console.log(document.cookies);
+
+    socket.emit('connection/handshake', {
+      cookies: read_cookie('username')
+    })
+  });
+
+  socket.on('users/update', function(users) {
+    console.log(users);
+  });
+
+  function read_cookie(k,r){return(r=RegExp('(^|; )'+encodeURIComponent(k)+'=([^;]*)').exec(document.cookie))?r[2]:null;}
+
+
+</script>

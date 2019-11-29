@@ -1,31 +1,456 @@
-JARDIN
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"> <!-- indique la langue du code -->
+		<title>Navigateur</title>
+		<link rel="stylesheet" type="text/css" href="services/n/style/style.css">
+		<link rel="stylesheet" type="text/css" href="services/n/style/style2.css">
+		<script src="services/n/js/jquery-3.4.1.min.js"> </script>
+		<script src="services/n/js/jquery-ui.min.js"> </script>
+
+		<script src="services/n/js/js.js"> </script>
+
+		<link href="https://fonts.googleapis.com/css?family=Fira+Mono&display=swap" rel="stylesheet">
+	</head>
+
+  <body id="n">
+
+    <div id="menu">
+			<div id="retour"> </div>
+			<div id="barrerecherche">
+				<!-- <label for="site-search">Que souhaitez-vous recherchez dans votre jardin ?</label> -->
+				<input type="text" id="site-search" name="recherche" placeholder="Que souhaitez-vous recherchez dans votre jardin ?"/>
+			</div>
+			<div class="space"></div>
+
+			<div class="bouton" id="profil">
+
+				<div class="handler"></div>
+
+				<div id="pageprofil">
+					<table>
+						<caption> Profil : Nanastar </caption>
+							<tr>
+								<td></td>
+								<td class=reponse> Oui / Non	</td>
+						</tr>
+						<tr>
+								<td class=quoiprofil>Navigation privée</td>
+								<td class=reponse>
+									<label class="switch">
+										<input type="checkbox">
+										<span class="slider"></span>
+									</label>
+								</td>
+						</tr>
+						<tr>
+								<td class=quoiprofil>Données de stockage restantes</td>
+								<td class=reponse>325 Mo</td>
+						</tr>
+						<tr>
+								<td class=quoiprofil>Visionnage vidéo restant</td>
+								<td class=reponse>6 minutes</td>
+						</tr>
+					</table>
+
+					<table>
+						<caption class=separation> Favoris</caption>
+						<tr>
+								<td class=picto>=</td>
+								<td class=quoifavoris>Amis :</td>
+								<td class=reponse>DarkJuly</td>
+						</tr>
+						<tr>
+							<td class=picto>+</td>
+							<td class=quoifavoris>Connaissance :</td>
+							<td class=reponse>Le surf</td>
+						</tr>
+						<tr>
+							<td class=picto>°</td>
+							<td class=quoifavoris>Vidéo :</td>
+							<td class=reponse>Astronomie</td>
+						</tr>
+						<tr>
+							<td class=picto>!</td>
+							<td class=quoifavoris>Actualités :</td>
+							<td class=reponse>Grève SNCF</td>
+						</tr>
+					</table>
+
+					<table>
+						<caption class=separation> Paramètres</caption>
+						<tr>
+								<td class=quoiparametre>Niveau luminosité :</td>
+								<td class=reponse>
+										<input type="range" min="0" max="10" step="5"/>
+								</td>
+						</tr>
+						<tr>
+								<td class=quoiparametre>Niveau contraste :</td>
+								<td class=reponse><input type="range" min="0" max="10" step="5"/></td>
+						</tr>
+						<tr>
+								<td class=quoiparametre>Chargement des commentaires :</td>
+								<td class=reponse>
+									<label class="switch">
+										<input type="checkbox">
+										<span class="slider"></span>
+									</label>
+								</td>
+						</tr>
+						<tr>
+								<td class=quoiparametre>Chargement des photos :</td>
+								<td class=reponse>
+									<label class="switch">
+										<input type="checkbox">
+										<span class="slider"></span>
+									</label>
+								</td>
+						</tr>
+						<tr>
+								<td class=quoiparametre>Localisation activée :</td>
+								<td class=reponse>
+									<label class="switch">
+										<input type="checkbox">
+										<span class="slider"></span>
+									</label>
+								</td>
+						</tr>
+						<tr>
+								<td class=quoiparametre>Rafraîchissement des données <br> automatique :</td>
+								<td class=reponse>
+									<label class="switch">
+										<input type="checkbox">
+										<span class="slider"></span>
+									</label>
+								</td>
+						</tr>
+						<tr>
+								<td class=quoiparametre>Ajustement luminosité <br>  pour personnes malvoyantes :</td>
+								<td class=reponse>
+									<label class="switch">
+										<input type="checkbox">
+										<span class="slider"></span>
+									</label>
+								</td>
+						</tr>
+					</table>
+				</div>
+
+			</div>
+			<div class="bouton" id="otherjardin">  </div>
+			<div class="bouton" id="exit"> </div>
+		</div>
+
+		<div id="conteneur">
+			<a href="/a" target="iframe" class="service" id="serviceA"><div class="box"> A </div></a>
+			<a href="/v" target="iframe" class="service" id="serviceV"><div class="box"> V </div></a>
+			<a href="/t" target="iframe" class="service" id="serviceT"><div class="box"> T </div></a>
+			<a href="/j" target="iframe" class="service" id="serviceJ"><div class="box"> J </div></a>
+			<a href="/p" target="iframe" class="service" id="serviceP"><div class="box"> P </div></a>
+			<a href="/c" target="iframe" class="service" id="serviceC"><div class="box"> C </div></a>
+		</div>
+
+		<div id="service">
+			<div id="page-service">
+			<iframe src="/c" name="iframe">
+			</iframe>
+			</div>
+			<div id="utilitaire-messagerie">
+				<div id="utilitaire"> </div>
+				<div id="messagerie"> </div>
+			</div>
+			<div id="stockage">
+				<div class="stockage-use"> </div>
+				<div class=pourcentage>Il vous reste 20%</div>
+			</div>
+		</div>
 
 
-<script src="<%= BASEURL %>/resources/socket.io.js"></script>
-
-<script>
-  var BASEURL = '<%= BASEURL %>';
-  var socket = io(BASEURL);
-</script>
-
-<script type="text/javascript">
 
 
 
-  socket.on('connection/handshake', function() {
-
-    console.log(document.cookies);
-
-    socket.emit('connection/handshake', {
-      cookies: read_cookie('username')
-    })
-  });
-
-  socket.on('users/update', function(users) {
-    console.log(users);
-  });
-
-  function read_cookie(k,r){return(r=RegExp('(^|; )'+encodeURIComponent(k)+'=([^;]*)').exec(document.cookie))?r[2]:null;}
 
 
-</script>
+
+
+		<div id="exit1">
+		Etes-vous sûr de vouloir <br> quitter le web ? <br><br>
+		Non / Oui <br><br>
+			<label class="switch">
+				<input type="checkbox">
+				<span class="slider"></span>
+			</label>
+		</div>
+
+
+		<div id="exit2">
+			Pour naviguer le plus légèrement possible,
+			le jardin vous propose de gérer vos paramètres.
+			Moins votre navigation exigera la consommation d’énergie,
+			plus important vous sera le <br> temps accordé au sein de l’ancien web.
+
+			<table class=exit2>
+				<tr>
+						<td></td>
+						<td>Non / Oui</td>
+						<td>Contrainte</td>
+						<td>Non / Oui</td>
+				</tr>
+				<tr>
+					<td class=>Charger les images</td>
+					<td class=v>
+						<label class="switch">
+							<input type="checkbox">
+							<span class="slider"></span>
+						</label>
+					</td>
+					<td class=x>Clic</td>
+					<td class=v>
+						<label class="switch">
+							<input type="checkbox">
+							<span class="slider"></span>
+						</label>
+					</td>
+				</tr>
+				<tr>
+					<td class=x>Charger les vidéos</td>
+					<td class=v>
+							<label class="switch">
+								<input type="checkbox">
+								<span class="slider"></span>
+							</label>
+					</td>
+					<td class=x>Minutes</td>
+					<td class=v>
+						<label class="switch">
+							<input type="checkbox">
+							<span class="slider"></span>
+						</label>
+					</td>
+				</tr>
+				<tr>
+						<td class=x>Charger les actualitées</td>
+						<td class=v>
+							<label class="switch">
+								<input type="checkbox">
+								<span class="slider"></span>
+							</label>
+						</td>
+						<td class=x>Données</td>
+						<td class=v>
+							<label class="switch">
+								<input type="checkbox">
+								<span class="slider"></span>
+							</label>
+						</td>
+				</tr>
+				<tr>
+						<td class=x>Ecran en N&B</td>
+						<td class=v>
+							<label class="switch">
+								<input type="checkbox">
+								<span class="slider"></span>
+							</label>
+						</td>
+						<td class=x></td>
+						<td class=v> </td>
+				</tr>
+				<tr>
+						<td class=x>Contraste légé</td>
+						<td class=v>
+								<label class="switch">
+									<input type="checkbox">
+									<span class="slider"></span>
+								</label>
+						<td> </td>
+						<td class=button-ok> Ok </td>
+
+				</tr>
+			</table>
+		</div>
+
+		<div id="exit3">
+			Vous disposez de : <br><br><br>
+			8 minutes
+		</div>
+
+	<!--    <ul class="initiale">
+	      <li> C </li>
+	      <li> A </li>
+	      <li> T </li>
+	      <li> V </li>
+	      <li> J </li>
+	      <li> P </li>
+			</ul>
+
+		-->
+
+
+
+		    <footer class="m-footer">
+		      <div class="m-divBlock">
+		      <div class="m-tab">
+		        <button id="buttonChat" class="goto-m-chat" onclick="openNav()"></button>
+		        <button id="buttonHub" class="tablinks" onclick="toggleNav()"></button>
+		      </div>
+		      <div class="m-content" data-current-page>
+		      <div class="m-hub m-page" id="fenetre">
+		        <div class="m-header">
+		        <form action="">
+		          <input id="text" autocomplete="off" placeholder="Recherchez une pousse ..."/>
+		        </form>
+		        <img id="linkFlowerHub" src="services/m/link-flower.svg" alt="Lien vers notre fleur">
+		      </div>
+		      <div class="m-listContainer">
+		        <div class="m-lineGroup" id="lineGrid" >
+		          <div class="leftLineButton"> </div>
+		          <div class="lineGroupFlowers" id="lineGridFlowers">
+		            <div class="m-userbox" id="flwr1">
+		              <div class="m-userboxFlwr"> </div>
+		              <div class="m-userboxName">=daxfire</div>
+		            </div>
+		            <div class="m-userbox" id="flwr2">
+		              <div class="m-userboxFlwr"> </div>
+		              <div class="m-userboxName">=dana.void</div>
+		            </div>
+		            <div class="m-userbox" id="flwr3">
+		              <div class="m-userboxFlwr"> </div>
+		              <div class="m-userboxName">=MargotDelFuego</div>
+		            </div>
+		            <div class="m-userbox" id="flwr4">
+		              <div class="m-userboxFlwr"> </div>
+		              <div class="m-userboxName"> </div>
+		            </div>
+		            <div class="m-userbox" id="flwr5">
+		              <div class="m-userboxFlwr"> </div>
+		              <div class="m-userboxName"> </div>
+		            </div>
+		          </div>
+		          <div class="rightLineButton"> </div>
+		        </div>
+		        <div class="m-lineConnected" id="lineGrid">
+		          <div class="leftLineButton"> </div>
+		          <div class="lineConnectedFlowers" id="lineGridFlowers">
+		            <div class="m-userbox" id="flwr1">
+		              <div class="m-userboxFlwr"> </div>
+		              <div class="m-userboxName"> </div>
+		            </div>
+		            <div class="m-userbox" id="flwr2">
+		              <div class="m-userboxFlwr"> </div>
+		              <div class="m-userboxName"> </div>
+		            </div>
+		            <div class="m-userbox" id="flwr3">
+		              <div class="m-userboxFlwr"> </div>
+		              <div class="m-userboxName"> </div>
+		            </div>
+		            <div class="m-userbox" id="flwr4">
+		              <div class="m-userboxFlwr"> </div>
+		              <div class="m-userboxName"> </div>
+		            </div>
+		            <div class="m-userbox" id="flwr5">
+		              <div class="m-userboxFlwr"> </div>
+		              <div class="m-userboxName"> </div>
+		            </div>
+		          </div>
+		          <div class="rightLineButton"> </div>
+		        </div>
+		        <div class="m-friendList" id="lineGrid">
+		          <div class="leftLineButton"> </div>
+		          <div class="lineFriendFlowers" id="lineGridFlowers">
+		            <div class="m-userbox" id="flwr1">
+		              <div class="m-userboxFlwr"> </div>
+		              <div class="m-userboxName"> </div>
+		            </div>
+		            <div class="m-userbox" id="flwr2">
+		              <div class="m-userboxFlwr"> </div>
+		              <div class="m-userboxName"> </div>
+		            </div>
+		            <div class="m-userbox" id="flwr3">
+		              <div class="m-userboxFlwr"> </div>
+		              <div class="m-userboxName"> </div>
+		            </div>
+		            <div class="m-userbox" id="flwr4">
+		              <div class="m-userboxFlwr"> </div>
+		              <div class="m-userboxName"> </div>
+		            </div>
+		            <div class="m-userbox" id="flwr5">
+		              <div class="m-userboxFlwr"> </div>
+		              <div class="m-userboxName"> </div>
+		            </div>
+		          </div>
+		          <div class="rightLineButton"> </div>
+		        </div>
+		      </div>
+		    </div>
+
+
+		      <div class="m-chatContainer m-page" id="fenetreChat">
+		        <div class="m-chatHeader">
+		          <img class="goto-m-hub" id="m-retour" src="services/m/Pousse-retour.svg" alt="Retour au hub">
+		          <h3 align="center" id="m-usernametop">=daxfire</h3>
+		        </div>
+		        <div class="m-chatMessages" id="messages">
+		          <div class="m-usernames"></div>
+		          <div class="m-messages"></div>
+		        </div>
+		        <div class="m-drawerChat" id="m-drawerChatOpened">
+		        <div class="m-drawerClosed">
+		          <div class="m-btn1 goto-m-smileyDrawer" alt="Smiley">
+		          </div>
+		          <div class="m-btn2"> </div>
+		          <div class="m-btn3"> </div>
+		          <div class="m-toggleDrawer" onclick="toggleDrawer()"></div>
+		          <div class="m-btn4"> </div>
+		          <div class="m-btn5"> </div>
+		          <div class="m-btn6"> </div>
+		        </div>
+		        <div class="m-drawerOpened" id="m-drawerOpened">
+		          <div class="m-contentDrawer" data-current-page>
+		          <div class="m-drawerSmiley m-pageDrawer" id="drawerScreen">
+		            <div class="m-drawerSmileyScreen">
+		              <a id="smiley" title="smiley" href="#"> &#129300; </a>
+		            </div>
+		          </div>
+		        </div>
+		        </div>
+		      </div>
+		        <div class="m-chatFooter">
+		          <form action="">
+		          <input id="m-text" /><button></button>
+		        </form>
+		        </div>
+		      </div>
+		    </div>
+		  </div>
+
+		    </footer>
+		    <script src="/socket.io/socket.io.js"></script>
+
+			    <link href="services/m/m-style2.min.css" rel="stylesheet" type="text/css">
+			    <script src="services/m/m-script.js"></script>
+
+				<style type="text/css">
+
+				.m-divBlock {
+					position:absolute;
+					bottom:0;
+					right:0;
+				}
+
+				.m-content {
+					background:white;
+				}
+
+				</style>
+		<script>
+		  var socket = io();
+		</script>
+
+
+
+
+
+
+  </body>
+</html>
