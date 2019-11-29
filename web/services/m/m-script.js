@@ -6,6 +6,18 @@ $(function () {
 	$('.goto-m-chat').on('click', function(){
 		$('.m-page').hide();  // 1. On cache tous les écrans
 		$('.m-chatContainer').show(); // 2. Puis on affiche l'écran
+// chat
+		var socket = io();
+		$('.m-chatContainer form').on("submit",function(e){
+			e.preventDefault(); // prevents page reloading
+			let msg = $('#m-text').val();
+      socket.emit('chat message', msg);
+      $('#m-text').val('');
+      return false;
+		});
+		socket.on('chat message', function(msg){
+      $('.m-messages').append($('<li>').text(msg));
+    });
 	});
 });
 
