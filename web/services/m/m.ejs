@@ -5,9 +5,6 @@
     <link href="services/m/m-style2.min.css" rel="stylesheet" type="text/css">
     <script src="services/m/jquery-3.4.1.min.js"> </script>
     <script src="services/m/m-script.js"></script>
-    <script src="services/m/m-scriptio.js"></script>
-    <script src="/socket.io/socket.io.js"></script>
-    <script> var socket = io(); </script>
   </head>
   <body>
     <footer class="m-footer">
@@ -139,7 +136,7 @@
       </div>
         <div class="m-chatFooter">
           <form action="">
-          <input id="text" /><button></button>
+          <input id="m-text" /><button></button>
         </form>
         </div>
       </div>
@@ -147,5 +144,9 @@
   </div>
 
     </footer>
+    <script src="/socket.io/socket.io.js"></script>
+<script>
+  var socket = io();
+</script>
 </body>
 </html>
