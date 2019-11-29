@@ -1,0 +1,54 @@
+{
+   "nodes":[
+      {
+         "id":"Lycée de Villefontaine",
+         "group":"lieu",
+         "localisation":"lycee villefontaine"
+      },
+      {
+         "id":"Boule Disco",
+         "group":"objet",
+         "type":"deco",
+         "fill":{
+            "src":"services/t/img/candle.png",
+            "mode":"fit"
+         },
+         "localisation":"lycee villefontaine"
+      },
+      {
+         "id":"T-Shirt Enfant",
+         "group":"objet",
+         "type":"vetement",
+         "fill":{
+            "src":"services/t/img/shirt.png",
+            "mode":"fit"
+         },
+         "localisation":"lycee villefontaine"
+      },
+      {
+         "id":"Canapé",
+         "group":"objet",
+         "type":"meuble",
+         "fill":{
+            "src":"services/t/img/couch.png",
+            "mode":"fit"
+         },
+         "localisation":"lycee villefontaine"
+      }
+   ],
+
+   "edges":[
+      {
+         "from":"Lycée de Villefontaine",
+         "to":"Boule Disco"
+      },
+      {
+         "from":"Lycée de Villefontaine",
+         "to":"T-Shirt Enfant"
+      },
+      {
+         "from":"Lycée de Villefontaine",
+         "to":"Canapé"
+      }
+   ]
+}

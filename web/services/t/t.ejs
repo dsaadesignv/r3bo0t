@@ -1,7 +1,190 @@
-Hi, I'm T
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Service de Troc</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<script>
-  var BASEURL = '<%= BASEURL %>';
-</script>
+  <link rel="stylesheet" href="services/t/css/reset.css">
+  <link rel="stylesheet" href="services/t/css/styles.min.css">
+  <link rel='stylesheet' href='http://www.cnap.graphismeenfrance.fr/faune/styles/faune-fontes.css'>
 
-<script src="<%= BASEURL %>/resources/socket.io-1.2.0.js"></script>
+  <script  type="text/javascript" src="services/t/js/jquery.min.js"></script>
+  <script src="https://cdn.anychart.com/releases/8.7.0/js/anychart-core.min.js"></script>
+  <script src="https://cdn.anychart.com/releases/8.7.0/js/anychart-graph.min.js"></script>
+  <script  type="text/javascript" src="services/t/js/scripts.js"></script>
+
+</head>
+
+<body>
+  <div class="t-service">
+    <div class="t-content" data-current-page>
+
+<!-- /////////////////////////////////////////////////////////-->
+<!-- ////////////////////////////////////////PAGE1 -->
+
+      <div class="t-page t-page1">
+        <div id="pageMenu">
+
+          <p class="t-Menu t-goto-page2">Je me promène</p>
+          <div class="t-menu-border"></div>
+          <p class="t-Menu t-goto-page3">Je cherche</p>
+          <div class="t-menu-border"></div>
+          <p class="t-Menu t-goto-page6">Je donne</p>
+
+        </div>
+      </div>
+
+
+<!-- ////////////////////////////////////////PAGE2 -->
+
+      <div class="t-page t-page2">
+        <p class="t-IconeMenu t-goto-page1">&#9776;</p>
+
+        <!-- <div class="t-Categories">
+          <div class="t-Item1"></div>
+          <div class="t-Item2"></div>
+          <div class="t-Item3"></div>
+          <div class="t-Item4"></div>
+        </div> -->
+
+        <div id="t-containerContainer">
+          <div id="t-Container1"></div>
+          <div id="t-Container2"></div>
+          <div id="t-Container3"></div>
+        </div>
+
+      </div>
+
+
+<!-- ////////////////////////////////////////PAGE3 -->
+
+      <div class="t-page t-page3">
+        <p class="t-IconeMenu t-goto-page1">X</p>
+        <form>
+            <input type="text" name="t-recherche" id="t-recherche" style="border-radius: 1vh;font-family: 'Faune'; position: relative; color: #000000;
+            font-size: 2em; font-style: italic; width:66.6vw; height: 1.5em; background-color: #F8F8F8; margin-left: 16.5vw;
+            margin-top: 45vh; transform: translateY(-50%); line-height: 1.5em; border:0px;" placeholder="Que recherchet-vous" size="30" maxlength="10" />
+
+            <select name="distance" style="border-radius: 1vh;font-family: 'Faune'; position: relative; color: #000; font-size: 2em; font-style: italic; width:15vw; height: 1.5em;
+            background-color: #F8F8F8; margin-left: 16.5vw; margin-top: 5vh; transform: translateY(-50%); line-height: 1.5em;border:0px;" id="distance"/>
+                <option value="5km">5km</option>
+                <option value="10km">10km</option>
+                <option value="15km">15km</option>
+                <option value="20km">20km</option>
+                <option value="25km">25km</option>
+                <option value="30km">30km</option>
+            </select>
+            <input type="submit" style="border-radius: 1vh; font-family: 'Faune'; position: relative; color: #ffffff; font-size: 2em; font-style: italic; height: 1.5em;
+            background-color: #038090; margin-left: 5vw; margin-top: 5vh; transform: translateY(-50%); line-height: 1.5em;border:0px;" name="Go"/>
+        </form>
+      </div>
+
+
+<!-- ////////////////////////////////////////PAGE4 -->
+
+      <div class="t-page t-page4">
+        <p class="t-IconeMenu t-goto-page1">X</p>
+
+        <div class="t-Description">
+          <h2 class="t-Titre">Nono38</h2>
+          <p class="t-SousTitre">Marie de Villefontaine</p><br>
+          <p>J'aime le jardinage et la permaculture. <br>Je fais du vélo et de la randonnée.</p>
+          <p>Je recherche activement une <span class="t-BoldItalic">Binette</span></p>
+        </div>
+
+        <div id="t-Scroll">
+            <p class="t-Icone t-goto-page5">&#9917;</p>
+            <p class="t-SousTitreIcone t-goto-page5">Livre "Le Seigneur des Anneaux"</p>
+            <p class="t-Icone t-goto-page5">&#127810;</p>
+            <p class="t-SousTitreIcone t-goto-page5">Brouette</p>
+            <p class="t-Icone t-goto-page5">&#128085;</p>
+            <p class="t-SousTitreIcone t-goto-page5">T-shirt Enfant</p>
+            <p class="t-Icone t-goto-page5">&#128715;</p>
+            <p class="t-SousTitreIcone t-goto-page5">Lot d'assiettes</p>
+            <p class="t-Icone t-goto-page5">&#127810;</p>
+            <p class="t-SousTitreIcone t-goto-page5">Botte de pluie T40</p>
+        </div>
+      </div>
+
+<!-- ////////////////////////////////////////PAGE5 -->
+      <div class="t-page t-page5">
+        <p class="t-IconeMenu t-goto-page1">X</p>
+
+        <div class="t-parent">
+          <div class="t-div1">
+            <p class="t-etat"> Etat : Bon</p>
+          </div>
+          <div class="t-div2 t-imageAnim"></div>
+          <div class="t-div3">
+            <p class="t-date"> 19/11</p>
+          </div>
+          <div class="t-div4">
+            <p class="t-sousTitre">T-Shirt</p>
+            <p class="t-localisation">Marie de Villefontaine</p>
+          </div>
+          <div class="t-div5">
+            <h3 class="t-titreObjet">T-shirt enfant</h3>
+            <p class="t-description">T-shirt enfant manches longues. Blanc avec une ancre noire et rouge.
+              Epaulettes noires. Marque petit bateau. Taille 6 ans.</p>
+          </div>
+          <div class="t-div6">
+            <h3 class="t-titreObjet t-goto-page4">Nono38</h3>
+            <p class="t-description">J’aime le jardinage et je fais du vélo. Je recherche activement une Binette</p>
+            <p class="t-inline-block t-bouton">Créer une pousse</p>
+          </div>
+          </div>
+
+      </div>
+
+<!-- ////////////////////////////////////////PAGE6 -->
+          <div class="t-page t-page6">
+            <p class="t-IconeMenu t-goto-page1">X</p>
+
+            <div class="t-parent">
+              <div class="t-div1">
+                <form>
+                  <label for="t-etat">Etat :</label>
+                  <select style="border: 0px; background-color: #F8F8F8; font-family: 'Faune';" id="t-etat" name="t-etat" >
+                    <option value="tresBonEtat">Très bon état</option>
+                    <option value="bonEtat">Bon état</option>
+                    <option value="assezBonEtat">Assez bon état</option>
+                    <option value="etatMoyen">Etat moyen</option>
+                    <option value="mauvaisEtat">Mauvais état</option>
+                  </select>
+                </form>
+              </div>
+              <div class="t-div2"></div>
+              <div class="t-div3">
+                <p class="t-date"> 19/11</p>
+              </div>
+              <div class="t-div4">
+                <label style="margin-right:2vw" for="etat">Alt image : </label>
+                <input type="text" name="t-etat" id="t-etat" style="border: 0px;padding: 1vh; background-color: #F8F8F8; border-radius: 3vh;"><br>
+              </div>
+              <div class="t-div5">
+                <form>
+                  <label class="t-titreObjet" for="etat">Nom Objet</label><br>
+                  <input type="text" name="t-etat" id="t-etat" style="width: 33vw; border: 0px;padding: 2vh; background-color: #F8F8F8; border-radius: 3vh;"><br>
+                  <label class="t-titreObjet" for="t-description2">Description</label><br>
+                  <input type="textarea" name="t-description2" id="t-description2" style="padding: 2vh; height: 20vw; width: 33vw;  border: 0px; background-color: #F8F8F8; border-radius: 3vh;">
+                </form>
+              </div>
+              <div class="t-div6">
+                <h3 class="t-titreObjet">Nono38</h3>
+                <p class="t-description">J’aime le jardinage et je fais du vélo. Je recherche activement une Binette</p>
+                <p class="t-inline-block t-bouton t-goto-page4">Valider</p>
+              </div>
+              </div>
+          </div>
+
+<!-- /////////////////////////////////////////////////////////-->
+
+
+    </div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+{
+   "nodes":[
+      {
+         "id":"Mairie de Villefontaine",
+         "group":"lieu",
+         "localisation":"marie villefontaine"
+      },
+      {
+         "id":"Chaussettes",
+         "group":"objet",
+         "type":"vetement",
+         "fill":{
+            "src":"services/t/img/shirt.png",
+            "mode":"fit"
+         },
+         "localisation":"marie villefontaine"
+      },
+      {
+         "id":"Bougie",
+         "group":"objet",
+         "type":"deco",
+         "fill":{
+            "src":"services/t/img/candle.png",
+            "mode":"fit"
+         },
+         "localisation":"marie villefontaine"
+      },
+      {
+         "id":"Pelle",
+         "group":"objet",
+         "type":"jardin",
+         "fill":{
+            "src":"services/t/img/leaf.png",
+            "mode":"fit"
+         },
+         "localisation":"marie villefontaine"
+      },
+      {
+         "id":"T-Shirt Metallica",
+         "group":"objet",
+         "type":"vetement",
+         "fill":{
+            "src":"services/t/img/shirt.png",
+            "mode":"fit"
+         },
+         "localisation":"marie villefontaine"
+      },
+      {
+         "id":"Brouette",
+         "group":"objet",
+         "type":"jardin",
+         "fill":{
+            "src":"services/t/img/leaf.png",
+            "mode":"fit"
+         },
+         "localisation":"marie villefontaine"
+      },
+      {
+         "id":"Manteau Hiver",
+         "group":"objet",
+         "type":"vetement",
+         "fill":{
+            "src":"services/t/img/shirt.png",
+            "mode":"fit"
+         },
+         "localisation":"marie villefontaine"
+      }
+   ],
+
+   "edges":[
+      {
+         "from":"Mairie de Villefontaine",
+         "to":"Chaussettes"
+      },
+      {
+         "from":"Mairie de Villefontaine",
+         "to":"Bougie"
+      },
+      {
+         "from":"Mairie de Villefontaine",
+         "to":"Pelle"
+      },
+      {
+         "from":"Mairie de Villefontaine",
+         "to":"T-Shirt Metallica"
+      },
+      {
+         "from":"Mairie de Villefontaine",
+         "to":"Brouette"
+      },
+      {
+         "from":"Mairie de Villefontaine",
+         "to":"Manteau Hiver"
+      }
+   ]
+}

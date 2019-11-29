@@ -1,0 +1,83 @@
+{
+   "nodes":[
+      {
+         "id":"Gare de la Verpillière",
+         "group":"objet",
+         "group":"lieu",
+         "localisation":"gare verpilliere"
+      },
+      {
+         "id":"Boutures de Figuier",
+         "group":"objet",
+         "type":"jardin",
+         "fill":{
+            "src":"services/t/img/leaf.png",
+            "mode":"fit"
+         },
+         "localisation":"gare verpilliere"
+      },
+      {
+         "id":"Mirroir",
+         "group":"objet",
+         "type":"deco",
+         "fill":{
+            "src":"services/t/img/candle.png",
+            "mode":"fit"
+         },
+         "localisation":"gare verpilliere"
+      },
+      {
+         "id":"Etagère",
+         "group":"objet",
+         "type":"meuble",
+         "fill":{
+            "src":"services/t/img/couch.png",
+            "mode":"fit"
+         },
+         "localisation":"gare verpilliere"
+      },
+      {
+         "id":"Table de nuit",
+         "group":"objet",
+         "type":"meuble",
+         "fill":{
+            "src":"services/t/img/couch.png",
+            "mode":"fit"
+         },
+         "localisation":"gare verpilliere"
+      },
+      {
+         "id":"Guéridon",
+         "group":"objet",
+         "type":"meuble",
+         "fill":{
+            "src":"services/t/img/couch.png",
+            "mode":"fit"
+         },
+         "localisation":"gare verpilliere"
+      }
+   ],
+
+   "edges":[
+      {
+         "from":"Gare de la Verpillière",
+         "to":"Boutures de Figuier"
+      },
+      {
+         "from":"Gare de la Verpillière",
+         "to":"Mirroir"
+      },
+      {
+         "from":"Gare de la Verpillière",
+         "to":"Etagère"
+      },
+      {
+         "from":"Gare de la Verpillière",
+         "to":"Table de nuit"
+      },
+      {
+         "from":"Gare de la Verpillière",
+         "to":"Guéridon"
+      }
+   ]
+}
