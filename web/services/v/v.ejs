@@ -3,16 +3,16 @@
 <head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> <!-- pour mobile -->
-		
-		<link rel="stylesheet" href="css/master.css">
+
+		<link rel=stylesheet href="css/master.css" type="text/css" media="all">
 
 		<title> Video - Audio </title>
-		
+
 		<script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
-		<script src="/js/main.js"></script>
+		<script src="js/main.js"></script>
 </head>
 <body>
 
@@ -33,13 +33,13 @@
 
 
 
-    <!--------------------------------------------------------------- NAV -->    
+    <!--------------------------------------------------------------- NAV -->
         <header>
-            <div id="v-research" class="v-hide"> 
-                <form id="v-form_bar"> 
+            <div id="v-research" class="v-hide">
+                <form id="v-form_bar">
                     <input type="search"  id="v-search_big" placeholder="Tapez un mot-clef !"/>
-                    <button> Connaissance </button> 
-                    <button> Divertissement </button> 
+                    <button> Connaissance </button>
+                    <button> Divertissement </button>
                     <button> Musique </button>
                 </form>
             </div>
@@ -55,7 +55,7 @@
                 <path class="v-color_blue" d="M37 36.8075V39.1301H41.4299V44H43.5701V39.1301H48V36.8075H43.5701V32H41.4299V36.8075H37Z"/>
                 <rect x="0.5" y="0.5" width="55" height="48" fill="none" stroke="#142585"/>
                 </svg></a>
-            <a id="v-theme"><object type="image/svg+xml" data="/icons/nav_theme.svg"></object></a> 
+            <a id="v-theme"><object type="image/svg+xml" data="/icons/nav_theme.svg"></object></a>
             <a><img src="/icons/nav_drops.svg" /></a>
         </header>
     <!-- End of NAV -->
@@ -64,11 +64,11 @@
 <!-------------------------------------------------------------------------------------->
 <!--------------------------------------------------------------------------- WRAPPER ---->
 <!-------------------------------------------------------------------------------------->
-    <div id="v-wrapper">    
+    <div id="v-wrapper">
 
-        <!---------------------------------------------------------- 01 - Big search bar -->    
-            <div id="v-research_home"> 
-                <form> 
+        <!---------------------------------------------------------- 01 - Big search bar -->
+            <div id="v-research_home">
+                <form>
                     <input type="search" id="v-search" placeholder="Tapez un mot-clef !"/> <img src="/icons/picto_search.svg">
                     <button type="button"> Connaissance </button> <button type="button"> Divertissement </button> <button type="button"> Musique </button>
                 </form>
@@ -80,7 +80,7 @@
             <div id="v-grid">
                 <h2>La récolte du jour</h2>
 
-                <div id="v-category_name"> 
+                <div id="v-category_name">
                     <h3> Connaissance </h3>
                     <h3> Divertissement </h3>
                     <h3> Musique </h3>
@@ -91,25 +91,25 @@
                     <div id="v-cat-knowledge">
                     </div>
 
-                    <div id="v-cat-entertainment"> 
+                    <div id="v-cat-entertainment">
                     </div>
 
-                    <div id="v-cat-music"> 
+                    <div id="v-cat-music">
                     </div>
-               
+
                 </div> <!-- END OF RESULTS BLOC -->
 
                 <div id="v-gardeners">
                     <h3> Jardiniers </h3>
 
                     <div>
-                     
+
                     </div>
                 </div>
-            </div> 
+            </div>
         <!-- END OF 02 - Item grid -->
 
-            
+
 
         <!----------------------------------------------------------- 03 - Content info -->
             <div class="v-hide" id="v-info_content">
@@ -117,7 +117,7 @@
                     <h4 id="v-content_category" > </h4>
                     <h5 id="v-content_subcategory"> </h5>
                     <img id="v-state" src="/icons/2_state.svg"/>
-                    <hr id="v-background_bar"/> 
+                    <hr id="v-background_bar"/>
                     <hr id="v-hydratation_bar"/>
                 </div>
 
@@ -134,9 +134,9 @@
                         <img id="v-bucket_add" src="/icons/picto_bucket-plus.svg"/>
                         <button id="v-share"> Partager </button>
                     </div>
-                    
+
                 </div>
-                
+
 
             </div>
         <!-- End of 03 - Content info  -->
@@ -173,17 +173,17 @@
                         <audio class="v-hide" controls>
                                 <source src="" type="audio/mp3">
                         </audio>
-                        
-                        
+
+
                         <!-- CONTENT = VIDEO-->
                         <video class="v-hide" controls>
                                 <source preload="none" src="" type="video/mp4">
                         </video>
 
-                        
+
                     </div>
                 </div>
-                
+
 
             </div>
         <!-- End of 04 - Content Media -->
@@ -193,14 +193,14 @@
             <div class="v-hide" id="v-info_profile">
                 <div>
                     <h5 id="v-subcategory"> Rock </h5>
-                    <hr id="v-background_bar"/> 
+                    <hr id="v-background_bar"/>
                     <p id="v-profile_author">Yonaka</p>
                     <p id="v-separator">  |  </p>
                     <p id="v-content_year"> 2019 </p>
                 </div>
 
                 <div>
-                    <button> Ajouter le prochain contenu 
+                    <button> Ajouter le prochain contenu
                         <img src="/icons/picto_bucket.svg" alt="bucket icon">
                     </button>
                 </div>
@@ -214,11 +214,11 @@
                     <figure>
                             <img src="/img/profile_pic.jpg" alt="profile pic"/>
                     </figure>
-    
+
                     <div id="v-musician_album">
                         <h3> Albums </h3>
 
-                    <!-- album item -->    
+                    <!-- album item -->
                         <div class="v-album_item">
                             <p class="v-title">Bubblegum</p>
                             <p class="v-author">2016</p>
@@ -232,8 +232,8 @@
 
                     </div>
                </div>
-               
-               
+
+
                <div id="v-profile_grid" >
                    <!-- item content -->
                    <div class="v-item">
@@ -278,13 +278,13 @@
                             <hr/>
                             <p class="v-title">Cédric Villani - 1/7 La théorie synthétique de la courbure de Ricci</p>
                             <p class="v-author">Institut des Hautes Études Scientifiques (IHÉS)</p>
-                        </div>  
+                        </div>
                </div>
 
             </div>
         <!-- End of  06 - Profile Content -->
 
-        
+
         <!----------------------------------------------------------- 07 - Import -->
             <div class="v-hide" id="v-import">
                 <h2 id="v-import_title">Nouvelle Pousse</h2>
@@ -296,15 +296,15 @@
 
                     <div id="v-cutting_quota">
 
-                        <div id="v-video_quota"> 
+                        <div id="v-video_quota">
                             <p>Vidéo : </p><p class="v-left_number">1</p>
                             <div class="v-background_bar">
-                                <div class="v-progress_bar"></div> 
+                                <div class="v-progress_bar"></div>
                             </div>
-                            
+
                         </div>
 
-                        <div id="v-music_quota"> 
+                        <div id="v-music_quota">
                             <p>Musique :</p><p class="v-left_number">4</p>
                             <div class="v-background_bar">
                                 <div class="v-progress_bar"></div>
@@ -328,14 +328,14 @@
                         <div id="v-plant_quota">
                             <p>Stockage disponible :</p><p class="v-left_number">43%</p>
                             <div class="v-background_bar">
-                                <div class="v-progress_bar"></div> 
+                                <div class="v-progress_bar"></div>
                             </div>
                         </div>
-    
+
                         <figure>
                             <img src="/icons/picto_new.svg" alt="Plantation : héberger une vidéo et la mettre en ligne">
                         </figure>
-    
+
                         <button> Mettre en ligne une vidéo </button>
                 </div>
 
