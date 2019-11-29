@@ -409,7 +409,7 @@ margin: 0 auto;
     display: block;
     width: 100%;
     height: 100%;
-    background-image: url(../img/tuxkart.png);
+    background-image: url(../services/s/img/tuxkart.png);
     background-size: cover;
 }
 
@@ -605,7 +605,6 @@ margin: 0 auto;
 }
 
 
-
 .s-titre{
     margin: 0 0 8px 2%;
     font-size: 40px;
@@ -650,6 +649,7 @@ margin: 0 auto;
     color : #F5F0F1;
     font-family: HK Grotesk, "Arial";
     font-size: 14px;
+    margin-right: 2%;
 }
 
 .stexte-uri {
