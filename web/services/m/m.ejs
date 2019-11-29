@@ -11,6 +11,7 @@
       <div class="m-divBlock">
       <div class="m-tab">
         <button id="buttonChat" class="goto-m-chat" onclick="openNav()"></button>
+        <button id="buttonGeneral" class="goto-m-chat" onclick="openNav()"></button>
         <button id="buttonHub" class="tablinks" onclick="toggleNav()"></button>
       </div>
       <div class="m-content" data-current-page>
@@ -39,11 +40,11 @@
             </div>
             <div class="m-userbox" id="flwr4">
               <div class="m-userboxFlwr"> </div>
-              <div class="m-userboxName"> </div>
+              <div class="m-userboxName">=PascalObispo</div>
             </div>
             <div class="m-userbox" id="flwr5">
               <div class="m-userboxFlwr"> </div>
-              <div class="m-userboxName"> </div>
+              <div class="m-userboxName">=JUL</div>
             </div>
           </div>
           <div class="rightLineButton"> </div>
@@ -53,23 +54,23 @@
           <div class="lineConnectedFlowers" id="lineGridFlowers">
             <div class="m-userbox" id="flwr1">
               <div class="m-userboxFlwr"> </div>
-              <div class="m-userboxName"> </div>
+              <div class="m-userboxName">=BarackObama</div>
             </div>
             <div class="m-userbox" id="flwr2">
               <div class="m-userboxFlwr"> </div>
-              <div class="m-userboxName"> </div>
+              <div class="m-userboxName">=jsp</div>
             </div>
             <div class="m-userbox" id="flwr3">
               <div class="m-userboxFlwr"> </div>
-              <div class="m-userboxName"> </div>
+              <div class="m-userboxName">=une.idee</div>
             </div>
             <div class="m-userbox" id="flwr4">
               <div class="m-userboxFlwr"> </div>
-              <div class="m-userboxName"> </div>
+              <div class="m-userboxName">=oskour</div>
             </div>
             <div class="m-userbox" id="flwr5">
               <div class="m-userboxFlwr"> </div>
-              <div class="m-userboxName"> </div>
+              <div class="m-userboxName">=j'en.ai.marre </div>
             </div>
           </div>
           <div class="rightLineButton"> </div>
@@ -79,23 +80,23 @@
           <div class="lineFriendFlowers" id="lineGridFlowers">
             <div class="m-userbox" id="flwr1">
               <div class="m-userboxFlwr"> </div>
-              <div class="m-userboxName"> </div>
+              <div class="m-userboxName">=exemple </div>
             </div>
             <div class="m-userbox" id="flwr2">
               <div class="m-userboxFlwr"> </div>
-              <div class="m-userboxName"> </div>
+              <div class="m-userboxName">=exemple </div>
             </div>
             <div class="m-userbox" id="flwr3">
               <div class="m-userboxFlwr"> </div>
-              <div class="m-userboxName"> </div>
+              <div class="m-userboxName">=exemple </div>
             </div>
             <div class="m-userbox" id="flwr4">
               <div class="m-userboxFlwr"> </div>
-              <div class="m-userboxName"> </div>
+              <div class="m-userboxName">=exemple </div>
             </div>
             <div class="m-userbox" id="flwr5">
               <div class="m-userboxFlwr"> </div>
-              <div class="m-userboxName"> </div>
+              <div class="m-userboxName">=exemple </div>
             </div>
           </div>
           <div class="rightLineButton"> </div>
@@ -106,7 +107,7 @@
 
       <div class="m-chatContainer m-page" id="fenetreChat">
         <div class="m-chatHeader">
-          <img class="goto-m-hub" id="m-retour" src="services/m/Pousse-retour.svg" alt="Retour au hub">
+          <img class="goto-m-hub" id="m-retour" src="services/m/Pousse-retour.svg" alt="Retour au hub" onclick="letOpen">
           <h3 align="center" id="m-usernametop">=daxfire</h3>
         </div>
         <div class="m-chatMessages" id="messages">
@@ -115,20 +116,22 @@
         </div>
         <div class="m-drawerChat" id="m-drawerChatOpened">
         <div class="m-drawerClosed">
-          <div class="m-btn1 goto-m-smileyDrawer" alt="Smiley">
+          <div class="m-btn1 goto-m-smileyDrawer" onclick="openDrawer()" alt="Smiley">
           </div>
-          <div class="m-btn2"> </div>
-          <div class="m-btn3"> </div>
+          <div class="m-btn2 goto-m-smileyDrawer" onclick="openDrawer()"> <font color="white">(◕‿◕｡)</font> </div>
+          <div class="m-btn3 goto-m-smileyDrawer" onclick="openDrawer()"> </div>
           <div class="m-toggleDrawer" onclick="toggleDrawer()"></div>
-          <div class="m-btn4"> </div>
-          <div class="m-btn5"> </div>
-          <div class="m-btn6"> </div>
+          <div class="m-btn4 goto-m-smileyDrawer" onclick="openDrawer()"> </div>
+          <div class="m-btn5 goto-m-smileyDrawer" onclick="openDrawer()"> </div>
+          <div class="m-btn6 goto-m-smileyDrawer" onclick="openDrawer()"> </div>
         </div>
         <div class="m-drawerOpened" id="m-drawerOpened">
           <div class="m-contentDrawer" data-current-page>
           <div class="m-drawerSmiley m-pageDrawer" id="drawerScreen">
             <div class="m-drawerSmileyScreen">
-              <a id="smiley" title="smiley" href="#"> &#129300; </a>
+              <span id="smiley" title="smiley">&#129300;</span>
+              <span id="smiley" title="smiley">&#129314;</span>
+
             </div>
           </div>
         </div>
@@ -136,7 +139,9 @@
       </div>
         <div class="m-chatFooter">
           <form action="">
-          <input id="m-text" /><button></button>
+          <input type="m-text" id="textmsg"/>
+
+          <button></button>
         </form>
         </div>
       </div>

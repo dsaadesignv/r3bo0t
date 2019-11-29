@@ -33,8 +33,13 @@ $(function () {
 });
 
 $("#smiley").click(function(){
-    $('#text').val($('#text').val() + $('#smiley').html());
-  });
+	console.log('reconnu');
+	console.log( $('#smiley').text());
+	console.log( $('#textmsg').val());
+    $('#textmsg').val( $('#textmsg').val() + '' + $('#smiley').text());
+	});
+
+
 
 function toggleNav() {
     var element = document.getElementById("fenetre");
@@ -51,6 +56,15 @@ function toggleNav() {
 				element.style.height = "428.44px";
 		}
 }
+
+function letOpen() {
+    var element = document.getElementById("fenetre");
+    if (element.style.height == "0px") {
+        element.style.height = "428.44px";
+    } else {
+				element.style.height = "428.44px";
+		}
+	}
 
 function toggleDrawer() {
     var element = document.getElementById("m-drawerOpened");
@@ -74,6 +88,11 @@ function openNav() {
 
 }
 
+function openDrawer() {
+	document.getElementById("m-drawerOpened").style.height = "95.5%";
+	document.getElementById("m-drawerChatOpened").style.height = "75%";
+
+}
 
 
 /* Set the width of the side navigation to 0 */
