@@ -92,6 +92,12 @@ io.on('connection', function(socket) {
 
   socket.emit('connection/handshake', {});
 
+
+  socket.on('chat message', function(msg){
+    console.log('message: ' + msg);
+    io.emit('chat message', msg);
+  });
+
   socket.on('connection/handshake', function(data) {
     console.log(data);
 
