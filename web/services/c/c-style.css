@@ -226,7 +226,6 @@ display: inline;
   grid-column-end: end;
   grid-row-start: first-row;
   grid-row-end: end-row;
-  overflow:scroll;
 }
 /*------------- LAYOUT TEXT PART RIGHT -------*/
 h1{
@@ -344,7 +343,7 @@ h4:focus{
 }
 .c-input-plant-pousse{
   position: absolute;
-  bottom: 11%;
+  bottom: 13%;
   right: 3%;
   display: inline-flex;
   padding-left: 2%;

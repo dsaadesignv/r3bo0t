@@ -1,15 +1,17 @@
 {
     "content":    [
         {
-           "category": "Divertissement",
+            "id": 1,
+            "category": "Divertissement",
            "subcategory": "Gaming",
            "title": "Papy Grenier - GTA SAN ANDREAS",
            "author": "Joueur du grenier",
            "duration": "3min14",
            "hydratation": 34,
-           "url" : "/video/PAPY_GRENIER.mp4"
+           "url" : "PAPY_GRENIER.webm"
         },
         {
+            "id": 2,
             "category": "Musique",
             "subcategory": "Pop",
             "title": "Walk Alone (feat. Tom Walker)",
@@ -17,9 +19,10 @@
             "duration": "6min33",
             "album": "Walk Alone (single)",
             "hydratation": 68,
-            "url" : "/music/rudimental.ogg"
+            "url" : "rudimental.ogg"
         },
         {
+            "id": 3,
             "category": "Musique",
             "subcategory": "Rock",
             "title": "Loose your head",
@@ -27,9 +30,10 @@
             "duration": "3min02",
             "album": "Teach me how to fight",
             "hydratation": 10,
-            "url" : "/music/rudimental.ogg"
+            "url" : "rudimental.ogg"
         },
         {
+            "id": 4,
             "category": "Musique",
             "subcategory": "Rock",
             "title": "Creature",
@@ -37,9 +41,10 @@
             "duration": "3min02",
             "album": "Teach me how to fight",
             "hydratation": 10,
-            "url" : "/music/creature.mp3"
+            "url" : "creature.mp3"
         },
         {
+            "id": 5,
             "category": "Musique",
             "subcategory": "Rock",
             "title": "Stigmata",
@@ -47,63 +52,70 @@
             "duration": "3min02",
             "album": "Apocalypse Now",
             "hydratation": 10,
-            "url" : "/music/grandson.mp3"
+            "url" : "grandson.mp3"
         },
         {
+            "id": 6,
             "category": "Connaissance",
             "subcategory": "Cuisine",
             "title": "Gâteau à la carotte et à la canelle",
             "author": "YouCook",
             "duration": "5min02",
             "hydratation": 14,
-            "url" : "/video/gateau.mp4"
+            "url" : "gateau.mp4"
         },
         {
+            "id": 7,
             "category": "Connaissance",
             "subcategory": "Politique",
             "title": "Japon : retour au centre ? - Le Dessous des cartes",
             "author": "Arte",
             "duration": "26min02",
             "hydratation": 23,
-            "url" : "/video/gateau.mp4"
+            "url" : "gateau.mp4"
         },
         {
+            "id": 8,
             "category": "Connaissance",
             "subcategory": "Nature",
             "title": "Les secrets du saumon d'élevage (reportage complet)",
             "author": "Thalassa",
             "duration": "47min02",
             "hydratation": 0,
-            "url" : "/video/gateau.mp4"
+            "url" : "gateau.mp4"
         },
         {
+            "id": 9,
             "category": "Connaissance",
             "subcategory": "Société",
             "title": "Amazon : le défi logistique - Documentaire Reportage 2016",
             "author": "NETYCOM",
             "duration": "13min02",
             "hydratation": 3,
-            "url" : "/video/gateau.mp4"
+            "url" : "gateau.mp4"
         },
         {
+            "id": 10,
             "category": "Connaissance",
             "subcategory": "Société",
             "title": "Les Coulisses des Autoroutes",
             "author": "RoadriPro",
             "duration": "17min02",
             "hydratation": 65,
-            "url" : "/video/gateau.mp4"
+            "url" : "gateau.mp4"
         },
         {
+            "id": 11,
             "category": "Connaissance",
             "subcategory": "Politique",
             "title": "Secrets et Coulisses du Palais de L' ÉLYSÉE",
             "author": "imineo Documentaire",
             "duration": "6min02",
             "hydratation": 28,
-            "url" : "/video/gateau.mp4"
+            "url" : "gateau.mp4"
         },
         {
+            "id": 12,
             "category": "Musique",
             "subcategory": "Rap",
             "title": "Plume",
@@ -111,9 +123,10 @@
             "duration": "3min02",
             "album": "Plume",
             "hydratation": 2,
-            "url" : "/music/rudimental.ogg"
+            "url" : "rudimental.ogg"
         },
         {
+            "id": 13,
             "category": "Musique",
             "subcategory": "R&B",
             "title": "Blue Lights",
@@ -121,9 +134,10 @@
             "duration": "3min02",
             "album": "Blue Lights EP",
             "hydratation": 42,
-            "url" : "/music/rudimental.ogg"
+            "url" : "rudimental.ogg"
         },
         {
+            "id": 14,
             "category": "Musique",
             "subcategory": "Indie",
             "title": "Big God",
@@ -131,9 +145,10 @@
             "album": "Lungs",
             "duration": "3min32",
             "hydratation": 35,
-            "url" : "/music/rudimental.ogg"
+            "url" : "rudimental.ogg"
         },
         {
+            "id": 15,
             "category": "Musique",
             "subcategory": "Rock",
             "title": "Waves",
@@ -141,18 +156,20 @@
             "duration": "3min37",
             "album": "Teach me how to fight",
             "hydratation": 47,
-            "url" : "/music/rudimental.ogg"
+            "url" : "rudimental.ogg"
         },
         {
+            "id": 16,
             "category": "Musique",
             "subcategory": "Rap",
             "title": "Bad Commando",
             "author": "Rema",
             "duration": "3min37",
             "hydratation": 36,
-            "url" : "/music/rudimental.ogg"
+            "url" : "rudimental.ogg"
         },
         {
+            "id": 17,
             "category": "Musique",
             "subcategory": "Rock",
             "title": "Bubblegum",
@@ -160,54 +177,60 @@
             "duration": "3min17",
             "album": "Teach me how to fight",
             "hydratation": 66,
-            "url" : "/music/rudimental.ogg"
+            "url" : "rudimental.ogg"
         },
         {
+            "id": 18,
             "category": "Divertissement",
             "subcategory": "Danse",
             "title": "The Evolution of Dance - 1950 to 2019 - By Ricardo Walker's Crew",
             "author": "Ricardo Walker",
             "duration": "3min17",
             "hydratation": 14,
-            "url" : "/video/gateau.mp4"
+            "url" : "gateau.mp4"
         },
         {
+            "id": 19,
             "category": "Divertissement",
             "subcategory": "Humour",
             "title": "Antonia de Rendinger - 'L'épilation' ",
             "author": "Montreux Comedy",
             "duration": "9min17",
             "hydratation": 26,
-            "url" : "/video/gateau.mp4"
+            "url" : "gateau.mp4"
         },
         {
+            "id": 20,
             "category": "Divertissement",
             "subcategory": "Vlogs",
             "title": "What Does My Husky Do When Home Alone? *GoPro Spy Footage*",
             "author": "Gohan The Husky",
             "duration": "5min13",
             "hydratation": 18,
-            "url" : "/video/gateau.mp4"
+            "url" : "gateau.mp4"
         },
         {
+            "id": 21,
             "category": "Divertissement",
             "subcategory": "Gaming",
             "title": "ON A TROUVÉ LA MEILLEURE CACHETTE ! (ft. Squeezie, Gotaga, Micka, Doigby)",
             "author": "Squeezie Gaming",
             "duration": "12min13",
             "hydratation": 29,
-            "url" : "/video/gateau.mp4"
+            "url" : "gateau.mp4"
         },
         {
+            "id": 22,
             "category": "Divertissement",
             "subcategory": "Humour",
             "title": "LES RÉUNIONS 3",
             "author": "Cyprien",
             "duration": "4min13",
             "hydratation": 36,
-            "url" : "/video/gateau.mp4"
+            "url" : "gateau.mp4"
         },
         {
+            "id": 23,
             "category": "Musique",
             "subcategory": "Rock",
             "title": "Fired Up",
@@ -215,7 +238,45 @@
             "duration": "3min35",
             "album": "Teach me how to fight",
             "hydratation": 48,
-            "url" : "/music/rudimental.ogg"
+            "url" : "rudimental.ogg"
+        },
+        {
+            "id": 24,
+            "category": "Connaissance",
+            "subcategory": "Histoire",
+            "title": "Cuba, un aller et un retour",
+            "author": "Arte",
+            "duration": "12min32",
+            "hydratation": 48,
+            "url" : "cuba.mp4"
+        },
+        {
+            "id": 25,
+            "category": "Connaissance",
+            "subcategory": "Culture",
+            "title": "Francisco de Goya : le sommeil de la raison",
+            "author": "Arte",
+            "duration": "14min03",
+            "hydratation": 49,
+            "url" : "cuba.mp4"
+        }
+    ],
+
+    "gardeners":    [
+        {
+            "profile_pic": "/img/profile_pic.jpg",
+            "name": "Yonaka",
+            "category": "Musique - Rock"
+        },
+        {
+            "profile_pic": "/img/profile_pic.jpg",
+            "name": "Joueur du Grenier",
+            "subcategory": "Divertissement - Gaming"
+        },
+        {
+            "profile_pic": "/img/profile_pic.jpg",
+            "name": "Arte",
+            "subcategory": "Connaissance - Culture / Histoire / Géographie"
         }
     ]
  }

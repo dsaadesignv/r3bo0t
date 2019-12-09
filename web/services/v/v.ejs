@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> <!-- pour mobile -->
 
-		<link rel=stylesheet href="services/v/css/master.css" type="text/css" media="all">
+		<link rel="stylesheet" href="services/v/css/master.css">
 
 		<title> Video - Audio </title>
 
@@ -12,7 +12,13 @@
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
-		<script src="services/v/js/main.js"></script>
+
+
+        <!-- Api Youtube -->
+        <script src="services/v/js/youtube_api.js"></script>
+        <script src="https://apis.google.com/js/client.js?onload=init"></script>
+
+        <script src="services/v/js/main.js"></script>
 </head>
 <body>
 
@@ -27,7 +33,7 @@
             <div id="v-level">
 
             </div>
-            <img src="services/v/icons/picto_eye.svg">
+            <img src="/services/v/icons/picto_eye.svg">
         </div>
     <!-- End of Viewing bar -->
 
@@ -35,45 +41,47 @@
 
     <!--------------------------------------------------------------- NAV -->
         <header>
-            <div id="v-research" class="v-hide">
-                <form id="v-form_bar">
-                    <input type="search"  id="v-search_big" placeholder="Tapez un mot-clef !"/>
-                    <button> Connaissance </button>
-                    <button> Divertissement </button>
-                    <button> Musique </button>
-                </form>
-            </div>
 
-            <div id="v-reading_list">
+
+            <div class="v-hide" id="v-reading_list">
 
             </div>
 
             <a><img id="v-search_go" src="services/v/icons/nav_search.svg" /></a>
-            <a><img src="services/v/icons/nav_bucket.svg" /></a>
+            <a id="v-list_open"><svg width="56" height="49" viewBox="0 0 56 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="v-color_blue" d="M28.1855 10C20.122 10 15.0454 12.6533 15.3872 14.9167C15.4857 15.565 15.7568 18.1583 16.1002 20.3717C12.149 21.9283 10.8396 24.4533 11.0154 26.5117C11.224 28.9467 13.3828 31.5533 18.1259 32.0033C20.8334 32.26 24.0913 30.7533 26.2025 28.1783C25.9469 27.7366 25.8417 27.2219 25.9031 26.7135C25.9645 26.2051 26.1891 25.7314 26.5422 25.3653C26.8953 24.9992 27.3573 24.7612 27.857 24.6879C28.3567 24.6146 28.8663 24.7102 29.3071 24.9598C29.748 25.2094 30.0956 25.5992 30.2964 26.0692C30.4972 26.5391 30.5401 27.063 30.4183 27.56C30.2965 28.0571 30.0169 28.4997 29.6226 28.8196C29.2283 29.1394 28.7412 29.3188 28.2364 29.33C25.7244 32.6183 21.898 34.6033 18.2738 34.3717C18.3576 34.9117 18.3888 35.95 18.4315 36.2267C18.5793 37.1917 22.2874 39.9933 28.1855 40C34.0835 39.9933 37.7916 37.1917 37.9411 36.2283C38.0857 35.2667 40.6371 17.2133 40.9838 14.9167C41.3255 12.6533 36.2472 10 28.1855 10ZM13.3056 26.3083C13.2152 25.2367 14.0531 23.8117 16.4666 22.7433L17.523 29.5333C14.8877 29.0117 13.419 27.6183 13.3056 26.3083ZM28.1855 18.3733C22.2874 18.37 18.1029 16.15 18.1029 15.32C18.0996 14.4967 22.2874 12.3367 28.1855 12.34C34.0835 12.3367 38.2713 14.4967 38.268 15.32C38.268 16.15 34.0835 18.37 28.1855 18.3733Z"/>
+                <rect x="0.5" y="0.5" width="55" height="48" stroke="#142585"/>
+                </svg>
+                </a>
             <a id="v-import_open"><svg  width="56" height="49" viewBox="0 0 56 49" xmlns="http://www.w3.org/2000/svg">
                 <path class="v-color_blue" d="M31.5792 20.3813C32.3225 20.7602 33.0658 20.9631 33.8092 20.9902C34.9929 21.0443 36.0253 20.8616 36.9062 20.4422C37.7872 20.0227 38.5167 19.4679 39.0949 18.7778C39.673 18.0877 40.2167 17.3908 40.726 16.6872C41.2353 15.9836 41.8478 15.3273 42.5636 14.7184C43.2794 14.1095 44.0915 13.7238 45 13.5614C43.9263 12.9931 43.128 12.5804 42.6049 12.3233C42.0818 12.0662 41.3936 11.755 40.5402 11.3896C39.6868 11.0243 38.971 10.8078 38.3929 10.7401C37.8147 10.6725 37.1334 10.6386 36.3488 10.6386C35.5642 10.6386 34.7933 10.7672 34.0363 11.0243C33.2792 11.2814 32.474 11.64 31.6205 12.1C29.4457 13.3179 28.7024 15.1581 29.3906 17.6209V17.6615C27.5186 18.771 26.2247 20.0701 25.5089 21.5585C24.9583 20.7196 24.4077 20.0971 23.8571 19.6912C23.1138 19.1499 22.0952 18.5139 20.8013 17.7832C21.0766 17.1879 21.2143 16.5519 21.2143 15.8753C21.2143 15.0364 21.0353 14.2786 20.6775 13.602C20.1544 12.5736 19.4661 11.7888 18.6127 11.2475C17.7593 10.7063 16.8646 10.3748 15.9286 10.253C14.9926 10.1312 14.0565 10.0432 13.1205 9.98912C12.1845 9.935 11.2485 9.75909 10.3125 9.4614C9.37649 9.16371 8.60565 8.67657 8 8C8 8.92014 8.00688 9.60348 8.02065 10.05C8.03441 10.4966 8.05506 11.0987 8.08259 11.8565C8.11012 12.6142 8.17206 13.1961 8.26842 13.602C8.36477 14.008 8.49554 14.5154 8.66071 15.1243C8.82589 15.7332 9.03925 16.2271 9.30078 16.606C9.56231 16.9849 9.87891 17.4111 10.2506 17.8847C10.6222 18.3583 11.0696 18.7846 11.5926 19.1635C12.1157 19.5423 12.7076 19.9077 13.3683 20.2595C15.378 21.3691 17.2775 21.2067 19.067 19.7724C20.7188 20.5031 22.1228 21.5315 23.279 22.8575C23.6644 24.0483 23.8571 25.1579 23.8571 26.1863C23.8571 26.9982 23.747 27.8642 23.5268 28.7843H14.6071C14.2493 28.7843 13.9395 28.9129 13.678 29.17C13.4165 29.4271 13.2857 30.0833 13.2857 30.0833C13.2857 30.0833 13.3683 38 25.5089 38C36.9062 38 38.163 30.0833 38.163 30.0833C38.163 29.7315 38.0323 29.4271 37.7707 29.17C37.5092 28.9129 37.1995 28.7843 36.8416 28.7843H27.3672C26.7891 27.6206 26.5 26.7546 26.5 26.1863C26.5 25.2391 26.9887 24.2107 27.966 23.1011C28.9433 21.9915 30.0513 21.0173 31.2902 20.1783C31.3177 20.1783 31.359 20.2054 31.4141 20.2595C31.4691 20.3136 31.5242 20.3542 31.5792 20.3813Z"/>
                 <path class="v-color_blue" d="M37 36.8075V39.1301H41.4299V44H43.5701V39.1301H48V36.8075H43.5701V32H41.4299V36.8075H37Z"/>
                 <rect x="0.5" y="0.5" width="55" height="48" fill="none" stroke="#142585"/>
                 </svg></a>
-            <a id="v-theme"><object type="image/svg+xml" data="services/v/icons/nav_theme.svg"></object></a>
-            <a><img src="services/v/icons/nav_drops.svg" /></a>
+            <a><img id="v-theme" src="services/v/icons/nav_theme.svg" /></a>
+            <a id="v-drops" ><img  src="services/v/icons/nav_drops.svg" /><div> <div><!-- drops level --></div></div> </a>
+
+
         </header>
+
     <!-- End of NAV -->
 
+
+<!---------------------------------------------------------- 01 - Big search bar -->
+<div class="v-research_home">
+    <form>
+        <input type="search" id="v-search" placeholder="Tapez un mot-clef !"/> <img src="services/v/icons/picto_search.svg">
+        <button type="button"> Connaissance </button> <button type="button"> Divertissement </button> <button type="button"> Musique </button>
+    </form>
+</div>
+<!-- END OF 01 - Big search bar -->
 
 <!-------------------------------------------------------------------------------------->
 <!--------------------------------------------------------------------------- WRAPPER ---->
 <!-------------------------------------------------------------------------------------->
     <div id="v-wrapper">
 
-        <!---------------------------------------------------------- 01 - Big search bar -->
-            <div id="v-research_home">
-                <form>
-                    <input type="search" id="v-search" placeholder="Tapez un mot-clef !"/> <img src="services/v/icons/picto_search.svg">
-                    <button type="button"> Connaissance </button> <button type="button"> Divertissement </button> <button type="button"> Musique </button>
-                </form>
-            </div>
-        <!-- END OF 01 - Big search bar -->
+
 
 
         <!----------------------------------------------------------- 02 - Item grid -->
@@ -100,7 +108,7 @@
                 </div> <!-- END OF RESULTS BLOC -->
 
                 <div id="v-gardeners">
-                    <h3> Jardiniers </h3>
+                    <h3> Auteurs </h3>
 
                     <div>
 
@@ -145,39 +153,39 @@
         <!----------------------------------------------------------- 04 - Content Media -->
             <div class="v-hide" id="v-content_media">
                 <div class="v-quality_choice" id="v-quality_choice_video">
-                    <button> Audio </button>
-                    <button> Vidéo 240p </button>
-                    <button> Vidéo 720p </button>
+                    <button class="v-q-bass"> Audio </button>
+                    <button class="v-q-moyen"> Vidéo SD </button>
+                    <button class="v-q-haut"> Vidéo HD </button>
                     <img src="services/v/icons/picto_p2p.svg" alt="peer to peer">
                 </div>
 
                 <div class="v-hide v-quality_choice" id="v-quality_choice_music">
-                    <button> Qualité Basse </button>
-                    <button> Qualité Moyenne </button>
-                    <button> Qualité Haute </button>
+                    <button class="v-q-bass"> Qualité Basse </button>
+                    <button class="v-q-moyen"> Qualité Moyenne </button>
+                    <button class="v-q-haut"> Qualité Haute </button>
                     <img src="services/v/icons/picto_p2p.svg" alt="peer to peer">
                 </div>
 
                 <div id="v-content">
-
+<!--
                     <figure>
                         <img src="services/v/img/img_album.jpg" alt="album"/>
-                    </figure>
+                    </figure> -->
 
                     <div>
 
-                        <p> Veuillez sélectionner un mode de visionnage !</p>
+                        <p> Veuillez sélectionner une qualité !</p>
 
                         <!-- CONTENT = MUSIC-->
                         <img src="services/v/img/img_music_visu.jpg"/>
-                        <audio class="v-hide" controls>
-                                <source src="" type="audio/mp3">
+                        <audio class="v-hide" autoplay controls>
+                                <source src="" type="audio/ogg">
                         </audio>
 
 
                         <!-- CONTENT = VIDEO-->
-                        <video class="v-hide" controls>
-                                <source preload="none" src="" type="video/mp4">
+                        <video autoplay class="v-hide" width="260" controls>
+                                <source preload="none" src="" type="video/webm">
                         </video>
 
 
@@ -192,11 +200,9 @@
         <!----------------------------------------------------------- 05 - Profile info -->
             <div class="v-hide" id="v-info_profile">
                 <div>
-                    <h5 id="v-subcategory"> Rock </h5>
+                    <h5 id="v-gardener_subcategory">  </h5>
                     <hr id="v-background_bar"/>
-                    <p id="v-profile_author">Yonaka</p>
-                    <p id="v-separator">  |  </p>
-                    <p id="v-content_year"> 2019 </p>
+                    <p id="v-profile_author"></p>
                 </div>
 
                 <div>
@@ -216,19 +222,19 @@
                     </figure>
 
                     <div id="v-musician_album">
-                        <h3> Albums </h3>
+                        <!-- <h3> Albums </h3>
 
-                    <!-- album item -->
+                    album item
                         <div class="v-album_item">
                             <p class="v-title">Bubblegum</p>
                             <p class="v-author">2016</p>
                         </div>
 
-                     <!-- album item -->
+                     album item
                         <div class="v-album_item">
                             <p class="v-title">Teach Me how to fight EP</p>
                             <p class="v-author">2019</p>
-                        </div>
+                        </div> -->
 
                     </div>
                </div>
@@ -321,6 +327,17 @@
                 </div>
 
 
+                <div id="v-youtube_API" class="v-hide">
+                    <form id="v-yt_search" action="#">
+                        <p><input type="search" id="v-search_yt" placeholder="Chercher sur Youtube" autocomplete="off" /></p>
+                        <p><input id="v-validate_yt" type="submit" value="Rechercher"></p>
+                    </form>
+                    <div id="v-results_yt"></div>
+                    <p id="v-yt_validation" class="v-hide"> Le contenu est ajouté au jardin ! </p>
+                </div>
+
+
+
 
                 <div id="v-import_upload">
                         <h2>Plantation</h2>
@@ -336,8 +353,10 @@
                             <img src="services/v/icons/picto_new.svg" alt="Plantation : héberger une vidéo et la mettre en ligne">
                         </figure>
 
-                        <button> Mettre en ligne une vidéo </button>
+                        <input type="file"> </input>
                 </div>
+
+
 
             </div>
          <!-- End of  07 - Import -->

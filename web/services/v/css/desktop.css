@@ -3,10 +3,6 @@
 
 /************************************** GENERAL */
 
-.theme_black {
-    background-color: rgb(14, 14, 14);
-}
-
 
 input:focus, button:focus {
     outline: none;
@@ -35,6 +31,7 @@ input:focus, button:focus {
 .v-selected_button { /* UI panel*/
     fill: #142585 !important;
     stroke: white !important;
+    background-color: #142585;
 }
 
 .v-color_blue {
@@ -47,9 +44,6 @@ input:focus, button:focus {
     stroke: #142585;
 }
 
-.v-selected_button { /* change the background of the button */
-    background-color: #142585;
-}
 
 .v-album, .v-subcategory, .v-category, .v-url, .v-hydratation {
     visibility: hidden;
@@ -93,18 +87,65 @@ _____   _                     _             _
     margin-right: 0.5vw;
 }
 
-/******************************* reading list */
-
-
-
-/******************************* Small Research bar */
-#v header #v-research {
-    -webkit-flex: 0 0 74.5%;
-    flex: 0 0 74.5%;
-    
+/******************** drops */
+#v-drops div div{
+    width: 100%;
+    background-color: white;
+    height: 50%;
+    margin-top: -100%;
+    box-sizing: border-box;
+    z-index: -80;
 }
 
-#v header #v-research form {
+#v-drops div {
+    transform-origin: center top;
+    width: 100%;
+    background-color: #142585;
+    height: 100%;
+    margin-top: -50%;
+    z-index: -100;
+}
+
+#v-drops img{
+    z-index: 100;
+}
+
+
+
+/******************************* reading list */
+
+#v-reading_list {
+    position: fixed;
+    height: 93.7vh;
+    right: 1.8vw;
+    top: 6.3vh;
+    width: 13.9vw;
+    background-color: #142585;
+}
+
+#v-reading_list div {
+    width: 80%;
+    margin-left: 2vh;
+}
+
+#v-reading_list div p{
+    color: white;
+    background-color: #142585;
+}
+
+/***************************************************** Small Research bar */
+
+.v-research {
+    position: fixed;
+    width: 74%;
+    z-index: 3000;
+    margin-top: 1vh;
+    margin-left: 13vh;
+}
+
+.v-research form {
+   
+    
 display: -webkit-flex;
 	display: flex;
 	-webkit-flex-flow: row wrap;
@@ -114,24 +155,29 @@ display: -webkit-flex;
     
 }
 
-#v header #v-research form input {
-    -webkit-flex: 0 0 100%;
-    flex: 0 0 100%;
+.v-research form input {
+    -webkit-flex: 0 0 99%;
+    flex: 0 0 99%;
     border: none;
+    border-bottom: 1px solid #142585;
     
     margin-bottom: 0.8vh;
     padding-top: 1.6vh;
     padding-bottom: 1.3vh;
-    background-color: #142585;
+    background-color: none;
     text-indent: 0.7vw;
 
     font-family: 'quebeclight_italic';
     font-size: 1.1em;
-    color: white;
+    color: #142585;
     text-transform: lowercase;
 }
 
-#v-research form button {
+.v-research form img { /* glass picto*/
+ display: none;
+}
+
+.v-research form button {
     -webkit-flex: 0 0 8%;
     flex: 0 0 8%;
     margin-right: 0.7vw;
@@ -157,8 +203,8 @@ display: -webkit-flex;
 
 #v-level {
     background-color: #FF9F9F;
-    height: 20vh;
-    margin-top: 80vh;
+    height: 45vh;
+    margin-top: 55vh;
 }
 
 #v-bar img {
@@ -190,21 +236,27 @@ by displaying some of the blocs*/
     width: 82vw;
     left: 6vw;
     top: 14vh;
+    z-index: 1;
 }
 
 /***********************************************************************************/
 /******************************************************** BLOC 1 - BIG SEARCH BAR */
 /***********************************************************************************/
 
-#v-research_home {
+.v-research_home {
+    position: fixed;
     -webkit-flex: 0 0 5vh;
     flex: 0 0 5vh;
     width: 120vh;
+    width: 82vw;
+    left: 6vw;
+    top: 14vh;
     margin-top: 6vh;
     margin-bottom:16vh;
+    z-index: 100;
 }
 
-#v-research_home form {
+.v-research_home form {
 display: -webkit-flex;
 	display: flex;
 	-webkit-flex-flow: row wrap;
@@ -213,7 +265,7 @@ display: -webkit-flex;
 	justify-content:flex-start;
 }
 
-#v-research_home form input {
+.v-research_home form input {
     -webkit-flex: 0 0 100%;
     flex: 0 0 100%;
     border: none;
@@ -223,10 +275,10 @@ display: -webkit-flex;
 
     font-family: 'quebeclight_italic';
     font-size: 1.4em;
-    color: grey;
+    color: black;
 }
 
-#v-research_home form img { /* glass picto*/
+.v-research_home form img { /* glass picto*/
     -webkit-flex: 0 0 7%;
     flex: 0 0 3%;
 
@@ -235,7 +287,7 @@ display: -webkit-flex;
     margin-top:-3%;
 }
 
-#v-research_home form button {
+.v-research_home form button {
     -webkit-flex: 0 0 13%;
     flex: 0 0 13%;
     margin-right: 1vw;
@@ -262,6 +314,7 @@ display: -webkit-flex;
 }
 
 #v-grid h2:nth-child(1){ /* "Récolte du jour" */
+    margin-top: 30vh;
     -webkit-flex: 0 0 4vh;
     flex: 0 0 4vh;
 }
@@ -301,6 +354,22 @@ display: -webkit-flex;
 	-webkit-flex-flow: column nowrap;
 	flex-flow: column nowrap;
 }
+
+#v-results .v-selected_category {
+    width: 100% !important;
+    display: -webkit-flex !important;
+	display: flex !important;
+	-webkit-flex-flow: row wrap !important;
+    flex-flow: row wrap !important;
+}
+
+#v-results .v-selected_category div {
+    -webkit-flex: 0 0 31% !important;
+    flex: 0 0 31% !important;
+    width: 31% !important;
+    margin-right: 2% !important;
+}
+
 
 /******************************************* Gardeners */
 #v-gardeners {
@@ -345,7 +414,7 @@ display: -webkit-flex;
 
 .v-item {
     width: 100%;
-    margin-top: 4vh;
+    margin-top: 4.5vh;
     cursor: pointer;
 }
 
@@ -356,6 +425,7 @@ display: -webkit-flex;
     float: right;
     height: 1px;
     background-color: #142585;
+    border: none;
     position: relative;
     z-index: 1;
 }
@@ -374,7 +444,7 @@ display: -webkit-flex;
 .v-item img {
     float: right;
     position: relative;
-    margin-top: -3%;
+    margin-top: -3.2%;
     height: 2.6vh;
     z-index:1;
 }
@@ -394,6 +464,7 @@ display: -webkit-flex;
 .v-author {
     font-family: 'quebeclight';
     font-size: 1em;  
+    cursor: pointer;
 }
 
 
@@ -458,17 +529,18 @@ display: -webkit-flex;
     display: block;
     float: right;
     position: relative;
-    margin-top: -1.2%;
+    margin-top: 0vh;
     width: 8%;
 }
 
 #v-background_bar {
     border: 0.5px solid #142585;
+    margin-top: 2vh;
 }
 
 #v-hydratation_bar {
     position: relative;
-    margin-top: -1%;
+    margin-top: -1vh;
     border: 1.5px solid #142585;
     float: right;
     
@@ -482,9 +554,12 @@ display: -webkit-flex;
 }
 
 #v-separator {
-    display: inline-block;
+    /* display: inline-block;
     font-family: 'quebeclight', sans-serif;
-    font-size: 1.3em;
+    font-size: 1.3em; */
+    visibility: hidden;
+    display: none !important; /* to overwrite flex */
+    pointer-events: none;
 }
 
 #v-content_album {
@@ -525,10 +600,16 @@ display: -webkit-flex;
 }
 
 #v-bucket_add {
-   width: 18%;
-   border: 1px solid #142585;
+   width: 18% !important;
+   border: 1px solid #142585 !important;
    padding: 0.5em;
 }
+
+img#selected_item {
+    width: 18% !important;
+    border: 1px solid #142585 !important;
+    padding: 0.5em;
+ }
 
 
 
@@ -556,6 +637,12 @@ display: -webkit-flex;
     margin-right: 0.5em;
     
 }
+
+#selected_quality {
+    background-color: #FF9F9F;
+    color: white;
+}
+
 
 .v-quality_choice img {
    width: 7vh;
@@ -597,7 +684,7 @@ display: -webkit-flex;
 #v-content div audio {
     width: 100%;
     position: relative;
-    margin-top: -5%;
+    margin-top: 27%;
 }
 
 #v-content div video {
@@ -610,7 +697,7 @@ display: -webkit-flex;
     width: 100%;
     margin-top: 27vh;
     margin-bottom: 27vh;
-    margin-left: 13vw;
+    margin-left: 19vw;
     
     font-family: 'quebecregular', sans-serif;
     font-size: 1.5em;
@@ -654,10 +741,13 @@ display: -webkit-flex;
 }
 
 
-#v-content_year {
+#v-gardener_subcategory {
     display: inline-block;
-    font-family: 'quebeclight', sans-serif;
-    font-size: 1.2em;
+    font-family: 'quebecregular', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    text-decoration: underline;
+    color: #142585;
 }
 
 #v-info_profile button {
@@ -740,7 +830,7 @@ display: -webkit-flex;
 
 #v-profile_grid div {
     width: 48%; /* Bloc width */
-    margin-top: 0;
+    margin-top: 4vh;
 }
 
 
@@ -814,6 +904,18 @@ display: -webkit-flex;
     padding-right: 0.9em;
 }
 
+#v-import input {
+    padding-top: 0.6em;
+    padding-bottom: 0.7em;
+    padding-left: 0.9em;
+    padding-right: 0.9em;
+    border: 1px solid #142585;
+    background-color: white;
+    font-family: 'quebecsemibold', sans-serif;
+    color: #142585;
+    text-transform: uppercase;
+}
+
 
 .v-background_bar {
     width: 95%;
@@ -872,4 +974,84 @@ display: -webkit-flex;
     margin-bottom: 4vh;
 }
 
+
+/*************************************************************** YOUTUBE API */
+
+#v-youtube_API {
+   position: fixed;
+   top: 10vh;
+   width: 80vw;
+   height: 80vh;
+   background-color: #142585;
+}
+
+#v-results_yt p {
+    font-family: 'quebeclight';
+    font-size: 1.3em;  
+    margin-top: 3vh;
+    margin-left: 10vw;
+    padding-left: 1.2em;
+    padding-right: 1.2em;
+    padding-top: 0.8em;
+    padding-bottom: 0.8em;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+#v-search_yt {
+    margin-top: 2vh;
+    margin-bottom: 4vh;
+    margin-left: 10vw;
+    width: 50vw;
+
+    border: none;
+    border-bottom: 1px solid #142585;
+    
+   
+    padding-top: 1.3vh;
+    padding-bottom: 1.3vh;
+    text-indent: 0.7vw;
+
+    font-family: 'quebeclight_italic';
+    font-size: 1.1em;
+    color: #142585;
+    text-transform: lowercase;
+}
+
+#v-yt_validation {
+    background-color: white;
+    font-family: 'quebecsemibold', sans-serif;
+    color: #142585;
+    margin-top: 30vh;
+    font-size: 1.8em !important;
+    margin-bottom: 4vh;
+    margin-left: 22vw;
+    width: 25vw;
+    
+    padding-top: 2.6vh;
+    padding-bottom: 3vh;
+    padding-left: 3vw;
+    padding-right: 3vw;
+}
+
+#v-validate_yt {
+    border: 1px solid #142585;
+    background-color: white;
+    font-family: 'quebecsemibold', sans-serif;
+    color: #142585;
+    text-transform: uppercase;
+    padding-top: 1.6vh;
+    padding-bottom: 1.3vh;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+
+
+.v-yt_url {
+    visibility: hidden;
+    display: none !important; /* to overwrite flex */
+    pointer-events: none;
+}
 
