@@ -215,3 +215,47 @@ input:checked + .slider:before {
   left: 45%;
   display: none;
 }
+
+
+.contenu-exit-3{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+.button-ok2{
+  background-color: white;
+  width: 10vh;
+  height: 3vh;
+  color: black;
+  padding-top: 1.1vh;
+  /* position: relative; */
+  text-align: center;
+  position: center;
+}
+
+#other{
+  background-color: #00FFD1;
+  font-size: 0.8em;
+  height: 40vh;
+  width: 30vh;
+  padding: 4vh 3vh 3vh 3vh;
+  position: absolute;
+  top: 68px;
+  right: 129px;
+  display: none;
+  /* visibility: hidden; */
+  z-index: 10;
+
+}
+
+#new-page {
+  background-image: url("../images/ecran.png");
+  background-color: yellow;
+  width: 60vh;
+  height: 80vh;
+  z-index: 10;
+  display: none;
+}

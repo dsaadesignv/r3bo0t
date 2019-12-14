@@ -8,6 +8,7 @@ body
   background-size: 30px auto;
   background-repeat: repeat;
   overflow: hidden;
+  background: #00FFD1;
 }
 
 
@@ -16,10 +17,10 @@ body
   display:flex;
   /* justify-content: space-around; */
   margin-top: 2vh;
-  padding-left: 2vw;
   height: 10vh;
   box-sizing: border-box;
   max-width: 100vw;
+  padding-left: 10px;
 }
 
 /* #retour
@@ -47,10 +48,10 @@ body
 {
   background-color: white;
   /* font-size: 2em; */
-  width: 80vh;
-  height: 7vh;
-  border: 3px black solid;
-  margin-left: 10vh;
+  width: 50vw;
+  height: 5vh;
+  border: 4px black solid;
+  margin-left: 4vw;
 }
 
 
@@ -61,8 +62,11 @@ body
   font-size: 0.8em;
   padding-left: 20px;
   box-sizing: border-box;
-  width: 80vh;
-  height: 7vh;
+  width: 50vw;
+  height: 5vh;
+  border: none;
+  background: #00FFD1;
+  
 }
 
 
@@ -84,10 +88,9 @@ body
 
 .bouton
 {
-  background-color: white;
-  width: 50vh;
-  height: 7vh;
-  border: 3px #00FFD1 solid;
+  width: 30vh;
+  height: 5vh;
+  border: 4px #000 solid;
   margin-right: 5vh;
   position: relative;
 }
@@ -124,8 +127,8 @@ body
 #service{
   position: absolute;
   top: 10vh;
-  left: 7%;
-  width: 93%;
+  left: 4vw;
+  width: 96vw;
   height: 90vh;
   display: none;
 }
@@ -133,7 +136,7 @@ body
 #page-service{
   background-color: white;
   width: 100%;
-  height: 75vh;
+  height: 84vh;
   top: 0vh;
   /* bottom: -80vh; */
   left: 0;
@@ -143,6 +146,8 @@ body
 #page-service iframe {
   width:100%;
   height:100%;
+  border:10px solid #00FFD1;
+box-sizing: border-box;
 }’
 
 #utilitaire-messagerie{
@@ -151,52 +156,54 @@ body
 
 #utilitaire{
   background-color: black;
-  width: 80%;
-  height: 5vh;
+  width: 100%;
+  height: 2vh;
   position: relative;
+  font-size: .7em;
+  line-height: 2vh;
+  padding-left: 1%;
+  color: #DDD;
+  margin-left: 10px;
 }
 
 #messagerie{
+  margin-left: 10px;
+
   background-color: grey;
   width: 20%;
-  height: 5vh;
+  height: 2vh;
+  font-size: .7em;
+  line-height: 2vh;
+  padding-left: 1%;
 }
 
 #stockage{
-  background-color: white;
-  width: 100%;
-  height: 5vh;
+  margin-left: 10px;
+
+  background-color:  #FFF;
+  width: 80%;
+  height: 2vh;
   position: relative;
   color: black;
   display:flex;
+  text-decoration: none;
+  font-size: .7em;
+  line-height: 2vh;
+  padding-left: 1%;
 }
 
-.stockage-use{
-  background-color: #00FFD1;
-  height: 100%;
-  width: 50%; /*le pourcentage de données utilisées*/
-}
 
-.pourcentage{
-  color: #00FFD1;
-  font-size: 0.7em;
-  width: 18vh;
-  height: 4vh;
-  padding-top: 10px;
-  padding-left: 6px;
-  box-sizing: border-box;
-}
 
 .box
 {
   font-size: 1.4em;
-  background-color: white;
-  height: 4vh;
-  width: 9vh;
-  padding-top: 0.7vh;
+  background-color: #000;
+  color: #00FFD1;
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
   text-align:center;
   border: 3px #00FFD1 solid;
-
   position: absolute; /*box = enfant de service*/
   top: 50%;
   transform: translateY(-50%);
@@ -234,7 +241,7 @@ body
 }
 
 body.is-service-open #conteneur {
-  width:7%;
+  width:4vw;
 }
 
 

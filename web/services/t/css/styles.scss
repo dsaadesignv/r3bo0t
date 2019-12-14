@@ -127,7 +127,7 @@ body{
 //   align-content: center;
 //   border: 2px solid red;
 // }
-// 
+//
 // .t-Item1, .t-Item2, .t-Item3, .t-Item4{
 //     width: 20vh;
 //     height: 20vh;
@@ -292,4 +292,9 @@ body{
 .t-localisation{
   font-size: 1em;
   text-align: center;
+}
+
+
+.anychart-credits{
+  display: none !important;
 }

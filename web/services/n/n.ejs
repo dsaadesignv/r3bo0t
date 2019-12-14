@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8"> <!-- indique la langue du code -->
-		<title>Navigateur</title>
+		<title>Jardin</title>
 		<link rel="stylesheet" type="text/css" href="services/n/style/style.css">
 		<link rel="stylesheet" type="text/css" href="services/n/style/style2.css">
 		<script src="services/n/js/jquery-3.4.1.min.js"> </script>
@@ -19,7 +19,7 @@
 			<div id="retour"> </div>
 			<div id="barrerecherche">
 				<!-- <label for="site-search">Que souhaitez-vous recherchez dans votre jardin ?</label> -->
-				<input type="text" id="site-search" name="recherche" placeholder="Que souhaitez-vous recherchez dans votre jardin ?"/>
+				<input type="text" id="site-search" name="recherche" placeholder="Que souhaitez-vous recherchez dans votre jardin ?" autofocus/>
 			</div>
 			<div class="space"></div>
 
@@ -139,6 +139,11 @@
 
 			</div>
 			<div class="bouton" id="otherjardin">  </div>
+				<div id="other">
+	Réseaux auquels vous pouvez vous connecter <br> <br>
+	LaPiscine_2Go_16users_n+a+c+t <br>
+	LaRuche_1Go_8users_j+m+v
+</div>
 			<div class="bouton" id="exit"> </div>
 		</div>
 
@@ -157,12 +162,23 @@
 			</iframe>
 			</div>
 			<a style="display:block"  href="/u" target="iframe" id="utilitaire-messagerie">
-				<div id="utilitaire"> </div>
-				<div id="messagerie"> </div>
+				<div id="utilitaire">
+					Utilitaires
+					<div class="u-meteo"> </div>
+					<div class="u-calculator"> </div>
+					<div class="u-calendar"> </div>
+					<div class="u-maps"> </div>
+					<div class="u-note"> </div>
+				</div>
+
 			</a>
+			<div id="messagerie">
+				Messagerie
+			</div>
 			<a style="display:block"  href="/s" target="iframe" id="stockage">
-				<div class="stockage-use"> </div>
-				<div class="pourcentage">Il vous reste 20%</div>
+				<div class="stockage-use">
+					Il vous reste 20% de stockage
+				</div>
 			</a>
 		</div>
 
