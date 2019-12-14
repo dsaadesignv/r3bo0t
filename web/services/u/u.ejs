@@ -17,190 +17,191 @@
   </head>
   <body>
 
-    <div id="accordion">
 
-      <h3></h3>
-      <div>
+        <div id="accordion">
 
-          <div id="accordion-two">
-            <div class="accordion-group">
-              <h3><div class="u-base-line-0"></div><div class="u-base-line-0-0"></div></h3>
-              <div>
-                <div class="u-block">
-                  <div class="u-semiblock">
-                    <div class="u-titre" id="u-api-city"></div>
-                    <div id="u-title-line"></div>
-                    <div id="u-city">
-                        <form id="u-api-meteo">
-                          <input type="text" id="u-ville" placeholder="Ville...">
-                          <input type="submit" class="u-button" value="OK">
-                        </form>
+          <h3></h3>
+          <div>
+
+              <div id="accordion-two">
+                <div class="accordion-group">
+                  <h3><div class="u-base-line-0"></div><div class="u-picto-soleil"></div><div class="u-base-line-0-0"></div></h3>
+                  <div>
+                    <div class="u-block">
+                      <div class="u-semiblock">
+                        <div class="u-titre" id="u-api-city"></div>
+                        <div id="u-title-line"></div>
+                        <div id="u-city">
+                            <form id="u-api-meteo">
+                              <input type="text" id="u-ville" placeholder="Ville...">
+                              <input type="submit" class="u-button" value="OK">
+                            </form>
+                            </div>
+                        </div>
+                        <div class="u-semiblock">
+                          <div class="u-corps"><div id="u-api-date"></div><br><div id="u-api-condition"></div></div>
+
+                          <div id="u-api-block">
+                          <div id="u-api-temp" class="u-temp"></div><div class="u-temp">°C</div>
+                          <div id="u-corps" class="u-corps">Humidité: <div id="u-api-humidity"></div> %<br>Pression: <div id="u-api-pressure"></div> hPa<br>Vent: <div id="u-api-wind"></div> km/h</div>
+                        </div>
                         </div>
                     </div>
-                    <div class="u-semiblock">
-                      <div class="u-corps"><div id="u-api-date"></div><br><div id="u-api-condition"></div></div>
-
-                      <div id="u-api-block">
-                      <div id="u-api-temp" class="u-temp"></div><div class="u-temp">°C</div>
-                      <div id="u-corps" class="u-corps">Humidité: <div id="u-api-humidity"></div> %<br>Pression: <div id="u-api-pressure"></div> hPa<br>Vent: <div id="u-api-wind"></div> km/h</div>
-                    </div>
-                    </div>
-                </div>
-              </div>
-            </div>
-
-                <div class="accordion-group">
-              <h3><div class="u-base-line-1"></div><div class="u-base-line-1-1"></div></h3>
-              <div>
-                <div id="u-container-note-global">
-                <div id="u-container-note">
-                    <form>
-                            <select id="u-documents" name="documents">
-                            <option value="one">document 1</option>
-                            <option value="two">document 2</option>
-                            <option value="three">document 3</option>
-                            </select>
-                    </form>
-                    <form>
-                      <input id="u-send" placeholder="=exemple...">
-                    </form>
-                    <div class="u-button-two" id="send">polliniser une pousse</div>
-
-                </div>
-
-              <div id="u-form">
-                  <form>
-                        <textarea id="u-doc" type="text" placeholder="Tapez votre texte..."></textarea>
-                  </form>
-              </div>
-            </div>
-              </div>
-
-              </div>
-
-                <div class="accordion-group">
-              <h3><div class="u-base-line-2"></div><div class="u-base-line-2-2"></div></h3>
-              <div>
-                <div id="u-map">
-                  <div id='map' id="geocoder-container" class="u-map-box" style='width: 100%; height: 55vh;'></div>
-                    <script>
-                    mapboxgl.accessToken = 'pk.eyJ1IjoieXJhZWxsZSIsImEiOiJjazNpZTRvNHAwNTczM21wbGt6bGxoZTVoIn0.8WCCVP2e-D6vcRmglRk_ag';
-                    var map = new mapboxgl.Map({
-                    container: 'map',
-                    style: 'mapbox://styles/yraelle/ck3iezway1vt31dpgafe4wypt'
-
-                    });
-
-                    map.addControl(new MapboxGeocoder({
-                      accessToken: mapboxgl.accessToken,
-                      mapboxgl: mapboxgl
-                      }));
-
-                    </script>
-                    <form>
-                      <input id="u-send-map" placeholder="=exemple...">
-                      </form>
-                      <div class="u-button-map" id="send">polliniser une pousse</div>
-                </div>
-              </div>
-
-              </div>
-
-                <div class="accordion-group">
-              <h3><div class="u-base-line-3"></div><div class="u-base-line-3-3"></div></h3>
-              <div>
-                <div id="u-container-cal">
-                  <script>
-                      calendrier();
-                  </script>
-                </div>
-                <div id="u-block-three">
-                <form>
-                        <select id="u-mois" name="calendar">
-                        <option value="one">Janvier</option>
-                        <option value="two">Février</option>
-                        <option value="three">Mars</option>
-                        <option value="one">Avril</option>
-                        <option value="two">Mai</option>
-                        <option value="three">Juin</option>
-                        <option value="one">Juillet</option>
-                        <option value="two">Aout</option>
-                        <option value="three">Septembre</option>
-                        <option value="one">Octobre</option>
-                        <option value="two">Novembre</option>
-                        <option value="three">Decembre</option>
-                        </select>
-                </form>
-                <div id="u-event">Aujourd'hui :<br><div id="u-square"><div class="plus">+</div></div></div>
-                </div>
-              </div>
-
-              </div>
-
-                <div class="accordion-group">
-              <h3><div class="u-base-line-4"></div><div class="u-base-line-4-4"></div></h3>
-              <div>
-                <div id="u-container-calculator">
-                <form id="u-calculator" name="calculator">
-                  <div class="u-parent">
-                      <div colspan="4" class="u-div1"><input class="u-display" type="text" name="display" id="display" disabled></div>
-                      <div class="u-div2"><input type="button" class="u-operator" name="div" value="/" onclick="calculator.display.value += '/'"></div>
-                      <div class="u-div3"><input type="button" class="u-operator" name="times" value="x" onclick="calculator.display.value += '*'"></div>
-                      <div class="u-div4"><input type="button" class="u-operator" name="minus" value="-" onclick="calculator.display.value += '-'"></div>
-                      <div class="u-div5"><input type="button" class="u-operator" name="plus" value="+" onclick="calculator.display.value += '+'"></div>
-                      <div class="u-div6"><input type="button" class="u-clear" name="clear" value="c" onclick="calculator.display.value = ''"></div>
-                      <div class="u-div7"><input class="u-equal" type="button" name="doit" value="=" onclick="calculator.display.value = eval(calculator.display.value)"></div>
-                      <div class="u-div8"><input class="u-zero" type="button" name="zero" value="0" onclick="calculator.display.value += '0'"></div>
-                      <div class="u-div9"><input class="u-chiffres" type="button" name="one" value="1" onclick="calculator.display.value += '1'"></div>
-                      <div class="u-div10"><input class="u-chiffres" type="button" name="two" value="2" onclick="calculator.display.value += '2'"></div>
-                      <div class="u-div11"><input class="u-chiffres" type="button" name="three" value="3" onclick="calculator.display.value += '3'"></div>
-                      <div class="u-div12"><input  class="u-chiffres" type="button" name="four" value="4" onclick="calculator.display.value += '4'"></div>
-                      <div class="u-div13"><input class="u-chiffres" type="button" name="five" value="5" onclick="calculator.display.value += '5'"></div>
-                      <div class="u-div14"><input class="u-chiffres" type="button" name="six" value="6" onclick="calculator.display.value += '6'"></div>
-                      <div class="u-div15"><input class="u-chiffres" type="button" name="seven" value="7" onclick="calculator.display.value += '7'"></div>
-                      <div class="u-div16"><input class="u-chiffres" type="button" name="eight" value="8" onclick="calculator.display.value += '8'"></div>
-                      <div class="u-div17"><input class="u-chiffres"type="button" name="nine" value="9" onclick="calculator.display.value += '9'"></div>
-                    </form>
                   </div>
                 </div>
+
+                    <div class="accordion-group">
+                  <h3><div class="u-base-line-1"></div><div class="u-picto-note"></div><div class="u-base-line-1-1"></div></h3>
+                  <div>
+                    <div id="u-container-note-global">
+                    <div id="u-container-note">
+                        <form>
+                                <select id="u-documents" name="documents">
+                                <option value="one">document 1</option>
+                                <option value="two">document 2</option>
+                                <option value="three">document 3</option>
+                                </select>
+                        </form>
+                        <form>
+                          <input id="u-send" placeholder="=exemple...">
+                        </form>
+                        <div class="u-button-two" id="send">polliniser une pousse</div>
+
+                    </div>
+
+                  <div id="u-form">
+                      <form>
+                            <textarea id="u-doc" type="text" placeholder="Tapez votre texte..."></textarea>
+                      </form>
+                  </div>
+                </div>
+                  </div>
+
+                  </div>
+
+                    <div class="accordion-group">
+                  <h3><div class="u-base-line-2"></div><div class="u-picto-maps"></div><div class="u-base-line-2-2"></div></h3>
+                  <div>
+                    <div id="u-map">
+                      <div id='map' id="geocoder-container" class="u-map-box" style='width: 100%; height: 55vh;'></div>
+                        <script>
+                        mapboxgl.accessToken = 'pk.eyJ1IjoieXJhZWxsZSIsImEiOiJjazNpZTRvNHAwNTczM21wbGt6bGxoZTVoIn0.8WCCVP2e-D6vcRmglRk_ag';
+                        var map = new mapboxgl.Map({
+                        container: 'map',
+                        style: 'mapbox://styles/yraelle/ck3iezway1vt31dpgafe4wypt'
+
+                        });
+
+                        map.addControl(new MapboxGeocoder({
+                          accessToken: mapboxgl.accessToken,
+                          mapboxgl: mapboxgl
+                          }));
+
+                        </script>
+                        <form>
+                          <input id="u-send-map" placeholder="=exemple...">
+                          </form>
+                          <div class="u-button-map" id="send">polliniser une pousse</div>
+                    </div>
+                  </div>
+
+                  </div>
+
+                    <div class="accordion-group">
+                  <h3><div class="u-base-line-3"></div><div class="u-picto-calendar"></div><div class="u-base-line-3-3"></div></h3>
+                  <div>
+                    <div id="u-container-cal">
+                      <script>
+                          calendrier();
+                      </script>
+                    </div>
+                    <div id="u-block-three">
+                    <form>
+                            <select id="u-mois" name="calendar">
+                            <option value="one">Janvier</option>
+                            <option value="two">Février</option>
+                            <option value="three">Mars</option>
+                            <option value="one">Avril</option>
+                            <option value="two">Mai</option>
+                            <option value="three">Juin</option>
+                            <option value="one">Juillet</option>
+                            <option value="two">Aout</option>
+                            <option value="three">Septembre</option>
+                            <option value="one">Octobre</option>
+                            <option value="two">Novembre</option>
+                            <option value="three">Decembre</option>
+                            </select>
+                    </form>
+                    <div id="u-event">Aujourd'hui :<br><div id="u-square"><div class="plus">+</div></div></div>
+                    </div>
+                  </div>
+
+                  </div>
+
+                    <div class="accordion-group">
+                  <h3><div class="u-base-line-4"></div><div class="u-picto-calculator"></div><div class="u-base-line-4-4"></div></h3>
+                  <div>
+                    <div id="u-container-calculator">
+                    <form id="u-calculator" name="calculator">
+                      <div class="u-parent">
+                          <div colspan="4" class="u-div1"><input class="u-display" type="text" name="display" id="display" disabled></div>
+                          <div class="u-div2"><input type="button" class="u-operator" name="div" value="/" onclick="calculator.display.value += '/'"></div>
+                          <div class="u-div3"><input type="button" class="u-operator" name="times" value="x" onclick="calculator.display.value += '*'"></div>
+                          <div class="u-div4"><input type="button" class="u-operator" name="minus" value="-" onclick="calculator.display.value += '-'"></div>
+                          <div class="u-div5"><input type="button" class="u-operator" name="plus" value="+" onclick="calculator.display.value += '+'"></div>
+                          <div class="u-div6"><input type="button" class="u-clear" name="clear" value="c" onclick="calculator.display.value = ''"></div>
+                          <div class="u-div7"><input class="u-equal" type="button" name="doit" value="=" onclick="calculator.display.value = eval(calculator.display.value)"></div>
+                          <div class="u-div8"><input class="u-zero" type="button" name="zero" value="0" onclick="calculator.display.value += '0'"></div>
+                          <div class="u-div9"><input class="u-chiffres" type="button" name="one" value="1" onclick="calculator.display.value += '1'"></div>
+                          <div class="u-div10"><input class="u-chiffres" type="button" name="two" value="2" onclick="calculator.display.value += '2'"></div>
+                          <div class="u-div11"><input class="u-chiffres" type="button" name="three" value="3" onclick="calculator.display.value += '3'"></div>
+                          <div class="u-div12"><input  class="u-chiffres" type="button" name="four" value="4" onclick="calculator.display.value += '4'"></div>
+                          <div class="u-div13"><input class="u-chiffres" type="button" name="five" value="5" onclick="calculator.display.value += '5'"></div>
+                          <div class="u-div14"><input class="u-chiffres" type="button" name="six" value="6" onclick="calculator.display.value += '6'"></div>
+                          <div class="u-div15"><input class="u-chiffres" type="button" name="seven" value="7" onclick="calculator.display.value += '7'"></div>
+                          <div class="u-div16"><input class="u-chiffres" type="button" name="eight" value="8" onclick="calculator.display.value += '8'"></div>
+                          <div class="u-div17"><input class="u-chiffres"type="button" name="nine" value="9" onclick="calculator.display.value += '9'"></div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
               </div>
-              </div>
-          </div>
+            </div>
         </div>
-    </div>
 
 
-    <script src="services/u/jquery-3.4.1.min.js" charset="utf-8"></script>
-    <script src="services/u/jquery-ui.js" charset="utf-8"></script>
-    <script src="services/u/script.js" charset="utf-8"></script>
-    <script type="text/javascript" src="services/u/APImeteo.js"></script>
-    <script>
-      $( function() {
-        $( "#accordion-two" ).accordion({
-          collapsible: true,
-          heightStyle: "content",
-          header: "> div > h3"
-      })
-      .sortable({
-        axis: "y",
-        handle: "h3",
-        stop: function( event, ui ) {
-          // IE doesn't register the blur when sorting
-          // so trigger focusout handlers to remove .ui-state-focus
-          ui.item.children( "h3" ).triggerHandler( "focusout" );
+        <script src="services/u/jquery-3.4.1.min.js" charset="utf-8"></script>
+        <script src="services/u/jquery-ui.js" charset="utf-8"></script>
+        <script src="services/u/script.js" charset="utf-8"></script>
+        <script type="text/javascript" src="services/u/APImeteo.js"></script>
+        <script>
+          $( function() {
+            $( "#accordion-two" ).accordion({
+              collapsible: true,
+              heightStyle: "content",
+              header: "> div > h3"
+          })
+          .sortable({
+            axis: "y",
+            handle: "h3",
+            stop: function( event, ui ) {
+              // IE doesn't register the blur when sorting
+              // so trigger focusout handlers to remove .ui-state-focus
+              ui.item.children( "h3" ).triggerHandler( "focusout" );
 
-          // Refresh accordion to handle new order
-          $( this ).accordion( "refresh" );
-        }
-      });
-      });
-      $( function() {
-        $( "#accordion" ).accordion({
-          collapsible: true,
-          heightStyle: "content"
-      });
-      } );
-    </script>
+              // Refresh accordion to handle new order
+              $( this ).accordion( "refresh" );
+            }
+          });
+          });
+          $( function() {
+            $( "#accordion" ).accordion({
+              collapsible: true,
+              heightStyle: "content"
+          });
+          } );
+        </script>
 
-  </body>
+      </body>
 </html>
