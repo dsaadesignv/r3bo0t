@@ -20,7 +20,7 @@ body
   height: 10vh;
   box-sizing: border-box;
   max-width: 100vw;
-  padding-left: 10px;
+  padding-left: 1vw;
 }
 
 /* #retour
@@ -66,7 +66,7 @@ body
   height: 5vh;
   border: none;
   background: #00FFD1;
-  
+
 }
 
 
@@ -136,7 +136,7 @@ body
 #page-service{
   background-color: white;
   width: 100%;
-  height: 84vh;
+  height: 83vh;
   top: 0vh;
   /* bottom: -80vh; */
   left: 0;
@@ -146,7 +146,7 @@ body
 #page-service iframe {
   width:100%;
   height:100%;
-  border:10px solid #00FFD1;
+  border:1vw solid #00FFD1;
 box-sizing: border-box;
 }’
 
@@ -156,18 +156,17 @@ box-sizing: border-box;
 
 #utilitaire{
   background-color: black;
-  width: 100%;
+  width: 93vw;
   height: 2vh;
   position: relative;
   font-size: .7em;
   line-height: 2vh;
   padding-left: 1%;
   color: #DDD;
-  margin-left: 10px;
+  margin:0 1vw;
 }
 
 #messagerie{
-  margin-left: 10px;
 
   background-color: grey;
   width: 20%;
@@ -175,10 +174,11 @@ box-sizing: border-box;
   font-size: .7em;
   line-height: 2vh;
   padding-left: 1%;
+  margin:0 1vw;
+
 }
 
 #stockage{
-  margin-left: 10px;
 
   background-color:  #FFF;
   width: 80%;
@@ -190,6 +190,8 @@ box-sizing: border-box;
   font-size: .7em;
   line-height: 2vh;
   padding-left: 1%;
+  margin:0 1vw;
+
 }
 
 
