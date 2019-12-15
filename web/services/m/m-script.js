@@ -32,12 +32,20 @@ $(function () {
 //	toggleDrawer();
 });
 
-$("#smiley").click(function(){
-	console.log('reconnu');
-	console.log( $('#smiley').text());
-	console.log( $('#textmsg').val());
-    $('#textmsg').val( $('#textmsg').val() + '' + $('#smiley').text());
-	});
+$.getJSON("services/m/emojis.json")
+    .done(function( data ) {
+			console.log("emojis chargés");
+      $.each( data, function( i, d ) {
+				if(i<100){ // b emojis
+        $('<span>'+d.char+'</span>').appendTo($('.m-drawerSmileyScreen'))
+				.on('click',function(){
+				    $('#m-text').val( $('#m-text').val() + '' + $(this).text());
+					});
+				}
+      });
+
+    });
+
 
 
 
