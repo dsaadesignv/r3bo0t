@@ -1,15 +1,16 @@
 $(function () {
-	console.log('m loaded');
 	$('.goto-m-hub').on('click', function(){
 		$('.m-page').hide();  // 1. On cache tous les écrans
 		$('.m-hub').show(); // 2. Puis on affiche l'écran
 	});
-	$('.goto-m-chat').on('click', function(){
+	$('.goto-m-chat').unbind().on('click', function(){
 		$('.m-page').hide();  // 1. On cache tous les écrans
-		$('.m-chatContainer').show(); // 2. Puis on affiche l'écran
+		$('.m-chatContainer').show("fast", function() {
+			$("#m-text").focus();
+		}); // 2. Puis on affiche l'écran
 // chat
 		var socket = io();
-		$('.m-chatContainer form').on("submit",function(e){
+		$('.m-chatContainer form').unbind().on("submit",function(e){
 
 				console.log('send msg');
 			e.preventDefault(); // prevents page reloading
@@ -83,17 +84,16 @@ function toggleDrawer() {
     }
 
 		var element = document.getElementById("m-drawerChatOpened");
-		if (element.style.height == "75%") {
+		if (element.style.height == "55%") {
 				element.style.height = "3.6%";
 		} else {
-				element.style.height = "75%";
+				element.style.height = "55%";
 		}
 }
 
 /* Set the width of the side navigation to 250px */
 function openNav() {
 	document.getElementById("fenetreChat").style.height = "428.44px";
-
 }
 
 function openDrawer() {

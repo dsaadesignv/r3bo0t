@@ -100,9 +100,10 @@ form {
 }
 
 #buttonChat {
-background:url(Pousse-fermee.svg) no-repeat;
+background:url('Pousse-fermee.svg') no-repeat;
 cursor:pointer;
-border: 0;
+padding-top: 8px;
+//border-top:3px double #00FFD1;
 }
 
 #buttonGeneral {
@@ -529,9 +530,12 @@ border: 0;
 		cursor:pointer;
 }
 .m-toggleDrawer {
-	border-top: 2px solid #DDD;
+	border-top: 3px solid #00FFD1;
 	grid-area: 1 / 5 / 2 / 6;
 	cursor:pointer;
+	&:hover{
+		border-top: 3px solid #DDD;
+	}
 }
 .m-btn4 {
 	grid-area: 1 / 6 / 2 / 7;

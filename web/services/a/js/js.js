@@ -49,8 +49,10 @@ $(function(){
 
 
 $(function(){
+  $('.go-article').on('click', function(){
+    $('.pop-up-verger1').show();
+  });
   $('.go-article-oui').on('click', function(){
-
     var ppp = $('.pop-up-verger1').html()
     $(this).html(pp)
 

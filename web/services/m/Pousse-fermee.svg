@@ -6,12 +6,12 @@
 	.st0{display:none;}
 	.st1{display:inline;}
 	.st2{display:inline;fill:#FFFFFF;}
-	.st3{fill:#010202;}
+	.st3{fill:#00FFD1;}
 	.st4{fill:#FFFFFF;}
 	.st5{display:inline;fill:#010202;}
 </style>
 <g id="Calque_1" class="st0">
-	
+
 		<image style="display:inline;overflow:visible;" width="375" height="196" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXcAAADECAYAAABk6WGRAAAREElEQVR4nO3dC4wV1R3H8YugooEi
 WLGKjypQF3WlmlSxUihVgxhrKhgf3dpqirE2afqiJKVKt6vRlrRJmyatSTFg7FZrqjZqQI1GoYs8
 mlrp+sCyWDSlVIwggSIiSDWGc34D53hn9s7cO/d/v5+E5Ozsmbmzd+/+c+bPOf8zYO/7KgAAUw5q
@@ -93,12 +93,12 @@ CO4AYBDBHQAMIrgDgEH/B8trpfCrNgE6AAAAAElFTkSuQmCC" transform="matrix(2.3244 0 0 2
 	</image>
 </g>
 <g id="Calque_2" class="st0">
-	<polygon class="st1" points="167.8,97.8 215.5,97.8 215.5,85.9 226.7,85.9 226.7,62.9 215.5,62.9 215.5,50.7 179.8,50.7 
-		179.8,62.9 167.8,62.9 167.8,74.4 155.9,74.4 155.9,50.7 144.1,50.7 144.1,38.9 131.9,38.9 131.9,27 97,27 97,38.9 85.1,38.9 
-		85.1,50.7 73.3,50.7 73.3,85.9 85.1,85.9 85.1,97.8 108.5,97.8 108.5,109.7 144.1,109.7 144.1,97.8 155.9,97.8 155.9,157.2 
-		144.1,157.2 144.1,145.2 131.9,145.2 131.9,133.7 108.5,133.7 108.5,145.2 97,145.2 97,168.9 108.5,168.9 108.5,180.8 131.9,180.8 
-		131.9,193 155.9,193 155.9,300 167.8,300 167.8,240.1 203.7,240.1 203.7,228.5 215.5,228.5 215.5,216.7 226.7,216.7 226.7,193 
-		215.5,193 215.5,180.8 191.7,180.8 191.7,193 179.8,193 179.8,216.7 167.8,216.7 167.8,133.7 179.8,133.7 179.8,145.2 203.7,145.2 
+	<polygon class="st1" points="167.8,97.8 215.5,97.8 215.5,85.9 226.7,85.9 226.7,62.9 215.5,62.9 215.5,50.7 179.8,50.7
+		179.8,62.9 167.8,62.9 167.8,74.4 155.9,74.4 155.9,50.7 144.1,50.7 144.1,38.9 131.9,38.9 131.9,27 97,27 97,38.9 85.1,38.9
+		85.1,50.7 73.3,50.7 73.3,85.9 85.1,85.9 85.1,97.8 108.5,97.8 108.5,109.7 144.1,109.7 144.1,97.8 155.9,97.8 155.9,157.2
+		144.1,157.2 144.1,145.2 131.9,145.2 131.9,133.7 108.5,133.7 108.5,145.2 97,145.2 97,168.9 108.5,168.9 108.5,180.8 131.9,180.8
+		131.9,193 155.9,193 155.9,300 167.8,300 167.8,240.1 203.7,240.1 203.7,228.5 215.5,228.5 215.5,216.7 226.7,216.7 226.7,193
+		215.5,193 215.5,180.8 191.7,180.8 191.7,193 179.8,193 179.8,216.7 167.8,216.7 167.8,133.7 179.8,133.7 179.8,145.2 203.7,145.2
 		203.7,133.7 215.5,133.7 215.5,122.2 203.7,122.2 203.7,109.7 179.8,109.7 179.8,122.2 167.8,122.2 	"/>
 </g>
 <g id="Calque_3" class="st0">
@@ -193,7 +193,7 @@ CO4AYBDBHQAMIrgDgEH/B8trpfCrNgE6AAAAAElFTkSuQmCC" transform="matrix(2.3244 0 0 2
 	<rect x="156" y="84" class="st5" width="12" height="12"/>
 </g>
 <g id="Calque_5" class="st0">
-	
+
 		<image style="display:inline;overflow:visible;" width="48" height="48" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAIXRFWHRDcmVhdGlvbiBUaW1lADIw
 MTY6MDI6MDYgMTk6Mjg6MzIrM9HEAAAAB3RJTUUH4AIIFywL0m7NfgAAAAlwSFlzAAAewQAAHsEB
 w2lUUwAAAARnQU1BAACxjwv8YQUAAAHtSURBVHja7Zi/SgNBEMY3YiEiYhHQ4shVVp5VXsCU5xXW

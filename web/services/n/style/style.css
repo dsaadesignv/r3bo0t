@@ -11,6 +11,10 @@ body
   background: #00FFD1;
 }
 
+html{
+  background: #00FFD1 !important;
+}
+
 
 #menu
 {
@@ -51,7 +55,7 @@ body
   width: 50vw;
   height: 5vh;
   border: 4px black solid;
-  margin-left: 4vw;
+  margin-left: 5vw;
 }
 
 
@@ -65,7 +69,6 @@ body
   width: 50vw;
   height: 5vh;
   border: none;
-  background: #00FFD1;
 
 }
 
@@ -127,7 +130,7 @@ body
 #service{
   position: absolute;
   top: 10vh;
-  left: 4vw;
+  left: 5vw;
   width: 96vw;
   height: 90vh;
   display: none;
@@ -168,19 +171,19 @@ box-sizing: border-box;
 
 #messagerie{
 
-  background-color: grey;
+  background-color: #333;
   width: 20%;
   height: 2vh;
   font-size: .7em;
   line-height: 2vh;
   padding-left: 1%;
   margin:0 1vw;
-
+color: #fff;
 }
 
 #stockage{
 
-  background-color:  #FFF;
+  background-color:  #666;
   width: 80%;
   height: 2vh;
   position: relative;
@@ -191,18 +194,20 @@ box-sizing: border-box;
   line-height: 2vh;
   padding-left: 1%;
   margin:0 1vw;
-
+color: #FFF;
 }
 
 
 
 .box
 {
+  display: inline;
+  padding: 3px;
   font-size: 1.4em;
   background-color: #000;
   color: #00FFD1;
   height: 30px;
-  width: 30px;
+  min-width: 30px;
   line-height: 30px;
   text-align:center;
   border: 3px #00FFD1 solid;
@@ -216,7 +221,7 @@ box-sizing: border-box;
   background-color: rgba(0,0,0,0.8);
   border-top: 5px #00FFD1 solid;
   border-right: 3px solid #00FFD1;
-  padding-left: 5%;
+  padding-left: 6%;
   position: relative; /*service = parent de box*/
   display:block;
   outline:none;
@@ -243,7 +248,7 @@ box-sizing: border-box;
 }
 
 body.is-service-open #conteneur {
-  width:4vw;
+  width:5vw;
 }
 
 

@@ -1,43 +1,44 @@
 var stats = {
-  a:20,
+  a:18,
   v:25,
   t:4,
   j:20,
   p:5,
-  c:2,
+  c:5,
 };
 
 
 function modeHome() {
+  console.log("home");
     var hauteurServiceA = stats.a / 100 * 90;
     if (hauteurServiceA < 8) {
       hauteurServiceA = 8;}
-    $('#serviceA').css('height', hauteurServiceA+'vh');
+    $('#serviceA').css('height', hauteurServiceA+'vh').children("div").html("Actualité");
 
     var hauteurServiceV = stats.v / 100 * 90;
     if (hauteurServiceV < 8) {
       hauteurServiceV = 8;}
-    $('#serviceV').css('height', hauteurServiceV+'vh');
+    $('#serviceV').css('height', hauteurServiceV+'vh').children("div").html("Vidéo");
 
     var hauteurServiceT = stats.t / 100 * 90;
     if (hauteurServiceT < 8) {
       hauteurServiceT = 8;}
-    $('#serviceT').css('height', hauteurServiceT+'vh');
+    $('#serviceT').css('height', hauteurServiceT+'vh').children("div").html("Troc");
 
     var hauteurServiceJ = stats.j / 100 * 90;
     if (hauteurServiceJ < 8) {
       hauteurServiceJ = 8;}
-    $('#serviceJ').css('height', hauteurServiceJ+'vh');
+    $('#serviceJ').css('height', hauteurServiceJ+'vh').children("div").html("Jeux");
 
     var hauteurServiceP = stats.p / 100 * 90;
     if (hauteurServiceP < 8) {
       hauteurServiceP = 8;}
-    $('#serviceP').css('height', hauteurServiceP+'vh');
+    $('#serviceP').css('height', hauteurServiceP+'vh').children("div").html("Post");
 
     var hauteurServiceC = stats.c / 100 * 90;
     if (hauteurServiceC < 8) {
       hauteurServiceC = 8;}
-    $('#serviceC').css('height', hauteurServiceC+'vh');
+    $('#serviceC').css('height', hauteurServiceC+'vh').children("div").html("Connaissance");
 }
 
 
@@ -94,7 +95,7 @@ $('#conteneur').css('height', somme +'vh');
 
 
 $(function (){
-  $("#conteneur").on("click", function(){
+  $("#conteneur a").on("click", function(){
     $('body').toggleClass('is-service-open');
 
     if ($('body').hasClass('is-service-open')) {
@@ -114,24 +115,24 @@ $(function (){
 function modeService() {
   console.log(somme);
     var hauteurServiceA2 = map_range(stats.a, 0, somme, 0, 100);
-    $('#serviceA').css('height', hauteurServiceA2 +'vh');
+    $('#serviceA').css('height', hauteurServiceA2 +'vh').children("div").html("A");
 
     console.log(hauteurServiceA2);
 
     var hauteurServiceV2 = (stats.v * 100) / somme;
-    $('#serviceV').css('height', hauteurServiceV2 +'vh');
+    $('#serviceV').css('height', hauteurServiceV2 +'vh').children("div").html("V");
 
     var hauteurServiceT2 = (stats.t * 100) / somme;
-    $('#serviceT').css('height', hauteurServiceT2 +'vh');
+    $('#serviceT').css('height', hauteurServiceT2 +'vh').children("div").html("T");
 
     var hauteurServiceJ2 = (stats.j * 100) / somme;
-    $('#serviceJ').css('height', hauteurServiceJ2 +'vh');
+    $('#serviceJ').css('height', hauteurServiceJ2 +'vh').children("div").html("J");
 
     var hauteurServiceP2 = (stats.p * 100) / somme;
-    $('#serviceP').css('height', hauteurServiceP2 +'vh');
+    $('#serviceP').css('height', hauteurServiceP2 +'vh').children("div").html("P");
 
     var hauteurServiceC2 = (stats.c * 100) / somme;
-    $('#serviceC').css('height', hauteurServiceC2 +'vh');
+    $('#serviceC').css('height', hauteurServiceC2 +'vh').children("div").html("C");
 }
 
 
@@ -230,4 +231,33 @@ $( function() {
 
   function map_range(value, low1, high1, low2, high2) {
     return low2 + (high2 - low2) * (value - low1) / (high1 - low1);
+}
+
+
+$(document).on("dblclick",function(){
+  openFullscreen();
+})
+
+function openFullscreen() {
+  var elem = document.getElementById("n");
+
+  if(elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if(elem.mozRequestFullScreen) {
+    elem.mozRequestFullScreen();
+  } else if(elem.webkitRequestFullscreen) {
+    elem.webkitRequestFullscreen();
+  } else if(elem.msRequestFullscreen) {
+    elem.msRequestFullscreen();
+  }
+}
+
+function closeFullscreen() {
+  if(document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if(document.mozCancelFullScreen) {
+    document.mozCancelFullScreen();
+  } else if(document.webkitExitFullscreen) {
+    document.webkitExitFullscreen();
+  }
 }
